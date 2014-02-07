@@ -7,6 +7,9 @@
 body {
 	background-color:#f4fbfc;
 }
+#home_bg {
+	background-color:#0B628B;
+}
 
 h1,h2,h3 {
 	text-align:center;
@@ -24,5 +27,24 @@ h1,h2,h3 {
 }
 
 #b1, #b2, #b3 {
+	float:left;
+}
+
+.btn-danger {
+  .buttonBackground(#f7cfda, #f29db4);
+}
+
+#appname{
+	font-size:;
+}
+
+.welcome_label {
+	text-align:center;
+	color:white;
+}
+
+#signup,#login {
+	width:50%;
+	display:inline;
 	float:left;
 }
