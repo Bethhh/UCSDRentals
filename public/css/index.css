@@ -1,7 +1,7 @@
 
 #logo {
-	margin-left:45px;
-	width: 190px;
+	margin-left:75px;
+	width: 160px;
 	margin-bottom:20px;
 }
 
@@ -20,7 +20,8 @@ h1,h2,h3 {
 	margin-left:0px;
 	margin-right:0px;
 	padding-top:10px;
-	padding-bottom:10px;
+	padding-bottom:20px;
+	margin-bottom:0px;
 }
 
 .block {
@@ -43,14 +44,19 @@ h1,h2,h3 {
 	text-align:center;
 	color:white;
 	width:100%;
+	font-weight:bold;
+	font-size:16pt;
 }
 
-input#signup, input#login {
+input#signup, input#login, input#save, input#submit {
 	width:50%;
 	float:left;
-
+	font-weight:bold;
+	height:35pt;
 	margin-bottom:30px;
 }
+
+
 
 input.menu {
 	margin-bottom:30px;
@@ -68,6 +74,21 @@ input.menu2 {
 
 }
 
-h2#menu_title{
+h2 #menu_title{
 	font-family: Oswald, sans-serif;
+}
+
+.block .btn-block {
+	height:80pt;
+}
+.nav li {
+	width:33.33%;
+}
+.nav {
+
+	margin-bottom:10px;
+}
+
+div #data {
+	margin-top:20px;
 }
