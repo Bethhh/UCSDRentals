@@ -5,10 +5,19 @@
 }
 
 body {
-	background-color:#002A5F;
+	background-color:#f4fbfc;
 }
 
 h1 {
-	font-size:30pt; 
+	text-align:center;
 	color:white;
+	background-color:#0B628B;
+}
+
+.block {
+	width:33.33%;
+}
+
+#b1, #b2, #b3 {
+	float:left;
 }
