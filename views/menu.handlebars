@@ -12,19 +12,34 @@
 
 <body>
 <div class="container">
-	<h3>Home Menu</h3>
+	<h2>Home Menu</h2>
 
 	<form id="menu" role="form" method="get" action="">
 
 	    <div class="form-group">
-	      <input type="button" class="form-control" id="createNew" class="btn" value="Create A New Profile"></input>
+	      <input type="button" id="createNew" class="menu form-control btn-block btn btn-primary" value="Create A New Profile"></input>
 	    </div>
 	   	<div class="form-group">
-	      <input type="button" class="form-control" id="viewExisting" class="btn" value="View Existing Profiles"></input>
+	      <input type="button" id="viewExisting" class="menu form-control btn-block btn btn-primary" value="View Existing Profiles"></input>
 	    </div>
 	    <div class="form-group">
-	      <input type="button" class="form-control" id="logout" class="btn" value="Log Out"></input>
+	      <input type="button" id="new_update" class="menu form-control btn-block btn btn-primary" value="What's New"></input>
 	    </div>
+	    <div class="form-group">
+	      <input type="button" id="logout" class="menu form-control btn-block btn btn-primary" value="Log Out"></input>
+	    </div>
+        <div class="form-group2">
+		    <div class="form-group">
+		      <input type="button" id="new_update" class="menu2 form-control  btn btn-primary" value="Settings"></input>
+		    </div>
+		    <div class="form-group">
+		      <input type="button" id="check_msg" class="menu2 form-control  btn btn-primary" value="Favorites"></input>
+		    </div>
+		    <div class="form-group">
+		      <input type="button" id="about" class="menu2 form-control btn btn-primary" value="About"></input>
+		    </div>
+		</div>
+
 	</form>
 </div>
 	<script src="js/jquery-1.11.0.js"></script>
