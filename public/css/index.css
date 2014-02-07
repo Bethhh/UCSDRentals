@@ -43,8 +43,9 @@ h1,h2,h3 {
 	color:white;
 }
 
-#signup,#login {
+input#signup, input#login {
 	width:50%;
-	display:inline;
 	float:left;
+	margin-bottom:10px;
 }
+
