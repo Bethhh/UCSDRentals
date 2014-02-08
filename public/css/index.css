@@ -48,7 +48,7 @@ h1,h2,h3 {
 	font-size:16pt;
 }
 
-input#signup, input#login, input#save, input#submit {
+input#signup, input#login, button#save, button#submit {
 	width:50%;
 	float:left;
 	font-weight:bold;
@@ -85,10 +85,10 @@ h2 #menu_title{
 	width:33.33%;
 }
 .nav {
-
+	clear:both;
 	margin-bottom:10px;
 }
 
-div #data {
-	margin-top:20px;
+.menu_bar {
+float:left;
 }
