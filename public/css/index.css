@@ -1,0 +1,28 @@
+
+#logo {
+	margin-left:30px;
+	width: 190px;
+}
+
+body {
+	background-color:#f4fbfc;
+}
+
+h1,h2,h3 {
+	text-align:center;
+	color:white;
+	background-color:#0B628B;
+	margin-top:0px;
+	margin-left:0px;
+	margin-right:0px;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+
+.block {
+	width:33.33%;
+}
+
+#b1, #b2, #b3 {
+	float:left;
+}
