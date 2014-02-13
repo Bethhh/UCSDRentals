@@ -1,0 +1,127 @@
+<info categories>
+	<layer id="1">
+		<area>
+			<region opt="required" choice="mul">
+				<area_item>Cardiff-By-The-Sea</area_item>
+				<area_item>Carlsbad</area_item>
+				<area_item>Carmel Valley</area_item>
+				<area_item>Clairemont Mesa</area_item>
+				<area_item>Del Mar</area_item>
+				<area_item>Encinitas</area_item>
+				<area_item>Hillcrest</area_item>
+				<area_item>La Jolla</area_item>
+				<area_item>Mira Mesa</area_item>
+				<area_item>Mission Beach</area_item>
+				<area_item>Mission Valley</area_item>
+				<area_item>Ocean Beach	Oceanside</area_item>
+				<area_item>Pacific Beach</area_item>
+				<area_item>Poway</area_item>
+				<area_item>San Diego</area_item>
+				<area_item>Solana Beach</area_item>
+				<area_item>Sorrento Valley	Tierrasanta</area_item>
+				<area_item>University City	UTC	Vista</area_item>
+			</region>
+			
+			<distance opt="required" choice="ddlist">
+				<dist_item>1 mile or less</dist_item>
+				<dist_item>3 miles or less</dist_item>
+				<dist_item>5 miles or less</dist_item>
+				<dist_item>10 miles or less</dist_item>
+				<dist_item>15 miles or less</dist_item>
+				<dist_item>20 miles or less</dist_item>
+				<dist_item>30 miles or less</dist_item>
+				<dist_item>50 miles or less</dist_item>
+			</distance>
+		</area>
+		
+		<listingType opt="required" choice="mul">
+			<ltype_item name="Full Vacancy">
+				<fv_bedroom opt="optional" choice="ddlist"/>
+				<fv_bathroom opt="optional" choice="ddlist"/>
+			</ltype_item>
+			<ltype_item name="Room For Rent (with non UCSD students)">
+			</ltype_item>
+			<ltype_item name="Room For Rent (with UCSD Students)">
+				<s>UnderGraduate</s>
+				<s>Graduate</s>
+				<s>Doesn't Matter</s>
+			</ltype_item>
+			<ltype_item>Work Exchange</ltype_item>
+		</listingType>
+		
+		<dwellingType opt="optional" choise="single">
+			<dtype_item>apartment</dtype_item>
+			<dtype_item>condominium</dtype_item>
+			<dtype_item>house</dtype_item>
+		</dwellingType>
+
+		<leaseType opt="optional" choise="ddlist">
+			<letype_item>school year lease</letype_item>
+			<letype_item>month to month</letype_item>
+			<letype_item>summer rental</letype_item>
+			<letype_item>year long</letype_item>
+		</leaseType>
+
+		<maxRent opt="optional" choise="user input"/>
+
+		<filter opt="default">
+			<fitem>location</fitem>
+			<fitem>date entered</fitem>
+			<fitem>rental type</fitem>
+		</filter>
+
+		<amenities opt="optional" choice="mul">
+			<aitem>Air Conditioning</aitem>
+			<aitem>Alarm System</aitem>
+			<aitem>Cable or Satellite</aitem>
+			<aitem>Ceiling Fan</aitem>
+			<aitem>Dishwasher</aitem>
+			<aitem>Extra Storage</aitem>
+			<aitem>Fireplace \</aitem>
+			<aitem>Furnished Available</aitem>
+			<aitem>Hardwood Floors</aitem>
+			<aitem>High Speed Internet Access</aitem>
+			<aitem>Microwave</aitem>
+			<aitem>Patio or Balcony</aitem>
+			<aitem>View</aitem>
+			<aitem>Walk-in Closets</aitem>
+			<aitem>Washer/DryerHookups</aitem>
+			<aitem>Washer/Dryer in Unit</aitem>
+			<aitem>Wireless Internet Access</aitem>
+		</amenities>
+
+		<community opt="optional" choice="mul">
+			<citem>Accepts Credit Card Payments</citem>
+			<citem>Accepts Electronic Payments</citem>
+			<citem>AT&T U-verse</citem>
+			<citem>Business Center</citem>
+			<citem>Close to Public Transportation</citem>
+			<citem>Clubhouse</citem>
+			<citem>Controlled Access</citem>
+			<citem>Covered Parking</citem>
+			<citem>Disability Access</citem>
+			<citem>Door Attendant</citem>
+			<citem>Elevator</citem>
+			<citem>Fitness Center</citem>
+			<citem>Garages</citem>
+			<citem>Hablamos Español</citem>
+			<citem>Laundry Facility</citem>
+			<citem>No Smoking</citem>
+			<citem>Playground</citem>
+			<citem>Pool</citem>
+			<citem>Short Term Lease</citem>
+			<citem>Tennis Courts</citem>
+			<citem>Utilities Included</citem>
+			<citem>Verizon FiOS</citem>
+		</community>
+
+		<pets opt="required" choice="mul">
+			<pitem>cat</pitem>
+			<pitem>small dog</pitem>
+			<pitem>big dog</pitem>
+			<pitem>pets allowed</pitem>
+			<pitem>no pets</pitem>
+		</pets>
+	</layer>
+	
+</info categories>
