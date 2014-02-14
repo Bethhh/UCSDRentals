@@ -1,0 +1,17 @@
+{
+	"Types": [
+		{
+			"label": "A",
+			"options": ["Single", "Shared"],
+			"dropdown":	0,
+			"radio":1
+
+		},
+		{
+			"label": "Housing Type",			
+			"options": ["Apts", "Rooms","Sublets", "Studios", "Condos"],
+			"dropdown":	1,
+			"radio":0
+		}
+	]
+}

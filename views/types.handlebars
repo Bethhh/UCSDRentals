@@ -2,7 +2,7 @@
 
 <html>
 <head>
-	<title>Create New Profile</title>	
+	<title>Types</title>	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="/css/bootstrap.css" rel="stylesheet">
@@ -10,7 +10,7 @@
 	<link href="/css/index.css" rel="stylesheet">
 </head>
 
-<body>
+<body onload="grabTypeForm()">
 	<div class="top_bar">
 		<div class="menu_bar">
 			<div class="btn-group">
@@ -24,7 +24,7 @@
 		  		</ul>
 			</div>
 		</div>
-		<h4>Create Housing Profile</h4>
+		<h4>Types</h4>
 		
 
 	</div>
@@ -36,22 +36,25 @@
   		<li><a href="/existing">Existing</a></li>
   		<li><a href="/matches">Matches</a></li>
 	</ul>
-	<div class="block" id="b1">
-		<button id="type_btn" type="button" class="btn btn-info btn-lg btn-block">Type</button>
-		<button type="button" class="btn btn-info btn-lg btn-block">Date</button>
-	</div>
-	<div class="block" id="b1">
-		<button type="button" class="btn btn-info btn-lg btn-block">Rent</button>
-		<button type="button" class="btn btn-info btn-lg btn-block">Property</button>
-	</div>
-	<div class="block" id="b1">
-		<button type="button" class="btn btn-info btn-lg btn-block">Address</button>
-		<button type="button" class="btn btn-info btn-lg btn-block">Other</button>
-	</div>
-	<div id="data">
-		  <button type="button" class="btn btn-primary" id="save">Save</button>
-		  <button type="button" class="btn btn-primary disabled" id="submit">Submit</button>
-	</div>
+	<form id="type_form" role="form" method="get" action="">
+	{{#each Types}}
+   		<div class="form-group">		
+   			{{#if radio}}
+   				{{#each options}}
+   					<input type="radio" name="{{label}}" value="{{this}}">{{this}}
+   				{{/each}}
+   			{{else}}	
+   				{{#if dropdown}}		
+   					<select name="{{label}}">		
+   						{{#each options}}
+							<option value="{{this}}">{{this}}</option>
+						{{/each}}
+					</select>
+				{{/if}}
+   			{{/if}}
+    	</div>
+    {{/each}}
+	</form>
 </div>
 	<script src="js/jquery-1.11.0.js"></script>
 	<script src="js/bootstrap.js"></script>

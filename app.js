@@ -14,6 +14,7 @@ var menu = require('./routes/menu');
 var newProfile = require('./routes/newProfile');
 var matches = require('./routes/matches');
 var existing = require('./routes/existing');
+var types = require('./routes/types');
 // Example route
 // var user = require('./routes/user');
 
@@ -46,6 +47,7 @@ app.get('/menu', menu.view);
 app.get('/newProfile', newProfile.view);
 app.get('/matches', matches.view);
 app.get('/existing', existing.view);
+app.get('/types', types.viewForm);
 // Example route
 // app.get('/users', user.list);
 
