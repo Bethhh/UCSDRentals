@@ -15,11 +15,13 @@ function grabTypeForm(){
 	
 }
 
-Handlebars.registerHelper('ifeq', function (a, b, options) {
-	  console.log(a);
-      if (a == b) { return options.fn(this); }
-});
-
 $("#type_btn").click(function() {
 	window.location='../types';
+})
+
+$("#type_submit").click(function(e) {
+	e.preventDefault();
+	var name = "Housing Type";
+	var val = $('input[name="'+name+'"]').val();
+	console.log(val);
 })

@@ -40,20 +40,28 @@
 	{{#each Types}}
    		<div class="form-group">		
    			{{#if radio}}
+   				<label>{{label}}: </label>
    				{{#each options}}
    					<input type="radio" name="{{label}}" value="{{this}}">{{this}}
    				{{/each}}
    			{{else}}	
-   				{{#if dropdown}}		
+   				{{#if dropdown}}	
+   					<label>{{label}}: </label>	
    					<select name="{{label}}">		
    						{{#each options}}
 							<option value="{{this}}">{{this}}</option>
 						{{/each}}
 					</select>
+				{{else}}
+					<label>{{label}}: </label>	
+   					{{#each options}}
+   						<input type="checkbox" name="{{label}}" value="{{this}}">{{this}}<br>
+   					{{/each}}
 				{{/if}}
    			{{/if}}
     	</div>
     {{/each}}
+    <input type="submit" id="type_submit" value="Submit">
 	</form>
 </div>
 	<script src="js/jquery-1.11.0.js"></script>
