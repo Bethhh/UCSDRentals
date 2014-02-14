@@ -27,6 +27,7 @@ $("#property_btn").click(function() {
 $("#type_submit").click(function(e) {
 	e.preventDefault();
 	var name = "Housing Type";
-	var val = $('input[name="'+name+'"]').val();
-	console.log(val);
+	var val = $("select").val();
+	var radio = $("input[type='radio']:checked").val();
+	console.log(radio);
 })
