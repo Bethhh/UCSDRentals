@@ -1,17 +1,18 @@
 {
 	"Types": [
 		{
-			"label": "A",
+			"label": "Listing Type",
 			"options": ["Single", "Shared"],
 			"dropdown":	0,
-			"radio":1
-
+			"radio":1,
+			"help": "Do you want a place of full vacancy or you can share with others?"
 		},
 		{
 			"label": "Housing Type",			
 			"options": ["Apts", "Rooms","Sublets", "Studios", "Condos"],
 			"dropdown":	1,
-			"radio":0
+			"radio":0,
+			"help": "Choose the type of the place you want :)"
 		}
 	],
 
@@ -20,118 +21,151 @@
 			"label": "Parking",
 			"options": ["lot","garage","none"],
 			"dropdown": 1,
-			"radio": 0
+			"radio": 0,
+			"help": "Choose the type of parking space for your car"
 		},
 		{
 			"label": "storage",
 			"options": ["Yes","No"],
 			"dropdown": 0,
-			"radio": 1
+			"radio": 1,
+			"help": "Do you want an extra storage room?"
 		},
 		{
 			"label": "kitchen",
 			"options": ["Yes","No"],
 			"dropdown": 0,
-			"radio": 1
+			"radio": 1,
+			"help": "Do you need a kitchen?"
 		},
 		{
 			"label": "bathroom",
 			"options": ["private","shared"],
 			"dropdown": 0,
-			"radio": 1
+			"radio": 1,
+			"help": "Do you want a private bathroom or you do not mind sharing?"
 		},
 	
 		{
 			"label": "bedroom",
 			"options": ["private","shared"],
 			"dropdown": 0,
-			"radio": 1
+			"radio": 1,
+			"help": "Do you want your own bedroom or you can share?"
 		},
 		{
 			"label": "laundry facility",
 			"options": ["in house","near","none"],
 			"dropdown": 1,
-			"radio": 0
+			"radio": 0,
+			"help": "Do you want your laundry facility in your place or somewhere outside and near? Or you do not need laundry facility?"
 		},
 		{
 			"label": "Furnished",
 			"options": ["Yes","No"],
 			"dropdown": 0,
-			"radio": 1
+			"radio": 1,
+			"help": "Do you want your place furnished?"
 		},
 		{
 			"label": "pool",
 			"options": ["yes","no"],
 			"dropdown": 0,
-			"radio": 1
+			"radio": 1,
+			"help": "Do you want a place in a complex with a pool?"
 		},
 		{
 			"label": "sports facility",
 			"options": ["yes","no"],
 			"dropdown": 0,
-			"radio": 1
+			"radio": 1,
+			"help": "Do you want a place in a complex with sports facility?"
 		},
 		{
 			"label": "Internet",
 			"options": ["yes","no"],
 			"dropdown": 0,
-			"radio": 1
+			"radio": 1,
+			"help": "Do you want a place with Internet access?"
 		},
 		{
 			"label": "balcony",
 			"options": ["yes","no"],
 			"dropdown": 0,
-			"radio": 1
+			"radio": 1,
+			"help": "Do you want a place with balcony?"
 		},
 		{
 			"label": "AC",
 			"options": ["yes","no"],
 			"dropdown": 0,
-			"radio": 1
+			"radio": 1,
+			"help": "Do you want a place with air conditioner?"
 		},
 		{
 			"label": "cable",
 			"options": ["yes","no"],
 			"dropdown": 0,
-			"radio": 1
+			"radio": 1,
+			"help": "Do you want a place with cable?"
 		}
 	],
 	"Rent": [
 		{
 			"label": "rent range",
-			"options": ["from","to"],
+			"options": [],
 			"dropdown": 0,
-			"radio": 1
+			"radio": 0,
+			"help": "Choose the range of rent that you can accept :)"
+		},
+		{
+			"label": "from",
+			"options": ["$0","$500","$1000","$1500"],
+			"dropdown": 1,
+			"radio": 0,
+			"help": "Choose the lower bound of the rent you can accept :)"
+		},
+		{
+			"label": "to",
+			"options": ["$500","$1000","$1500","$2000","-"],
+			"dropdown": 1,
+			"radio": 0,
+			"help": "Choose the upper bound of rent that you can accept :)"
 		},
 		{
 			"label": "water",
 			"options": ["include","not"],
 			"dropdown": 0,
-			"radio": 1
+			"radio": 1,
+			"help": "Is this rent for a place with water supply preinstalled?"
 		},
 		{
 			"label": "electricity",
 			"options": ["include","not"],
 			"dropdown": 0,
-			"radio": 1
+			"radio": 1,
+			"help": "Is this rent for a place with electricity supply preinstalled?"
 		},
 		{
 			"label": "internet/wifi",
 			"options": ["include","not"],
 			"dropdown": 0,
-			"radio": 1
+			"radio": 1,
+			"help": "Is this rent for a place with Internet/wifi supply preinstalled?"
 		},
 		{
 			"label": "pay method",
 			"options": ["credit/debit","cash","check"],
 			"dropdown": 1,
-			"radio": 0
+			"radio": 0,
+			"help": "How do you want to pay the rent?"
 		},
 		{
 			"label": "deposit",
 			"options":["under:"],
 			"dropdown": 1,
-			"radio": 0
+			"radio": 0,
+			"help": "How much deposit can you accept to pay"
 		}
 	],
 	"Address":[
