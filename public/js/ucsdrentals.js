@@ -1,4 +1,29 @@
 
+function validateEmail()
+{
+	console.log("ss");
+	var x=document.forms["login"]["email"].value;
+	console.log(x);
+	var atpos=x.indexOf("@");
+	var dotpos=x.lastIndexOf(".");
+	if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
+  	{
+  		alert("Not a valid e-mail address");
+  		return false;
+ 	}
+ 	return true;
+}
+
+
+
+$("#login_btn").click(function() {
+  console.log("xxx");
+  if(validateEmail())
+  	window.location='/menu';
+});
+
+
+
 $("#createNew").click(function() {
   window.location='/newProfile';
 });
@@ -44,6 +69,11 @@ $("#date_btn").click(function() {
 $("#other_btn").click(function() {
 	window.location='../other';
 })
+
+$(".submit").click(function(){
+	window.location="../newProfile"
+})
+
 
 $("#type_submit").click(function(e) {
 	e.preventDefault();
