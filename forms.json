@@ -13,5 +13,210 @@
 			"dropdown":	1,
 			"radio":0
 		}
+	],
+
+	"Property": [
+		{
+			"label": "parking",
+			"options": ["lot","garage","none"],
+			"dropdown": 1,
+			"radio": 0
+		},
+		{
+			"label": "storage",
+			"options": ["Yes","No"],
+			"dropdown": 0,
+			"radio": 1
+		},
+		{
+			"label": "kitchen",
+			"options": ["Yes","No"],
+			"dropdown": 0,
+			"radio": 1
+		},
+		{
+			"label": "bathroom",
+			"options": ["private","shared"],
+			"dropdown": 0,
+			"radio": 1
+		},
+	
+		{
+			"label": "bedroom",
+			"options": ["private","shared"],
+			"dropdown": 0,
+			"radio": 1
+		},
+		{
+			"label": "laundry facility",
+			"options": ["in house","near","none"],
+			"dropdown": 1,
+			"radio": 0
+		},
+		{
+			"label": "furnished",
+			"options": ["yes","no"],
+			"dropdown": 0,
+			"radio": 1
+		},
+		{
+			"label": "pool",
+			"options": ["yes","no"],
+			"dropdown": 0,
+			"radio": 1
+		},
+		{
+			"label": "sports facility",
+			"options": ["yes","no"],
+			"dropdown": 0,
+			"radio": 1
+		},
+		{
+			"label": "Internet",
+			"options": ["yes","no"],
+			"dropdown": 0,
+			"radio": 1
+		},
+		{
+			"label": "balcony",
+			"options": ["yes","no"],
+			"dropdown": 0,
+			"radio": 1
+		},
+		{
+			"label": "AC",
+			"options": ["yes","no"],
+			"dropdown": 0,
+			"radio": 1
+		},
+		{
+			"label": "cable",
+			"options": ["yes","no"],
+			"dropdown": 0,
+			"radio": 1
+		}
+	],
+	"rent": [
+		{
+			"label": "rent range",
+			"options": ["from","to"],
+			"dropdown": 0,
+			"radio": 1
+		},
+		{
+			"label": "water",
+			"options": ["include","not"],
+			"dropdown": 0,
+			"radio": 1
+		},
+		{
+			"label": "electricity",
+			"options": ["include","not"],
+			"dropdown": 0,
+			"radio": 1
+		},
+		{
+			"label": "internet/wifi",
+			"options": ["include","not"],
+			"dropdown": 0,
+			"radio": 1
+		},
+		{
+			"label": "pay method",
+			"options": ["credit/debit","cash","check"],
+			"dropdown": 1,
+			"radio": 0
+		},
+		{
+			"label": "deposit",
+			"options":["under:"],
+			"dropdown": 1,
+			"radio": 0
+		}
+	],
+	"address":[
+		{
+			"label": "area",
+			"options":["miles from UCSD"],
+			"dropdown": 1,
+			"radio": 0
+		},
+		{
+			"label": "address",
+			"options":[""],
+			"dropdown": 1,
+			"radio": 0
+		},
+		{
+			"label": "transportation",
+			"options":["close","far"],
+			"dropdown": 0,
+			"radio": 1
+		},
+		{
+			"label": "market/mall",
+			"options":["close","far"],
+			"dropdown": 0,
+			"radio": 1
+		}
+	],
+	"other": [
+		{
+			"label": "Pets",
+			"options":["allowed","not"],
+			"dropdown": 0,
+			"radio": 1
+		},
+		{
+			"label": "Major",
+			"options":[""],
+			"dropdown": 1,
+			"radio": 0
+		},
+		{
+			"label": "Age range",
+			"options":[""],
+			"dropdown": 1,
+			"radio": 0
+		},
+		{
+			"label": "Sex",
+			"options":["male","female"],
+			"dropdown": 0,
+			"radio": 1
+		},
+		{
+			"label": "Smoking",
+			"options":["yes","no"],
+			"dropdown": 0,
+			"radio": 1
+		},
+		{
+			"label": "contact",
+			"options":["email","text"],
+			"dropdown": 0,
+			"radio": 1
+		}
+	],
+
+	"date": [
+		{
+			"label": "length",
+			"options":["summer","quarter"],
+			"dropdown": 0,
+			"radio": 1
+		},
+		{
+			"label": "lease",
+			"options":["monthly","yearly"],
+			"dropdown": 0,
+			"radio": 1
+		},
+		{
+			"label": "move-in",
+			"options":[""],
+			"dropdown": 1,
+			"radio": 0
+		}
 	]
 }
