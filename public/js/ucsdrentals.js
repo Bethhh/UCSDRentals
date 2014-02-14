@@ -19,6 +19,11 @@ $("#type_btn").click(function() {
 	window.location='../types';
 })
 
+$("#property_btn").click(function() {
+	window.location='../properties';
+})
+
+
 $("#type_submit").click(function(e) {
 	e.preventDefault();
 	var name = "Housing Type";

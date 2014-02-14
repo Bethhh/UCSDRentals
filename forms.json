@@ -17,7 +17,7 @@
 
 	"Property": [
 		{
-			"label": "parking",
+			"label": "Parking",
 			"options": ["lot","garage","none"],
 			"dropdown": 1,
 			"radio": 0
@@ -54,8 +54,8 @@
 			"radio": 0
 		},
 		{
-			"label": "furnished",
-			"options": ["yes","no"],
+			"label": "Furnished",
+			"options": ["Yes","No"],
 			"dropdown": 0,
 			"radio": 1
 		},
@@ -96,7 +96,7 @@
 			"radio": 1
 		}
 	],
-	"rent": [
+	"Rent": [
 		{
 			"label": "rent range",
 			"options": ["from","to"],
@@ -134,7 +134,7 @@
 			"radio": 0
 		}
 	],
-	"address":[
+	"Address":[
 		{
 			"label": "area",
 			"options":["miles from UCSD"],
@@ -160,7 +160,7 @@
 			"radio": 1
 		}
 	],
-	"other": [
+	"Other": [
 		{
 			"label": "Pets",
 			"options":["allowed","not"],
@@ -199,7 +199,7 @@
 		}
 	],
 
-	"date": [
+	"Date": [
 		{
 			"label": "length",
 			"options":["summer","quarter"],
@@ -213,7 +213,7 @@
 			"radio": 1
 		},
 		{
-			"label": "move-in",
+			"label": "move in",
 			"options":[""],
 			"dropdown": 1,
 			"radio": 0

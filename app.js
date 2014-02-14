@@ -15,6 +15,7 @@ var newProfile = require('./routes/newProfile');
 var matches = require('./routes/matches');
 var existing = require('./routes/existing');
 var types = require('./routes/types');
+var properties = require('./routes/properties');
 // Example route
 // var user = require('./routes/user');
 
@@ -48,6 +49,7 @@ app.get('/newProfile', newProfile.view);
 app.get('/matches', matches.view);
 app.get('/existing', existing.view);
 app.get('/types', types.viewForm);
+app.get('/properties', properties.viewForm);
 // Example route
 // app.get('/users', user.list);
 
