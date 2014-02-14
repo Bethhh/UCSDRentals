@@ -44,7 +44,7 @@ h1,h2,h3,h4 {
 	font-size:16pt;
 }
 
-input#signup, input#login_btn, button#save, button#submit {
+input#signup, input#login_btn, button#save, button#ss {
 	width:50%;
 	float:left;
 	font-weight:bold;

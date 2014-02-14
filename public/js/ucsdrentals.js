@@ -71,7 +71,11 @@ $("#other_btn").click(function() {
 })
 
 $(".submit").click(function(){
-	window.location="../newProfile"
+	window.location="../newProfile";
+})
+
+$("#ss").click(function(){
+	window.location="../matches";
 })
 
 
