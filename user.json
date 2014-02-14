@@ -1,0 +1,40 @@
+{
+	"User": [
+		{
+			"name": "Tianyi Li",
+			"preferred name": "Sky",
+			"ucsd email": "1@ucsd.edu",
+			"major": "CS",
+			"rentout": [],
+			"rentin": [],
+			"age": "100",
+			"phone": "00000000",
+			"id": "0",
+			"photo": ""
+		},
+		{
+			"name": "Beth Yue Shi",
+			"preferred name": "Beth",
+			"ucsd email": "2@ucsd.edu",
+			"major": "CS",
+			"rentout": [],
+			"rentin": [],
+			"age": "100",
+			"phone": "11111111",
+			"id": "1",
+			"photo": ""
+		},
+		{
+			"name": "Joy Liao",
+			"preferred name": "Joy",
+			"ucsd email": "3@ucsd.edu",
+			"major": "CS",
+			"rentout": [],
+			"rentin": [],
+			"age": "100",
+			"phone": "22222222",
+			"id": "3",
+			"photo": ""
+		}
+	]
+}
