@@ -1,0 +1,73 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>Rent</title>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/css/bootstrap.css" rel="stylesheet">
+	<link href="/css/bootswatch.min.css" rel="stylesheet">
+	<link href="/css/index.css" rel="stylesheet">
+</head>
+
+<body onload="grabTypeForm()">
+	<div class="top_bar">
+		<div class="menu_bar">
+			<div class="btn-group">
+		 		<button type="button" class="btn btn- dropdown-toggle" data-toggle="dropdown">
+		    	<span class="caret"></span>
+		    	<span class="sr-only">Toggle Dropdown</span>
+		  		</button>
+		  		<ul class="dropdown-menu" role="menu">
+		    		<li><a href="/menu">Home Menu</a></li>
+		    		<li><a href="/help">Help</a></li>
+		  		</ul>
+			</div>
+		</div>
+		<h4>Rent</h4>
+		
+
+	</div>
+	
+<div class="container">
+	
+	<ul class="nav nav-tabs ">
+  		<li class="active"><a href="/newProfile">New</a></li>
+  		<li><a href="/existing">Existing</a></li>
+  		<li><a href="/matches">Matches</a></li>
+	</ul>
+	<form id="type_form" role="form" method="get" action="">
+	{{#each Rent}}
+   		<div class="form-group">		
+   			{{#if radio}}
+   				<label>{{label}}: </label>
+   				{{#each options}}
+   					<input type="radio" name="{{label}}" value="{{this}}">{{this}}
+   				{{/each}}
+   			{{else}}	
+   				{{#if dropdown}}	
+   					<label>{{label}}: </label>	
+   					<select name="{{label}}">		
+   						{{#each options}}
+							<option value="{{this}}">{{this}}</option>
+						{{/each}}
+					</select>
+				{{else}}
+					<label>{{label}}: </label>	
+   					{{#each options}}
+   						<input type="checkbox" name="{{label}}" value="{{this}}">{{this}}<br>
+   					{{/each}}
+				{{/if}}
+   			{{/if}}
+    	</div>
+    {{/each}}
+    <input type="submit" id="type_submit" value="Submit">
+	</form>
+</div>
+	<script src="js/jquery-1.11.0.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/handlebars.js"></script>
+	<script src="js/ucsdrentals.js"></script>
+
+</body>
+</html>

@@ -16,6 +16,10 @@ var matches = require('./routes/matches');
 var existing = require('./routes/existing');
 var types = require('./routes/types');
 var properties = require('./routes/properties');
+var rent = require('./routes/rent');
+var address = require('./routes/address');
+var date = require('./routes/date');
+var other = require('./routes/other');
 // Example route
 // var user = require('./routes/user');
 
@@ -50,6 +54,10 @@ app.get('/matches', matches.view);
 app.get('/existing', existing.view);
 app.get('/types', types.viewForm);
 app.get('/properties', properties.viewForm);
+app.get('/rent', rent.viewForm);
+app.get('/address', address.viewForm);
+app.get('/date', date.viewForm);
+app.get('/other', other.viewForm);
 // Example route
 // app.get('/users', user.list);
 
