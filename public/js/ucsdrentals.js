@@ -7,9 +7,15 @@ $("#viewExisting").click(function() {
   window.location='/existing';
 });
 
+$("#about").click(function() {
+  window.location='/about';
+});
+
+
 $("#logout").click(function()  {
 	window.location='/';
 });
+
 
 function grabTypeForm(){
 	
