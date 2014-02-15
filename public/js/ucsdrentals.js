@@ -82,7 +82,7 @@ $("#ss").click(function(){
 $("#type_submit").click(function(e) {
 	e.preventDefault();
 
-	var result_form = require(../../result.json);
+	var result_form = require(result.json);
 	var obj = eval ("(" + result_form + ")");
 	//$.getJSON("../../result.json", function(result_form) {
     	console.log(obj); // this will show the info it in firebug console
