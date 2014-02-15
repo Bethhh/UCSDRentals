@@ -81,6 +81,16 @@ $("#ss").click(function(){
 
 $("#type_submit").click(function(e) {
 	e.preventDefault();
+
+	var result_form = require(../../result.json);
+	var obj = eval ("(" + result_form + ")");
+	//$.getJSON("../../result.json", function(result_form) {
+    	console.log(obj); // this will show the info it in firebug console
+    //});
+
+	//for(var i =0; i<result_form['Types'].length; i++){
+	//	console.log(result_form['Types'].length);
+	//}
 	var name = "Housing Type";
 	var val = $("select").val();
 	var radio = $("input[type='radio']:checked").val();

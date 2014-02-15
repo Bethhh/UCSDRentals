@@ -40,7 +40,7 @@
    			{{#if radio}}
    				<label>{{label}}: </label>
    				{{#each options}}
-   					<input type="radio" name="{{label}}" value="{{this}}">{{this}}
+   					<input type="radio" name="{{../label}}" value="{{this}}">{{this}}
    				{{/each}}
    			{{else}}	
    				{{#if dropdown}}	
@@ -61,7 +61,7 @@
     {{/each}}
     <input type="submit" id="type_back" value="Back" class="submit">
     <input type="submit" id="type_save" value="Save" class="submit">
-    <input type="submit" id="type_submit" value="Submit" class="submit">
+    <input type="submit" id="type_submit" value="Submit" class="">
 	</form>
 </div>
 	<script src="js/jquery-1.11.0.js"></script>
