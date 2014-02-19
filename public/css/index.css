@@ -1,20 +1,71 @@
-
-#logo {
-	margin-left:75px;
+/*#logo {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 	width: 160px;
 	margin-bottom:20px;
 }
-
+*/
 body {
 }
-#home_bg {
-	background-color:#0D648D;
-}
 
-h1,h2,h3,h4 {
+/***** SIGN UP PAGE *****/
+#home_bg {
+/*	background-color:#0D648D; */
+	background-position: left bottom;
+	background-image:url('http://midcenturymundane.files.wordpress.com/2011/07/5867516513_dcd7c02beb_b.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 800px;
+}
+#appname{
+	text-align: center;
+	font-size: 30pt;
+	font-weight: bold;
+}
+h1 {
+	color:white;
+	background-opacity: 0;
+	margin-top:0px;
+	margin-left:0px;
+	margin-right:0px;
+	margin-bottom:0px;
+	padding-top:20px;
+	padding-bottom:10px;
+}
+.email_label {
+	text-align:center;
+	color:white;
+	width:100%;
+	font-size:16pt;
+	font-weight: normal;
+	margin-top: 200px; 
+}
+.password_label {
+	text-align:center;
+	color:white;
+	width:100%;
+	font-size:16pt;
+	font-weight: normal;
+	margin-bottom: 0px;
+}
+input#signup, input#login {
+	width:50%;
+	float:left;
+	font-weight:bold;
+	height:25pt;
+	margin-top:0px;
+	margin-bottom:30px;
+}
+/************************/
+
+
+
+
+h2,h3,h4 {
 
 	color:white;
-	background-color:#0D648D;
+	background-color: #1F5080;
 	margin-top:0px;
 	margin-left:0px;
 	margin-right:0px;
@@ -24,6 +75,8 @@ h1,h2,h3,h4 {
 
 }
 
+
+
 .block {
 	width:33.33%;
 }
@@ -32,6 +85,9 @@ h1,h2,h3,h4 {
 	float:left;
 }
 
+<<<<<<< HEAD
+button#save, button#submit {
+=======
 #appname{
 	font-size:;
 }
@@ -45,12 +101,13 @@ h1,h2,h3,h4 {
 }
 
 input#signup, input#login_btn, button#save, button#ss {
+>>>>>>> cb99ec6fe3e277fe5714151b8dee3164b5d287ac
 	width:50%;
 	float:left;
 	font-weight:bold;
 	height:30pt;
-	margin-bottom:30px;
 	margin-top:30px;
+	margin-bottom:30px;
 }
 
 
@@ -71,9 +128,35 @@ input.menu2 {
 
 }
 
-h2 #menu_title{
+/* Create New Profile Page */
+#menu_title{
 	font-family: Oswald, sans-serif;
+	text-align: center;
 }
+#createNew {
+	display: block;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+#viewExisting {
+	display: block;
+	margin-top: 0px;
+	margin-bottom: 20px;
+}
+#new_update {
+	display: block;
+	margin-top: 0px;
+	margin-bottom: 20px;
+}
+#logout {
+	display: block;
+	margin-top: 0px;
+	margin-bottom: 20px;
+}
+#about {
+
+}
+
 
 .block .btn-block {
 	height:80pt;

@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" >
 
 	<link href="/css/bootstrap.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/bootswatch.min.css">
+	<link rel="stylesheet" type="text/css" href="bootswatch.min.css">
 	<link href="/css/index.css" rel="stylesheet">
 
 </head>
@@ -15,29 +15,23 @@
 <body>
 <div class="container" id="home_bg">
 	<h1 id="appname">UCSDRentals</h1>
-	<div class="logo">
-		<img id="logo" src="http://upload.wikimedia.org/wikipedia/en/thumb/4/42/UCSD_Seal.svg/200px-UCSD_Seal.svg.png" />
-	</div>
-
 	<form id="login" role="form" method="get" action="/menu">
 	    <div class="form-group">
-	      <label class="welcome_label" for="email">Your UCSD Email:</label>
+	      <label class="email_label" for="email">Your UCSD Email:</label>
 	      <input type="text" class="form-control" id="email" placeholder="Example@ucsd.edu" name="email">
 	    </div>
 	    <div class="form-group">
-	      <label class="welcome_label" for="password">Password:</label>
-	      <input type="password" class="form-control" id="password" placeholder="Password" name="password">
+	      <label class="password_label" for="password">Password:</label>
+	      <input type="text" class="form-control" id="password" placeholder="Password" name="password">
 	    </div>
 	    <div class="form-group">
 	      <input type="submit" class="form-control btn-primary disabled" id="signup" class="btn" value="Sign Up"></input>
-	      <input type="submit" class="form-control btn-primary" id="login_btn" class="btn" value="Log In" onclick='Javascript:validateEmail();'></input>
+	      <input type="submit" class="form-control btn-primary" id="login" class="btn" value="Log In"></input>
 	    </div>
 	</form>
-	<script src="js/jquery-1.11.0.js"></script>
-	<script src="js/bootstrap.js"></script>
 	<script src="js/handlebars.js"></script>
-	<script src="js/ucsdrentals.js"></script>
 </div>
 
 </body>
 </html>
+
