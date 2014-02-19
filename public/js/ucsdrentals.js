@@ -1,7 +1,8 @@
 
+
+
 function validateEmail()
 {
-	console.log("ss");
 	/*
 	var email=document.forms["login"]["email"].value;
 	console.log(email);
@@ -18,18 +19,32 @@ function validateEmail()
  	var filter = /^([a-zA-Z0-9_\.\-])+\@ucsd.edu+$/;
 
  	if (!filter.test(email.value)){
- 		alert('Please provide a valide UCSD email address');
+ 		alert('Please provide a valide UCSD email address!\nEx: ucsdID@ucds.edu');
  		email.focus;
  		return false;
  	}
 }
 
+function validatePassword(){
+    var password = document.getElementById('password');
+    if(password.value == "" ){
+    	alert('Please enter your password!');
+    	return false;
+    }else{
+    	 //data
+       // return true;
+
+    }
+}
 
 
 $("#login_btn").click(function() {
   console.log("xxx");
-  if(validateEmail())
-  	window.location='/menu';
+  var pass = validatePassword();
+  if(validateEmail() ){
+  	if(validatePassword())
+  	  window.location='/menu';
+  }
 });
 
 

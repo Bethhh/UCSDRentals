@@ -2,8 +2,9 @@
 	"User": [
 		{
 			"name": "Tianyi Li",
-			"preferred name": "Sky",
-			"ucsd email": "1@ucsd.edu",
+			"preferred": "Sky",
+			"email": "1@ucsd.edu",
+			"pwd": "12345678",
 			"major": "CS",
 			"rentout": [],
 			"rentin": [],
@@ -14,8 +15,9 @@
 		},
 		{
 			"name": "Beth Yue Shi",
-			"preferred name": "Beth",
-			"ucsd email": "2@ucsd.edu",
+			"preferred": "Beth",
+			"email": "yus017@ucsd.edu",
+			"pwd":"87654321",
 			"major": "CS",
 			"rentout": [],
 			"rentin": [],
@@ -26,8 +28,9 @@
 		},
 		{
 			"name": "Joy Liao",
-			"preferred name": "Joy",
-			"ucsd email": "3@ucsd.edu",
+			"preferred": "Joy",
+			"email": "joliao@ucsd.edu",
+			"pwd":"password",
 			"major": "CS",
 			"rentout": [],
 			"rentin": [],
