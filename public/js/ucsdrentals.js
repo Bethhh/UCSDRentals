@@ -95,23 +95,23 @@ $("#other_btn").click(function() {
 	window.location='../other';
 })
 
-$(".submit").click(function(){
-	window.location="../newProfile";
-})
+//$(".submit").click(function(){
+//	window.location="../newProfile";
+//})
 
-$("#ss").click(function(){
-	window.location="../matches";
-})
+//$("#ss").click(function(){
+//	window.location="../matches";
+//})
 
 
 $("#type_submit").click(function(e) {
 	e.preventDefault();
 
-	var result_form = require(result.json);
-	var obj = eval ("(" + result_form + ")");
-	//$.getJSON("../../result.json", function(result_form) {
-    	console.log(obj); // this will show the info it in firebug console
-    //});
+	// obj = eval ("(" + result_form + ")");
+	var json;
+	$.getJSON('../../result.json', function(json) {
+        console.log(json);
+    });
 
 	//for(var i =0; i<result_form['Types'].length; i++){
 	//	console.log(result_form['Types'].length);
