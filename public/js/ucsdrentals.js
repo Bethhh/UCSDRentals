@@ -2,16 +2,26 @@
 function validateEmail()
 {
 	console.log("ss");
-	var x=document.forms["login"]["email"].value;
-	console.log(x);
-	var atpos=x.indexOf("@");
-	var dotpos=x.lastIndexOf(".");
-	if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length)
+	/*
+	var email=document.forms["login"]["email"].value;
+	console.log(email);
+	var atpos=email.indexOf("@");
+	var dotpos=email.lastIndexOf(".");
+	if (atpos<1 || dotpos<atpos+2 || dotpos+2>=email.length)
   	{
   		alert("Not a valid e-mail address");
   		return false;
  	}
  	return true;
+ 	*/
+ 	var email = document.getElementById('email');
+ 	var filter = /^([a-zA-Z0-9_\.\-])+\@ucsd.edu+$/;
+
+ 	if (!filter.test(email.value)){
+ 		alert('Please provide a valide UCSD email address');
+ 		email.focus;
+ 		return false;
+ 	}
 }
 
 
