@@ -1,50 +1,35 @@
 
 
 
-function validateEmail()
+function validateInfo()
 {
-	/*
-	var email=document.forms["login"]["email"].value;
-	console.log(email);
-	var atpos=email.indexOf("@");
-	var dotpos=email.lastIndexOf(".");
-	if (atpos<1 || dotpos<atpos+2 || dotpos+2>=email.length)
-  	{
-  		alert("Not a valid e-mail address");
-  		return false;
- 	}
- 	return true;
- 	*/
  	var email = document.getElementById('email');
  	var filter = /^([a-zA-Z0-9_\.\-])+\@ucsd.edu+$/;
+	var password = document.getElementById('password');
+	var errors = [];
 
- 	if (!filter.test(email.value)){
- 		alert('Please provide a valide UCSD email address!\nEx: ucsdID@ucds.edu');
- 		email.focus;
+	if (!filter.test(email.value)){
+		errors[errors.length] = "You must enter a valid UCSD email address.";
+	}
+ 	if (password.value == ''){
+ 		errors[errors.length] = "You must enter a password.";
+ 	}
+ 	if (errors.length > 0){
+ 		var msg = "Please Enter Valid Data...\n";
+		for (var i = 0; i<errors.length; i++){
+			var numError = i+1;
+			msg += "\n" + numError + ". " + errors[i];
+		}
+ 		alert(msg);
  		return false;
  	}
-}
-
-function validatePassword(){
-    var password = document.getElementById('password');
-    if(password.value == "" ){
-    	alert('Please enter your password!');
-    	return false;
-    }else{
-    	 //data
-       // return true;
-
-    }
+ 	return true;
 }
 
 
 $("#login_btn").click(function() {
   console.log("xxx");
-  var pass = validatePassword();
-  if(validateEmail() ){
-  	if(validatePassword())
-  	  window.location='/menu';
-  }
+  //$().(.click);
 });
 
 

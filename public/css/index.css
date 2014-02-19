@@ -11,7 +11,6 @@ body {
 
 /***** SIGN UP PAGE *****/
 #home_bg {
-/*	background-color:#0D648D; */
 	background-position: left bottom;
 	background-image:url('http://midcenturymundane.files.wordpress.com/2011/07/5867516513_dcd7c02beb_b.jpg');
 	background-repeat: no-repeat;
@@ -20,7 +19,7 @@ body {
 }
 #appname{
 	text-align: center;
-	font-size: 30pt;
+	font-size: 32pt;
 	font-weight: bold;
 }
 h1 {
@@ -49,7 +48,7 @@ h1 {
 	font-weight: normal;
 	margin-bottom: 0px;
 }
-input#signup, input#login {
+input#signup, input#login_btn {
 	width:50%;
 	float:left;
 	font-weight:bold;
@@ -60,9 +59,7 @@ input#signup, input#login {
 /************************/
 
 
-
-
-h2,h3,h4 {
+h3,h4 {
 
 	color:white;
 	background-color: #1F5080;
@@ -85,9 +82,6 @@ h2,h3,h4 {
 	float:left;
 }
 
-<<<<<<< HEAD
-button#save, button#submit {
-=======
 #appname{
 	font-size:;
 }
@@ -100,8 +94,8 @@ button#save, button#submit {
 	font-size:16pt;
 }
 
-input#signup, input#login_btn, button#save, button#ss {
->>>>>>> cb99ec6fe3e277fe5714151b8dee3164b5d287ac
+/* save and submit? */
+button#save, button#ss {
 	width:50%;
 	float:left;
 	font-weight:bold;
@@ -128,35 +122,54 @@ input.menu2 {
 
 }
 
-/* Create New Profile Page */
+/***** CREATE NEW PROFILE PAGE *****/
+h2 {
+	color:white;
+	background-position: left top;
+	background-image:url('http://realdealesurance.com/wp-content/uploads/2014/01/apartment_insurance.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-opacity: 0;
+	background-size: 360px;
+	margin-top:0px;
+	margin-left:0px;
+	margin-right:0px;
+	margin-bottom:0px;
+	padding-top:20px;
+	padding-bottom:10px;
+}
 #menu_title{
 	font-family: Oswald, sans-serif;
 	text-align: center;
 }
 #createNew {
 	display: block;
+	font-weight: normal;
 	margin-top: 20px;
 	margin-bottom: 20px;
 }
 #viewExisting {
 	display: block;
+	font-weight: normal;
 	margin-top: 0px;
 	margin-bottom: 20px;
 }
 #new_update {
 	display: block;
+	font-weight: normal;
 	margin-top: 0px;
 	margin-bottom: 20px;
 }
 #logout {
 	display: block;
+	font-weight: normal;
 	margin-top: 0px;
 	margin-bottom: 20px;
 }
 #about {
 
 }
-
+/*************************************/
 
 .block .btn-block {
 	height:80pt;
