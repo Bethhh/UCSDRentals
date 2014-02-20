@@ -1,6 +1,5 @@
 
 
-
 function validateInfo()
 {
  	var email = document.getElementById('email');
@@ -9,13 +8,14 @@ function validateInfo()
 	var errors = [];
 
 	if (!filter.test(email.value)){
-		errors[errors.length] = "You must enter a valid UCSD email address.";
+		errors[errors.length] = "You must enter a valid UCSD email address!";
 	}
  	if (password.value == ''){
- 		errors[errors.length] = "You must enter a password.";
+ 		errors[errors.length] = "You must enter a password!";
  	}
+    var msg = "";
  	if (errors.length > 0){
- 		var msg = "Please Enter Valid Data...\n";
+ 		//var msg = "Please Enter Valid Data...\n";
 		for (var i = 0; i<errors.length; i++){
 			var numError = i+1;
 			msg += "\n" + numError + ". " + errors[i];
@@ -23,20 +23,74 @@ function validateInfo()
  		alert(msg);
  		return false;
  	}
- 	return true;
+
+ 	
+    $.get("/user", login);
+
+
+
+
+
+  /*  function login(result){
+   	 alert("haha");
+     return false;
+   }*/
+
+
+   //////////////////////////////check user
+   //$.post("/user", {"email": email.value, "pwd":password.value}, login );
+
+
+
+
+  /*function afterQuery(err, users) {
+    if(err) console.log(err);
+    console.log(users[0]);
+    //res.json(projects[0]);
+    window.location='/menu';
+  }*/
 }
 
+function login(result){
+	var email = document.getElementById('email');
+
+	var password = document.getElementById('password');
+ 		var users  = result;
+ 		var errorMsg;
+	 	for(var j = 0; j < users.length; j++){
+	      if(users[j]['email'] == email.value && users[j]['pwd']!=password.value){
+	      	errorMsg = "Your password is wrong!";
+	        return false;
+	      }
+	      else if(users[j]['email'] == email.value && users[j]['pwd']==password.value){
+	      	window.location='/menu';
+	        return true;
+	      }
+	    }
+	    errorMsg = "User does not exist!";
+	    alert(errorMsg);
+ 		return false;
+
+ 	}
+//action="/menu"onsubmit="return validateInfo();">
 
 $("#login_btn").click(function() {
-  console.log("xxx");
-  //$().(.click);
+  validateInfo();
 });
 
 
 
 $("#createNew").click(function() {
+  $.get("/oneProfile", getProfileForm);
+
   window.location='/newProfile';
 });
+
+function getProfileForm(result){
+	var copy_result = result;
+	console.log("getprofileform");
+	console.log(copy_result);
+}
 
 $("#viewExisting").click(function() {
   window.location='/existing';

@@ -1,4 +1,4 @@
-UCSDRentals
-===========
+lab7
+====
 
-Web app to help UCSD students to rent house/apartment/room to each other.
+Lab 7: Databases

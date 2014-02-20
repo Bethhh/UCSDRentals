@@ -13,7 +13,7 @@
 <body id="home_bg">
 <div class="container" >
 	<h1 id="appname">UCSD Rentals</h1>
-	<form id="login" role="form" method="get" action="/menu" onsubmit="return validateInfo();">
+	<form id="login" role="form" method="get"  >
 	    <div class="form-group">
 	      <label class="email_label" for="email">Your UCSD Email:</label>
 	      <input type="text" class="form-control" id="email" placeholder="Example@ucsd.edu" name="email">
@@ -27,7 +27,9 @@
 	      <input type="submit" class="form-control btn-primary" id="login_btn" class="btn" value="Log In"></input>
 	    </div>
 	</form>
+	<script src="js/jquery-1.11.0.js"></script>
 	<script src="js/handlebars.js"></script>
+	<script src="js/ucsdrentals.js"></script>
 </div>
 
 </body>

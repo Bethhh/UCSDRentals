@@ -25,6 +25,9 @@ var other = require('./routes/other');
 var tmp = require('./routes/tmp');
 
 var submit_type = require('./routes/submit_type');
+var oneProfile = require('./routes/oneProfile');
+var writeTypes = require('./routes/writeTypes');
+var user = require('./routes/user');
 // Example route
 // var user = require('./routes/user');
 
@@ -65,7 +68,11 @@ app.get('/address', address.viewForm);
 app.get('/date', date.viewForm);
 app.get('/other', other.viewForm);
 app.get('/tmp',tmp.view);
-app.get('/types/submit_type', submit_type.submitForm);
+app.get('/submit_type', submit_type.submitForm);
+app.get('/oneProfile', oneProfile.getForm);
+app.get('/writeTypes',writeTypes.write);
+
+app.get('/user', user.userInfo);
 // Example route
 // app.get('/users', user.list);
 

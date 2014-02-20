@@ -11,7 +11,7 @@ heroku_missing="0"
 npm_missing="0"
 
 # set this to the number of the current lab
-cur_lab=4
+cur_lab=7
 
 system=$(uname -a)
 if [ "$system" == "Linux precise32 3.2.0-23-generic-pae #36-Ubuntu SMP Tue Apr 10 22:19:09 UTC 2012 i686 i686 i386 GNU/Linux" ]
@@ -39,7 +39,21 @@ fi
 if [ "$sys_vagrant" == "1" ]
 then
 # on vagrant guest
+  
+  mkdir -p /data/db;
+  chown vagrant /data/db;
 
+  mongo_fix=$(grep "run_mongo" ~/.bash_profile | wc -l | xargs)
+
+  if [ $mongo_fix != "1" ]
+  then
+
+    echo "Adding automatic mongo start"	
+    echo -e ". ~/lab7/run_mongo.sh" >> ~/.bash_profile
+    . ~/lab7/run_mongo.sh
+	
+  fi
+	
   required_pkg=( "mongo" "heroku" "node" "npm")
 
   all_present="1"
@@ -127,7 +141,7 @@ then
   fi
 
   # current lab hardcoded
-  node_status=$(cd lab4;npm ls 2>&1)
+  node_status=$(cd lab7;npm ls 2>&1)
 
   if [[ $node_status == *"UNMET DEPENDENCY"* ]]
   then
@@ -135,12 +149,26 @@ then
     echo "Attempting to repair."
     install_status=$(cd lab4; npm -y install --no-bin-links)
 
-    node_status=$(cd lab4;npm ls 2>&1)
+    node_status=$(cd lab7;npm ls 2>&1)
   
     if [[ $node_status != *"UNMET DEPENDENCY"* ]]
     then
       echo "PASS: Repair successful. All node packages installed."
     fi
+  fi
+
+  # change ssh timeout to fix disconnect issues
+
+  ssh_result=$(grep "Setup SSH timeouts" /etc/ssh/sshd_config | wc -l | xargs)
+
+  if [ $ssh_result != "1" ]
+  then
+    echo "Patching ssh timeout configuration."
+
+    echo -e "\n# Setup SSH timeouts\nClientAliveInterval 30\nClientAliveCountMax 4" >> /etc/ssh/sshd_config 
+    echo -e "\n# Setup SSH timeouts\nServerAliveInterval 30\nServerAliveCountMax 4" >> /etc/ssh/ssh_config 
+    /etc/init.d/ssh restart > /dev/null
+
   fi
 
   if [ $all_present == "1" ]
@@ -191,7 +219,7 @@ else
   hcidirs=$(ls)
 
   # current lab hardcoded
-  for i in {1..4} 
+  for i in {1..7} 
   do
     target_dir="lab$i"
   if [[ $hcidirs == *"$target_dir"* ]]
