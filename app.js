@@ -21,6 +21,7 @@ var rent = require('./routes/rent');
 var address = require('./routes/address');
 var date = require('./routes/date');
 var other = require('./routes/other');
+var tmp = require('./routes/tmp');
 // Example route
 // var user = require('./routes/user');
 
@@ -60,6 +61,7 @@ app.get('/rent', rent.viewForm);
 app.get('/address', address.viewForm);
 app.get('/date', date.viewForm);
 app.get('/other', other.viewForm);
+app.get('/tmp',tmp.view);
 // Example route
 // app.get('/users', user.list);
 

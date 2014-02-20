@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false">
+</script>
+
+<script>
+var center_UCSD = new google.maps.LatLng(32.877491,-117.235276);
+
+function initialize()
+{
+var mapProp = {
+  center:center_UCSD,
+  zoom:12,
+  mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+var map=new google.maps.Map(document.getElementById("googleMap")
+  ,mapProp);
+
+var image = {
+    url: '/icons/house.png',
+    // This marker is 20 pixels wide by 32 pixels tall.
+    //size: new google.maps.Size(20, 32),
+    // The origin for this image is 0,0.
+    //origin: new google.maps.Point(0,0),
+    // The anchor for this image is the base of the flagpole at 0,32.
+    //anchor: new google.maps.Point(0, 32)
+  };
+var ucsd = new google.maps.Marker({
+	position:center_UCSD,
+	//icon:google.maps.SymbolPath.CIRCLE
+});
+ucsd.setMap(map);
+
+{{#each matches}}
+	var match = new google.maps.LatLng({{lat}},{{lon}});
+	var marker=new google.maps.Marker({
+	position:match,
+	});
+	marker.setMap(map);
+	var msg = "{{name}}";
+	var infowindow = new google.maps.InfoWindow({
+	content:"You are here!"
+	});
+
+	google.maps.event.addListener(marker,'click',function(){
+		infowindow.open(map,marker);
+	})
+	//console.log("haha");
+{{/each}}
+
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+</head>
+
+<body>
+<div id="googleMap" style="width:640px;height:1136px;"></div>
+
+</body>
+</html>
+
