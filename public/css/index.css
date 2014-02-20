@@ -1,20 +1,68 @@
-
-#logo {
-	margin-left:75px;
+/*#logo {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 	width: 160px;
 	margin-bottom:20px;
 }
-
+*/
 body {
 }
-#home_bg {
-	background-color:#0D648D;
-}
 
-h1,h2,h3,h4 {
+/***** SIGN UP PAGE *****/
+#home_bg {
+	background-position: left bottom;
+	background-image:url('http://midcenturymundane.files.wordpress.com/2011/07/5867516513_dcd7c02beb_b.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 800px;
+}
+#appname{
+	text-align: center;
+	font-size: 32pt;
+	font-weight: bold;
+}
+h1 {
+	color:white;
+	background-opacity: 0;
+	margin-top:0px;
+	margin-left:0px;
+	margin-right:0px;
+	margin-bottom:0px;
+	padding-top:20px;
+	padding-bottom:10px;
+}
+.email_label {
+	text-align:center;
+	color:white;
+	width:100%;
+	font-size:16pt;
+	font-weight: normal;
+	margin-top: 200px; 
+}
+.password_label {
+	text-align:center;
+	color:white;
+	width:100%;
+	font-size:16pt;
+	font-weight: normal;
+	margin-bottom: 0px;
+}
+input#signup, input#login_btn {
+	width:50%;
+	float:left;
+	font-weight:bold;
+	height:25pt;
+	margin-top:0px;
+	margin-bottom:30px;
+}
+/************************/
+
+
+h3,h4 {
 
 	color:white;
-	background-color:#0D648D;
+	background-color: #1F5080;
 	margin-top:0px;
 	margin-left:0px;
 	margin-right:0px;
@@ -23,6 +71,8 @@ h1,h2,h3,h4 {
 	padding-bottom:10px;
 
 }
+
+
 
 .block {
 	width:33.33%;
@@ -44,13 +94,14 @@ h1,h2,h3,h4 {
 	font-size:16pt;
 }
 
-input#signup, input#login_btn, button#save, button#ss {
+/* save and submit? */
+button#save, button#ss {
 	width:50%;
 	float:left;
 	font-weight:bold;
 	height:30pt;
-	margin-bottom:30px;
 	margin-top:30px;
+	margin-bottom:30px;
 }
 
 
@@ -71,9 +122,54 @@ input.menu2 {
 
 }
 
-h2 #menu_title{
-	font-family: Oswald, sans-serif;
+/***** CREATE NEW PROFILE PAGE *****/
+h2 {
+	color:white;
+	background-position: left top;
+	background-image:url('http://realdealesurance.com/wp-content/uploads/2014/01/apartment_insurance.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-opacity: 0;
+	background-size: 360px;
+	margin-top:0px;
+	margin-left:0px;
+	margin-right:0px;
+	margin-bottom:0px;
+	padding-top:20px;
+	padding-bottom:10px;
 }
+#menu_title{
+	font-family: Oswald, sans-serif;
+	text-align: center;
+}
+#createNew {
+	display: block;
+	font-weight: normal;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+#viewExisting {
+	display: block;
+	font-weight: normal;
+	margin-top: 0px;
+	margin-bottom: 20px;
+}
+#new_update {
+	display: block;
+	font-weight: normal;
+	margin-top: 0px;
+	margin-bottom: 20px;
+}
+#logout {
+	display: block;
+	font-weight: normal;
+	margin-top: 0px;
+	margin-bottom: 20px;
+}
+#about {
+
+}
+/*************************************/
 
 .block .btn-block {
 	height:80pt;

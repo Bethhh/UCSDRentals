@@ -1,4 +1,5 @@
 
+
 /**
  * Module dependencies.
  */
@@ -21,6 +22,7 @@ var rent = require('./routes/rent');
 var address = require('./routes/address');
 var date = require('./routes/date');
 var other = require('./routes/other');
+var tmp = require('./routes/tmp');
 
 var submit_type = require('./routes/submit_type');
 // Example route
@@ -62,7 +64,7 @@ app.get('/rent', rent.viewForm);
 app.get('/address', address.viewForm);
 app.get('/date', date.viewForm);
 app.get('/other', other.viewForm);
-
+app.get('/tmp',tmp.view);
 app.get('/types/submit_type', submit_type.submitForm);
 // Example route
 // app.get('/users', user.list);
