@@ -3,7 +3,7 @@ body {
 
 /***** LOGIN PAGE *****/
 #home_bg {
-	background-position: center;
+	background-position: center bottom;
 	background-image:url('http://ucsdnews.ucsd.edu/news_uploads/130307roof14.jpg');
 	background-repeat: no-repeat;
 	background-attachment: cover;
