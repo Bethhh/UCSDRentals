@@ -6,7 +6,7 @@ body {
 	background-position: center bottom;
 	background-image:url('http://ucsdnews.ucsd.edu/news_uploads/130307roof14.jpg');
 	background-repeat: no-repeat;
-	background-attachment: cover;
+	background-attachment: fixed;
 	background-size: 1100px;
 }
 #appname{
@@ -125,7 +125,7 @@ h4 {
 	padding-bottom:30px;
 	padding-right: 30px;
 }
-#housing_title, #existing_title, #match_title {
+.subtitle {
 	font-size: 16pt;
 	padding-left: 20px;
 	text-align: left;
