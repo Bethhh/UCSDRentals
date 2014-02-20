@@ -14,7 +14,7 @@
 	<div class="top_bar">
 		<div class="menu_bar">
 			<div class="btn-group">
-		 		<button type="button" class="btn btn- dropdown-toggle" data-toggle="dropdown">
+		 		<button type="button" class="btn btn- dropdown-toggle" id="dropdown_btn" data-toggle="dropdown">
 		    	<span class="caret"></span>
 		    	<span class="sr-only">Toggle Dropdown</span>
 		  		</button>
@@ -24,19 +24,18 @@
 		  		</ul>
 			</div>
 		</div>
-		<h4>Create Housing Profile</h4>
+		<h4 id="housing_title">Create Housing Profile</h4>
 		
 
 	</div>
 	
-<div class="container">
+<div class="container" id="newprof_bg">
 	
 	<ul class="nav nav-tabs ">
   		<li class="active"><a href="/newProfile">New</a></li>
   		<li><a href="/existing">Existing</a></li>
   		<li><a href="/matches">Matches</a></li>
 	</ul>
-	<p>Click the button and specify your requirement :)</p>
 	<div class="block" id="b1">
 		<button id="type_btn" type="button" class="btn btn-danger btn-lg btn-block">Type</button>
 		<button id="date_btn" type="button" class="btn btn-danger btn-lg btn-block">Date</button>

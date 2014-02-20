@@ -1,29 +1,21 @@
-/*#logo {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	width: 160px;
-	margin-bottom:20px;
-}
-*/
 body {
 }
 
-/***** SIGN UP PAGE *****/
+/***** LOGIN PAGE *****/
 #home_bg {
-	background-position: left bottom;
-	background-image:url('http://midcenturymundane.files.wordpress.com/2011/07/5867516513_dcd7c02beb_b.jpg');
+	background-position: center bottom;
+	background-image:url('http://ucsdnews.ucsd.edu/news_uploads/130307roof14.jpg');
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	background-size: 800px;
+	background-size: 1100px;
 }
 #appname{
 	text-align: center;
-	font-size: 32pt;
+	font-size: 30pt;
 	font-weight: bold;
 }
 h1 {
-	color:white;
+	color: white;
 	background-opacity: 0;
 	margin-top:0px;
 	margin-left:0px;
@@ -59,8 +51,143 @@ input#signup, input#login_btn {
 /************************/
 
 
-h3,h4 {
 
+/********* MENU PAGE *********/
+#newprof_bg {
+/*	background-color: #303030; */
+}
+h2 {
+	color:white;
+	background-position: left top;
+	background-image:url('https://scontent-a-pao.xx.fbcdn.net/hphotos-prn2/t1/1897876_10202450767844708_1223169655_n.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-opacity: ;
+	background-size: 360px;
+	margin-top:0px;
+	margin-left:0px;
+	margin-right:0px;
+	margin-bottom:0px;
+	padding-top:20px;
+	padding-bottom:20px;
+}
+#menu_title {
+	font-family: Oswald, sans-serif;
+	text-align: center;
+}
+#createNew {
+	display: block;
+	font-weight: normal;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+#viewExisting {
+	display: block;
+	font-weight: normal;
+	margin-top: 0px;
+	margin-bottom: 20px;
+}
+#new_update {
+	display: block;
+	font-weight: normal;
+	margin-top: 0px;
+	margin-bottom: 20px;
+}
+#logout {
+	display: block;
+	font-weight: normal;
+	margin-top: 0px;
+	margin-bottom: 20px;
+}
+#about {
+
+}
+/*******************************/
+
+
+/***** CREATE HOUSING PROFILE PAGE *****/
+h4 {
+	color:white;
+	display: block;
+	background-position: center top;
+	background-image:url('https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-frc3/t1/1782039_10202451000130515_675626893_n.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 330px;
+	margin-top:0px;
+/*	margin-left:65px; */
+	margin-left: 0px;
+	margin-right:0px;
+	margin-bottom:0px; 
+	padding-top:30px;
+	padding-left: 10px;
+	padding-bottom:30px;
+	padding-right: 30px;
+}
+#housing_title {
+	font-size: 16pt;
+	padding-left: 20px;
+	text-align: right;
+}
+#dropdown_btn {
+	margin-top: 15px;
+	margin-left: 0px;
+}
+#type_btn {
+	display: block;
+	margin-top: 20px;
+}
+#rent_btn {
+	display: block;
+	margin-top: 20px;
+}
+#address_btn {
+	display: block;
+	margin-top: 20px;
+}
+#date_btn {
+	display: block;
+	margin-bottom: 50px;
+}
+#property_btn {
+	display: block;
+	margin-bottom: 50px;
+}
+#other_btn {
+	display: block;
+	margin-bottom: 50px;
+}
+/***********************************/
+
+
+/******* EXISTING PROFILES PAGE ********/
+h5 {
+	color:white;
+	display: block;
+	background-position: center top;
+	background-image:url('https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-frc3/t1/1782039_10202451000130515_675626893_n.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 330px;
+	margin-top:0px;
+/*	margin-left:65px; */
+	margin-left: 0px;
+	margin-right:0px;
+	margin-bottom:0px; 
+	padding-top:30px;
+	padding-left: 0px;
+	padding-bottom:30px;
+	padding-right: 50px; */
+}
+#existing_title {
+	font-size: 16pt;
+	padding-right: 60px;
+	padding-left: 20px;
+	text-align: right;
+}
+/***************************/
+
+h3 {
 	color:white;
 	background-color: #1F5080;
 	margin-top:0px;
@@ -69,7 +196,6 @@ h3,h4 {
 	margin-bottom:0px;
 	padding-top:20px;
 	padding-bottom:10px;
-
 }
 
 
@@ -121,55 +247,6 @@ input.menu2 {
 	float:left;
 
 }
-
-/***** CREATE NEW PROFILE PAGE *****/
-h2 {
-	color:white;
-	background-position: left top;
-	background-image:url('http://realdealesurance.com/wp-content/uploads/2014/01/apartment_insurance.jpg');
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-opacity: 0;
-	background-size: 360px;
-	margin-top:0px;
-	margin-left:0px;
-	margin-right:0px;
-	margin-bottom:0px;
-	padding-top:20px;
-	padding-bottom:10px;
-}
-#menu_title{
-	font-family: Oswald, sans-serif;
-	text-align: center;
-}
-#createNew {
-	display: block;
-	font-weight: normal;
-	margin-top: 20px;
-	margin-bottom: 20px;
-}
-#viewExisting {
-	display: block;
-	font-weight: normal;
-	margin-top: 0px;
-	margin-bottom: 20px;
-}
-#new_update {
-	display: block;
-	font-weight: normal;
-	margin-top: 0px;
-	margin-bottom: 20px;
-}
-#logout {
-	display: block;
-	font-weight: normal;
-	margin-top: 0px;
-	margin-bottom: 20px;
-}
-#about {
-
-}
-/*************************************/
 
 .block .btn-block {
 	height:80pt;
