@@ -30,7 +30,7 @@ h1 {
 	width:100%;
 	font-size:16pt;
 	font-weight: normal;
-	margin-top: 200px; 
+	margin-top: 170px; 
 }
 .password_label {
 	text-align:center;
@@ -38,6 +38,7 @@ h1 {
 	width:100%;
 	font-size:16pt;
 	font-weight: normal;
+	margin-top: 0px;
 	margin-bottom: 0px;
 }
 input#signup, input#login_btn {
@@ -45,7 +46,7 @@ input#signup, input#login_btn {
 	float:left;
 	font-weight:bold;
 	height:25pt;
-	margin-top:0px;
+	margin-top:5px;
 	margin-bottom:30px;
 }
 /************************/
