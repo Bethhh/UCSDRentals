@@ -1,12 +1,15 @@
 {
 	"Types": [
 		{
-			"Listing Type":"",
-			"type":"radio"
+			"label": "Listing Type",
+			"type":"radio",
+			"value": ""
 		},
 		{
-			"Housing Type":"",			
-			"type":"dropdown"
+			"label":"Housing Type",
+			"type":"dropdown",
+			"value":""			
+			
 		}
 	]
 }

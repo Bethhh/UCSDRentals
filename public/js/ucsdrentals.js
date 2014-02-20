@@ -104,20 +104,4 @@ $("#other_btn").click(function() {
 //})
 
 
-$("#type_submit").click(function(e) {
-	e.preventDefault();
 
-	// obj = eval ("(" + result_form + ")");
-	var json;
-	$.getJSON('../../result.json', function(json) {
-        console.log(json);
-    });
-
-	//for(var i =0; i<result_form['Types'].length; i++){
-	//	console.log(result_form['Types'].length);
-	//}
-	var name = "Housing Type";
-	var val = $("select").val();
-	var radio = $("input[type='radio']:checked").val();
-	console.log(radio);
-})
