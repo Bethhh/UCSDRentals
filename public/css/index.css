@@ -125,10 +125,10 @@ h4 {
 	padding-bottom:30px;
 	padding-right: 30px;
 }
-#housing_title {
+#housing_title, #existing_title, #match_title {
 	font-size: 16pt;
 	padding-left: 20px;
-	text-align: right;
+	text-align: left;
 }
 #dropdown_btn {
 	margin-top: 15px;
@@ -184,12 +184,12 @@ h5 {
 	padding-bottom:30px;
 	padding-right: 50px; */
 }
-#existing_title {
+/*#existing_title {
 	font-size: 16pt;
 	padding-right: 60px;
 	padding-left: 20px;
 	text-align: right;
-}
+}*/
 /***************************/
 
 h3 {
@@ -213,9 +213,6 @@ h3 {
 	float:left;
 }
 
-#appname{
-	font-size:;
-}
 
 .welcome_label {
 	text-align:center;
