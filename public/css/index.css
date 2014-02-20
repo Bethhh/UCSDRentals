@@ -3,10 +3,10 @@ body {
 
 /***** LOGIN PAGE *****/
 #home_bg {
-	background-position: center bottom;
+	background-position: center;
 	background-image:url('http://ucsdnews.ucsd.edu/news_uploads/130307roof14.jpg');
 	background-repeat: no-repeat;
-	background-attachment: fixed;
+	background-attachment: cover;
 	background-size: 1100px;
 }
 #appname{
@@ -59,12 +59,12 @@ input#signup, input#login_btn {
 }
 h2 {
 	color:white;
-	background-position: left top;
+/*	background-position: left top;
 	background-image:url('https://scontent-a-pao.xx.fbcdn.net/hphotos-prn2/t1/1897876_10202450767844708_1223169655_n.jpg');
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	background-opacity: ;
-	background-size: 360px;
+	background-opacity: ;*/
+	
 	margin-top:0px;
 	margin-left:0px;
 	margin-right:0px;
@@ -110,11 +110,11 @@ h2 {
 h4 {
 	color:white;
 	display: block;
-	background-position: center top;
+	/*background-position: center top;
 	background-image:url('https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-frc3/t1/1782039_10202451000130515_675626893_n.jpg');
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	background-size: 330px;
+	background-size: 330px;*/
 	margin-top:0px;
 /*	margin-left:65px; */
 	margin-left: 0px;
@@ -159,17 +159,21 @@ h4 {
 	margin-bottom: 50px;
 }
 /***********************************/
-
+.top_bar, #menu_title {
+	background-position: center top;
+	background-image:url('https://scontent-a-pao.xx.fbcdn.net/hphotos-prn2/t1/1897876_10202450767844708_1223169655_n.jpg');
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
 
 /******* EXISTING PROFILES PAGE ********/
 h5 {
 	color:white;
 	display: block;
-	background-position: center top;
+	/*background-position: center top;
 	background-image:url('https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-frc3/t1/1782039_10202451000130515_675626893_n.jpg');
 	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: 330px;
+	background-size: 100%;*/
 	margin-top:0px;
 /*	margin-left:65px; */
 	margin-left: 0px;
