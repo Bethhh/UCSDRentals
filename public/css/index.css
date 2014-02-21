@@ -270,3 +270,7 @@ input.menu2 {
 	margin-left:15px;
 	margin-top:10px;
 }
+
+#type_div, #rent_div, #property_div, #other_div, #date_div, #address_div{
+	display:none;
+}

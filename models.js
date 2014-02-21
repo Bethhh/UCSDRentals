@@ -15,8 +15,20 @@ var UserSchema = new Mongoose.Schema({
 			"photo": String
 });
 
+var entrySchema = new Mongoose.Schema({
+{
+
+	"label": String,
+	"type":String,
+	"value": String,
+	"selected": Number,
+	"order":Number.
+	"group":String
+});
+
 
 
 exports.User = Mongoose.model('User', UserSchema);
+exports.Entry = Mongoose.model('Entry', entrySchema);
 
 

@@ -4,13 +4,15 @@
 			"label": "Listing Type",
 			"type":"radio",
 			"value": "",
-			"selected": 0
+			"selected": 0,
+			"group":"Types"
 		},
 		{
 			"label":"Housing Type",
 			"type":"dropdown",
 			"value":"",
-			"selected": 0		
+			"selected": 0,
+			"group":"Types"		
 			
 		}
 	]
