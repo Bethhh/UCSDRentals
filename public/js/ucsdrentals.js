@@ -192,4 +192,8 @@ $("#ss").click(function(){
 });
 
 
+$("#contact").click(function(){
+	var msg=prompt("Enter your message here:");
 
+
+});
