@@ -148,15 +148,15 @@ h4 {
 }
 #date_btn {
 	display: block;
-	margin-bottom: 50px;
+	margin-bottom: 20px;
 }
 #property_btn {
 	display: block;
-	margin-bottom: 50px;
+	margin-bottom: 20px;
 }
 #other_btn {
 	display: block;
-	margin-bottom: 50px;
+	margin-bottom: 20px;
 }
 /***********************************/
 .top_bar, #menu_title {
@@ -229,7 +229,7 @@ button#save, button#ss {
 	font-weight:bold;
 	height:30pt;
 	margin-top:30px;
-	margin-bottom:30px;
+	margin-bottom:0px;
 }
 
 
