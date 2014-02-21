@@ -125,16 +125,16 @@ $("#signup_btn").click(function() {
 
 
 $("#createNew").click(function() {
-  $.get("/oneProfile", getProfileForm);
+ // $.get("/oneProfile", getProfileForm);
 
   window.location='/newProfile';
 });
 
-function getProfileForm(result){
+/*function getProfileForm(result){
 	var copy_result = result;
 	console.log("getprofileform");
 	console.log(copy_result);
-}
+}*/
 
 $("#viewExisting").click(function() {
   window.location='/existing';
