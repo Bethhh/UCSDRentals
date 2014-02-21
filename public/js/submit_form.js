@@ -16,6 +16,8 @@ function initializePage() {
   $('#property_submit').click(submit_form_property);
   $('#address_submit').click(submit_form_address);
 
+  $('#ss').click(submit_form);
+
 	//$('#colorBtn').click(randomizeColors);
 }
 
