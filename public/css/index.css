@@ -14,6 +14,11 @@ body {
 	font-size: 30pt;
 	font-weight: bold;
 }
+#sign{
+	text-align: center;
+	font-size: 24pt;
+	font-weight: bold;
+}
 h1 {
 	color: white;
 	background-opacity: 0;
@@ -32,6 +37,7 @@ h1 {
 	font-weight: normal;
 	margin-top: 170px; 
 }
+
 .password_label {
 	text-align:center;
 	color:white;
@@ -41,12 +47,30 @@ h1 {
 	margin-top: 0px;
 	margin-bottom: 0px;
 }
-input#signup, input#login_btn {
+button#login_btn {
 	width:50%;
 	float:left;
 	font-weight:bold;
 	height:25pt;
 	margin-top:5px;
+	margin-bottom:30px;
+}
+#signup{
+	text-align: center;
+	width:50%;
+	float:left;
+	font-weight:bold;
+	height:25pt;
+	margin-top:5px;
+	margin-bottom:30px;
+}
+
+#signup_btn{
+	text-align: center;
+	width:100%;
+	font-weight:bold;
+	height:25pt;
+	margin-top:10px;
 	margin-bottom:30px;
 }
 /************************/
@@ -72,6 +96,13 @@ h2 {
 	padding-top:20px;
 	padding-bottom:20px;
 }
+.welcome_label {
+	text-align:center;
+	color:white;
+	width:100%;
+	font-weight:bold;
+	font-size:16pt;
+}
 #menu_title {
 	font-family: Oswald, sans-serif;
 	text-align: center;
@@ -79,29 +110,32 @@ h2 {
 #createNew {
 	display: block;
 	font-weight: normal;
-	margin-top: 20px;
-	margin-bottom: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 #viewExisting {
 	display: block;
 	font-weight: normal;
 	margin-top: 0px;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 #new_update {
 	display: block;
 	font-weight: normal;
 	margin-top: 0px;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 #logout {
 	display: block;
 	font-weight: normal;
 	margin-top: 0px;
-	margin-bottom: 20px;
+	margin-bottom: 28px;
 }
-#about {
-
+button#settings, button#about {
+	margin-bottom:0px;
+	height:30pt;
+	width:50%;
+	float:left;
 }
 /*******************************/
 
@@ -125,13 +159,14 @@ h4 {
 	padding-bottom:30px;
 	padding-right: 30px;
 }
-.subtitle {
+#createprof {
 	font-size: 16pt;
-	padding-left: 20px;
-	text-align: left;
+	text-align: right;
+	padding-right: 20px;
 }
-#dropdown_btn {
-	margin-top: 15px;
+#home_dropdown {
+	display: block;
+	margin-top: 10px;
 	margin-left: 0px;
 }
 #type_btn {
@@ -184,12 +219,11 @@ h5 {
 	padding-bottom:30px;
 	padding-right: 50px; */
 }
-/*#existing_title {
+#existprof {
 	font-size: 16pt;
-	padding-right: 60px;
-	padding-left: 20px;
+	padding-right: 80px;
 	text-align: right;
-}*/
+}
 /***************************/
 
 h3 {
@@ -203,7 +237,11 @@ h3 {
 	padding-bottom:10px;
 }
 
-
+#matchprof {
+	font-size: 16pt;
+	padding-right: 80px;
+	text-align: right;
+}
 
 .block {
 	width:33.33%;
@@ -213,14 +251,6 @@ h3 {
 	float:left;
 }
 
-
-.welcome_label {
-	text-align:center;
-	color:white;
-	width:100%;
-	font-weight:bold;
-	font-size:16pt;
-}
 
 /* save and submit? */
 button#save, button#ss {
@@ -241,14 +271,6 @@ input.menu {
 	font-size:16pt;
 }
 
-input.menu2 {
-	margin-bottom:30px;
-	font-size:16pt;
-	height:40pt;
-	width:33.33%;
-	float:left;
-
-}
 
 .block .btn-block {
 	height:80pt;

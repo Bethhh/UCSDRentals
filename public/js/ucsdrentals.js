@@ -9,26 +9,25 @@ function validateInfo()
 
 	if (!filter.test(email.value)){
 		errors[errors.length] = "You must enter a valid UCSD email address!";
-	}
- 	if (password.value == ''){
+	}else if (password.value == ''){
  		errors[errors.length] = "You must enter a password!";
+ 	}else{
+ 		window.location='/menu';
+ 		console.log("should go");
+ 		return true;
  	}
     var msg = "";
  	if (errors.length > 0){
  		//var msg = "Please Enter Valid Data...\n";
 		for (var i = 0; i<errors.length; i++){
 			var numError = i+1;
-			msg += "\n" + numError + ". " + errors[i];
+			msg += "\n" + errors[i];
 		}
  		alert(msg);
  		return false;
  	}
-
  	
     //$.get("/user", login);
-
-window.location='/menu';
-
 
 
   /*  function login(result){
@@ -51,6 +50,35 @@ window.location='/menu';
   }*/
 }
 
+function signupValidation(){
+	var email = document.getElementById('emaill');
+	var p1 = document.getElementById('password1');
+	var p2 = document.getElementById('password2');
+	var filter = /^([a-zA-Z0-9_\.\-])+\@ucsd.edu+$/;
+	var errors = [];
+
+	if (!filter.test(emaill.value)){
+		errors[errors.length] = "You must enter a valid UCSD email address!";
+	}else if ((p1.value+p2.value)==""){
+		errors[errors.length] = "Please input your password!";
+	}else if (p1.value != p2.value){
+		errors[errors.length] = "Please confirm you input the same password!";
+	}else {
+		window.location = "/menu";
+	}
+
+	var msg = "";
+ 	if (errors.length > 0){
+ 		//var msg = "Please Enter Valid Data...\n";
+		for (var i = 0; i<errors.length; i++){
+			var numError = i+1;
+			msg += "\n" + errors[i];
+		}
+ 		alert(msg);
+ 		return false;
+ 	}
+}
+/*
 function login(result){
 	var email = document.getElementById('email');
 
@@ -58,7 +86,7 @@ function login(result){
  		var users  = result;
  		var errorMsg;
 	 	for(var j = 0; j < users.length; j++){
-	      if(users[j]['email'] == email.value && users[j]['pwd']!=password.value){
+	      if(users[j]['email'] == email.value && users[j]['pwd']!=passworifd.value){
 	      	errorMsg = "Your password is wrong!";
 	        return false;
 	      }
@@ -72,10 +100,26 @@ function login(result){
  		return false;
 
  	}
+ 	*/
 //action="/menu"onsubmit="return validateInfo();">
-
+/*
 $("#login_btn").click(function() {
-  validateInfo();
+  if (validateInfo()){
+  	window.location='/menu';
+  }
+});
+*/
+
+$("#signup").click(function() {
+  //console.log("should gogogogo");
+  window.location='/signup';
+  
+});
+
+$("#signup_btn").click(function() {
+  //console.log("should gogogogo");
+  window.location='/signup';
+  
 });
 
 

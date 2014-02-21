@@ -8,36 +8,84 @@
 	<link href="/css/bootstrap.css" rel="stylesheet">
 	<link href="/css/bootswatch.min.css" rel="stylesheet">
 	<link href="/css/index.css" rel="stylesheet">
+
+	<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false">
+	</script>
+
+	<script>
+	var center_UCSD = new google.maps.LatLng(32.877491,-117.235276);
+
+	function initialize()
+	{
+	var mapProp = {
+	  center:center_UCSD,
+	  zoom:13,
+	  mapTypeId:google.maps.MapTypeId.ROADMAP
+	  };
+	var map=new google.maps.Map(document.getElementById("googleMap")
+	  ,mapProp);
+	
+	var ucsd = new google.maps.Marker({
+		position:center_UCSD,
+		icon: {
+	      path: google.maps.SymbolPath.CIRCLE,
+	      scale: 10
+	    }
+	});
+	ucsd.setMap(map);
+
+	//{{#each matches}}
+		var match = new google.maps.LatLng({{lat}},{{lon}});
+		var marker = new google.maps.Marker({
+			position:match,
+		//icon: '/icons/house.png'
+		});
+		marker.setMap(map);
+		var msg = "{{name}}";
+		var infowindow = new google.maps.InfoWindow({
+			content:"{{name}}"
+			//icon: '/icons/house.png'
+		});
+
+		google.maps.event.addListener(marker,'click',function(){
+			infowindow.open(map,marker);
+			window.location = "https://plus.google.com/117128964015063959819/about?hl=en";
+		})
+		//console.log("haha");
+	//{{/each}}
+
+	}
+
+	google.maps.event.addDomListener(window, 'load', initialize);
+	</script>
 </head>
 
 <body>
-
 	<div class="top_bar">
 		<div class="menu_bar">
 			<div class="btn-group">
-		  		<button type="button" class="btn btn-default btn-lg" data-toggle="dropdown">
+		  		<button type="button" id="home_dropdown" class="btn btn-default btn-lg" data-toggle="dropdown">
   				<span class="glyphicon glyphicon-home"></span>
 				</button>
 		  		<ul class="dropdown-menu" role="menu">
 		    		<li><a href="/menu">Home Menu</a></li>
-		    		<li><a href="/about">Help</a></li>
+		    		<li><a href="/about">About</a></li>
 		  		</ul>
 			</div>
 		</div>
-		<h4 class="subtitle">Current Matches</h4>
+		<h4 class="subtitle" id="matchprof">Current Matches</h4>
 	</div>
 <div class="container">
 	<ul class="nav nav-tabs ">
   		<li><a href="/newProfile">New</a></li>
   		<li><a href="/existing">Existing</a></li>
   		<li class="active"><a href="/matches">Matches</a></li>
-  		<li class="active"><a href="/tmp">Matches</a></li>
 	</ul>
-	<img src="http://www.thepinnaclelist.com/wp-content/uploads/2011/04/45-the-razor-9826-la-jolla-farms-way-san-diego-ca-usa-map.jpg"></img>
 </div>
+
+<div id="googleMap" style="width:640px;height:1136px;"></div>
 	<script src="js/jquery-1.11.0.js"></script>
 	<script src="js/bootstrap.js"></script>
 	<script src="js/ucsdrentals.js"></script>
-
 </body>
 </html>
