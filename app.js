@@ -68,7 +68,7 @@ app.get('/address', address.viewForm);
 app.get('/date', date.viewForm);
 app.get('/other', other.viewForm);
 app.get('/tmp',tmp.view);
-app.get('/submit_type', submit_type.submiWholeForm);
+//app.get('/submit_type', submit_type.submiWholeForm);
 app.get('/oneProfile', oneProfile.getForm);
 app.get('/writeTypes',writeTypes.write);
 

@@ -16,12 +16,15 @@ function initializePage() {
   $('#property_submit').click(submit_form_property);
   $('#address_submit').click(submit_form_address);
 
-  $('#ss').click(submit_form);
+  //$('#ss').click(submit_form);
 
 	//$('#colorBtn').click(randomizeColors);
 }
 
-
+/*function submit_form(e){
+  e.preventDefault();
+  $.get("/submit_type", submit_)
+}*/
 
 function submit_form_type(e) {
 	e.preventDefault();
