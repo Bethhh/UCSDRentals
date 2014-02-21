@@ -142,3 +142,12 @@
 
 
    $(".submit").click(showNew);
+
+$("#ss").click(function(){
+  if(type_flag && rent_flag && other_flag && property_flag && address_flag && date_flag){
+    alert("There are Matches!!!");
+    window.location="../matches";
+  }else{
+    alert("You have to enter all the information to submit!\n Or you can click Save!");
+  }
+});

@@ -182,18 +182,34 @@ $("#other_btn").click(function() {
 //	window.location="../newProfile";
 //})
 
-$("#ss").click(function(){
-  if(type_flag && rent_flag && other_flag && property_flag && address_flag && date_flag){
-  	alert("There are Matches!!!");
-  	window.location="../matches";
-  }else{
-  	alert("You have to enter all the information to submit!\n Or you can click Save!");
-  }
-});
 
 
 $("#contact").click(function(){
 	var msg=prompt("Enter your message here:");
 
 
+});
+
+$("#detail_back").click(function(){
+	window_location = '../matches';
+
+
+});
+
+$(".m").click(function(){
+    window.location = '../matches';
+});
+
+$(".listItems").click(function(){
+	  var e = document.getElementById("existing_buttons");
+	  e.style.display = 'block'; 
+	  var d = document.getElementById("existing_list");
+	  d.style.display = 'none';
+});
+
+$("#update").click(function(){
+      var e = document.getElementById("existing_buttons");
+	  e.style.display = 'none'; 
+	  var e = document.getElementById("existing_list");
+	  e.style.display = 'block';
 });

@@ -171,7 +171,7 @@
 	"Address":[
 		{
 			"label": "area",
-			"options":["miles from UCSD"],
+			"options":["UTC", "Costa Verde", "La Jolla International Graden", "Norbel Court", "Regentes Court"],
 			"dropdown": 1,
 			"radio": 0
 		},
