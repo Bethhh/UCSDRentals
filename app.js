@@ -22,7 +22,7 @@ var rent = require('./routes/rent');
 var address = require('./routes/address');
 var date = require('./routes/date');
 var other = require('./routes/other');
-var tmp = require('./routes/tmp');
+var signup = require('./routes/signup');
 
 var submit_type = require('./routes/submit_type');
 var oneProfile = require('./routes/oneProfile');
@@ -67,7 +67,7 @@ app.get('/rent', rent.viewForm);
 app.get('/address', address.viewForm);
 app.get('/date', date.viewForm);
 app.get('/other', other.viewForm);
-app.get('/tmp',tmp.view);
+app.get('/signup',signup.view);
 app.get('/submit_type', submit_type.submitForm);
 app.get('/oneProfile', oneProfile.getForm);
 app.get('/writeTypes',writeTypes.write);
