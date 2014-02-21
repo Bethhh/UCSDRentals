@@ -7,13 +7,14 @@
 var express = require('express');
 var http = require('http');
 var path = require('path');
-var handlebars = require('express3-handlebars')
+var handlebars = require('express3-handlebars');
 
 var index = require('./routes/index');
 var add =  require('./routes/add');
 var menu = require('./routes/menu');
 var about = require('./routes/about');
-var newProfile = require('./routes/newProfile');
+//var newProfile = require('./routes/newProfile');
+var newp = require('./routes/newp');
 var matches = require('./routes/matches');
 var existing = require('./routes/existing');
 /*var types = require('./routes/types');
@@ -60,7 +61,8 @@ app.get('/', index.view);
 app.get('/add', add.addFriend);
 app.get('/menu', menu.view);
 app.get('/about', about.view);
-app.get('/newProfile', newProfile.view);
+//app.get('/newProfile', newProfile.view);
+app.get('/newp',newp.view);
 app.get('/matches', matches.view);
 app.get('/existing', existing.view);
 /*app.get('/types', types.viewForm);

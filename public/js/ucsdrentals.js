@@ -127,7 +127,7 @@ $("#signup_btn").click(function() {
 $("#createNew").click(function() {
  // $.get("/oneProfile", getProfileForm);
 
-  window.location='/newProfile';
+  window.location='/newp';
 });
 
 /*function getProfileForm(result){
