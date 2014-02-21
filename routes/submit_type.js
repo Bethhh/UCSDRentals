@@ -10,6 +10,15 @@ exports.submitForm = function(req, res) {
 	res.json(result[req.params.name]);
 }
 
+/*.submitWholeForm = function(req, res) {  
+	// Your code goes here
+	//console.log(result['Types']);
+	console.log(result[req.params.name]);
+	//JSON.parse(result);
+	//console.log(result);
+	res.json(result[req.params.name]);
+}*/
+
 exports.save = function(req, res){
   var json = req.body;
   console.log(json);

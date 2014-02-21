@@ -27,7 +27,6 @@ mongoose.connect(database_uri);
 
 // Step 2: Remove all existing documents
 var users = require('./user.json');
-var form = require('./forms.json');
 
 // Step 2: Remove all existing documents
 models.User
