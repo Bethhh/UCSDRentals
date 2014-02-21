@@ -172,15 +172,15 @@ h4 {
 }
 #date_btn {
 	display: block;
-	margin-bottom: 50px;
+	margin-bottom: 20px;
 }
 #property_btn {
 	display: block;
-	margin-bottom: 50px;
+	margin-bottom: 20px;
 }
 #other_btn {
 	display: block;
-	margin-bottom: 50px;
+	margin-bottom: 20px;
 }
 /***********************************/
 .top_bar, #menu_title {
@@ -253,7 +253,7 @@ button#save, button#ss {
 	font-weight:bold;
 	height:30pt;
 	margin-top:30px;
-	margin-bottom:30px;
+	margin-bottom:0px;
 }
 
 
@@ -293,4 +293,8 @@ input.menu2 {
 	float:left;
 	margin-left:15px;
 	margin-top:10px;
+}
+
+#type_div, #rent_div, #property_div, #other_div, #date_div, #address_div{
+	display:none;
 }

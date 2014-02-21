@@ -69,10 +69,15 @@ app.get('/date', date.viewForm);
 app.get('/other', other.viewForm);
 app.get('/signup',signup.view);
 app.get('/submit_type', submit_type.submitForm);
+
+//app.get('/submit_type', submit_type.submitForm);
+
 app.get('/oneProfile', oneProfile.getForm);
 app.get('/writeTypes',writeTypes.write);
 
 app.get('/user', user.userInfo);
+app.post('/submit_type/:name/save', submit_type.save);
+app.get('/submit_type/:name', submit_type.submitForm);
 // Example route
 // app.get('/users', user.list);
 

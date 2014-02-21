@@ -26,6 +26,7 @@ function validateInfo()
  		alert(msg);
  		return false;
  	}
+ 	
     //$.get("/user", login);
 
 
@@ -154,27 +155,27 @@ function grabTypeForm(){
 }
 
 $("#type_btn").click(function() {
-	window.location='../types';
+	//window.location='../types';
 })
 
 $("#property_btn").click(function() {
-	window.location='../properties';
+	//window.location='../properties';
 })
 
 $("#rent_btn").click(function() {
-	window.location='../rent';
+	//window.location='../rent';
 })
 
 $("#address_btn").click(function() {
-	window.location='../address';
+	//window.location='../address';
 })
 
 $("#date_btn").click(function() {
-	window.location='../date';
+	//window.location='../date';
 })
 
 $("#other_btn").click(function() {
-	window.location='../other';
+	//window.location='../other';
 })
 
 //$(".submit").click(function(){
