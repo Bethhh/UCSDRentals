@@ -16,7 +16,6 @@ var UserSchema = new Mongoose.Schema({
 });
 
 var entrySchema = new Mongoose.Schema({
-{
 
 	"label": String,
 	"type":String,
