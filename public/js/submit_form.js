@@ -11,6 +11,10 @@ $(document).ready(function() {
 function initializePage() {
 	$('#type_submit').click(submit_form_type);
   $('#rent_submit').click(submit_form_rent);
+  $('#date_submit').click(submit_form_date);
+  $('#other_submit').click(submit_form_other);
+  $('#property_submit').click(submit_form_property);
+  $('#address_submit').click(submit_form_address);
 
 	//$('#colorBtn').click(randomizeColors);
 }
@@ -25,7 +29,8 @@ function submit_form_type(e) {
       //  console.log(json);
     //});
   $.get("/submit_type/Types", submit_type);
-
+  $("#type_btn").removeClass("btn-danger");
+  $("#type_btn").addClass("btn-success");
 	//for(var i =0; i<result_form['Types'].length; i++){
 	//	console.log(result_form['Types'].length);
 	//}
@@ -38,24 +43,34 @@ function submit_form_type(e) {
 function submit_form_rent(e){
   e.preventDefault();
   $.get("/submit_type/Rent", submit_type);
+  $("#rent_btn").removeClass("btn-danger");
+  $("#rent_btn").addClass("btn-success");
 }
 
 function submit_form_property(e){
   e.preventDefault();
   $.get("/submit_type/Property", submit_type);
+  $("#property_btn").removeClass("btn-danger");
+  $("#property_btn").addClass("btn-success");
 }
 
 function submit_form_other(e){
   e.preventDefault();
   $.get("/submit_type/Other", submit_type);
+  $("#other_btn").removeClass("btn-danger");
+  $("#other_btn").addClass("btn-success");
 }
 function submit_form_date(e){
   e.preventDefault();
   $.get("/submit_type/Date", submit_type);
+  $("#date_btn").removeClass("btn-danger");
+  $("#date_btn").addClass("btn-success");
 }
 function submit_form_address(e){
   e.preventDefault();
   $.get("/submit_type/Address", submit_type);
+  $("#address_btn").removeClass("btn-danger");
+  $("#address_btn").addClass("btn-success");
 }
 
 function submit_type(result){
@@ -77,6 +92,7 @@ function submit_type(result){
       }
     }else if(copy_result[i].type == "dropdown"){
       var r = document.getElementsByName(copy_result[i].label);
+      if(r[0])
       copy_result[i].value = r[0].options[r[0].selectedIndex].value;
       copy_result[i].order = order++;
       //copy_result[i].group = "Types";
@@ -96,8 +112,8 @@ function submit_type(result){
 }
 
 function saveTypes(result){
-  $("#type_btn").removeClass("btn-danger");
-  $("#type_btn").addClass("btn-success");
+  //console.log("result="+result);
+
 }
 
 /*function writeTypes(result){

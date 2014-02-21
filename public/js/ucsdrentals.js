@@ -25,9 +25,9 @@ function validateInfo()
  	}
 
  	
-    $.get("/user", login);
+    //$.get("/user", login);
 
-
+window.location='/menu';
 
 
 

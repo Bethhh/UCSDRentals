@@ -3,7 +3,7 @@ var result = require("../result.json");
 
 exports.submitForm = function(req, res) {  
 	// Your code goes here
-	console.log(req.params.name);
+	//console.log(result['Types']);
 	console.log(result[req.params.name]);
 	//JSON.parse(result);
 	//console.log(result);
@@ -16,7 +16,7 @@ exports.save = function(req, res){
 
   // make a new Project and save it to the DB
   for(var i = 0; i< json.length; i++){
-  	  var form_data = [i];
+  	  var form_data = json[i];
 	  var newEntry = new models.Entry({
 	      "label":form_data["label"],
 	      "type": form_data["type"],
@@ -33,11 +33,5 @@ exports.save = function(req, res){
         //res.send();
       }
   }
-
-  if(req.params.name == "Rent"){
-  	$("#rent_btn").removeClass("btn-danger");
-  	$("#rent_btn").addClass("btn-success");
-  }
   res.send();
-
 }
