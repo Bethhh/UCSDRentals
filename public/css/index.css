@@ -14,6 +14,11 @@ body {
 	font-size: 30pt;
 	font-weight: bold;
 }
+#sign{
+	text-align: center;
+	font-size: 24pt;
+	font-weight: bold;
+}
 h1 {
 	color: white;
 	background-opacity: 0;
@@ -32,6 +37,7 @@ h1 {
 	font-weight: normal;
 	margin-top: 170px; 
 }
+
 .password_label {
 	text-align:center;
 	color:white;
@@ -41,12 +47,30 @@ h1 {
 	margin-top: 0px;
 	margin-bottom: 0px;
 }
-input#signup, input#login_btn {
+button#login_btn {
 	width:50%;
 	float:left;
 	font-weight:bold;
 	height:25pt;
 	margin-top:5px;
+	margin-bottom:30px;
+}
+#signup{
+	text-align: center;
+	width:50%;
+	float:left;
+	font-weight:bold;
+	height:25pt;
+	margin-top:5px;
+	margin-bottom:30px;
+}
+
+#signup_btn{
+	text-align: center;
+	width:100%;
+	font-weight:bold;
+	height:25pt;
+	margin-top:10px;
 	margin-bottom:30px;
 }
 /************************/
@@ -267,4 +291,8 @@ input.menu {
 	float:left;
 	margin-left:15px;
 	margin-top:10px;
+}
+
+#type_div, #rent_div, #property_div, #other_div, #date_div, #address_div{
+	display:none;
 }
