@@ -21,7 +21,7 @@ var entrySchema = new Mongoose.Schema({
 	"type":String,
 	"value": String,
 	"selected": Number,
-	"order":Number.
+	"order":Number,
 	"group":String
 });
 
