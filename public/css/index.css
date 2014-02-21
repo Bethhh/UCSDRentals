@@ -296,3 +296,16 @@ input.menu {
 #type_div, #rent_div, #property_div, #other_div, #date_div, #address_div{
 	display:none;
 }
+
+#detailtitle {
+	color:black;
+	margin:10px;
+	padding:0px;
+	text-align:center;
+	width:250px;
+	font-weight:bold;
+}
+#contact {
+	float:right;
+
+}

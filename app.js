@@ -17,13 +17,13 @@ var about = require('./routes/about');
 var newp = require('./routes/newp');
 var matches = require('./routes/matches');
 var existing = require('./routes/existing');
+//var detailedInfo = require('./routes/detaiedInfo');
 /*var types = require('./routes/types');
 var properties = require('./routes/properties');
 var rent = require('./routes/rent');
 var address = require('./routes/address');
 var date = require('./routes/date');
 var other = require('./routes/other');
-<<<<<<< HEAD
 var tmp = require('./routes/tmp');*/
 var signup = require('./routes/signup');
 
@@ -65,6 +65,7 @@ app.get('/about', about.view);
 app.get('/newp',newp.view);
 app.get('/matches', matches.view);
 app.get('/existing', existing.view);
+app.get('/detailedInfo', matches.seeDetail);
 /*app.get('/types', types.viewForm);
 app.get('/properties', properties.viewForm);
 app.get('/rent', rent.viewForm);

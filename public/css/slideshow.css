@@ -1,0 +1,34 @@
+
+
+#mainContainer {    
+    width: 250px;
+    height: 300px;
+}
+
+#mainImage {
+    margin: auto;      
+    height: 200px;  
+}
+
+#mainImage img {
+    margin: 10px;  
+    width: 250px;
+    height: 180px; 
+}
+
+#thumbnails {
+    padding-top: 10px;
+    height: 80px;
+}
+
+.imgThumbnails {
+    margin-left: 6px;
+    height: 70px;
+    width: 70px;
+    display: inline;
+    hover: 
+}
+
+.imgThumbnails:hover {
+    cursor: pointer;
+}

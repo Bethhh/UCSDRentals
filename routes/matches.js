@@ -14,3 +14,10 @@ exports.view = function(req, res){
 		]
 	});
 };
+
+exports.seeDetail = function(req,res){
+	var data = {"img1":"http://www.gardencommunitiesca.com/Apartment-Rentals/CA/San-Diego/Costa-Verde-Village/Home/CostaVerdeVillage-7.aspx?width=400",
+	            "img2":"http://www.gardencommunitiesca.com/Apartment-Rentals/CA/San-Diego/Costa-Verde-Village/Home/CostaVerdeVillage-8.aspx?width=400",
+	            "img3":"http://www.gardencommunitiesca.com/Apartment-Rentals/CA/San-Diego/Costa-Verde-Village/Home/CostaVerdeVillage-2.aspx?width=400"};
+    res.render('detailedInfo', data);
+};
