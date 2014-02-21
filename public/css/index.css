@@ -296,7 +296,9 @@ input.menu {
 #type_div, #rent_div, #property_div, #other_div, #date_div, #address_div{
 	display:none;
 }
-
+#existing_buttons {
+    display:none;
+}
 #detailtitle {
 	color:black;
 	margin:10px;

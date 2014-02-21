@@ -33,21 +33,49 @@
   		<li class="active"><a href="/existing">Existing</a></li>
   		<li><a href="/matches">Matches</a></li>
 	</ul>
-	<div class="block" id="b1">
-		<button type="button" id="type_btn" class="btn btn-info btn-lg btn-block">Type</button>
-		<button type="button" id="date_btn" class="btn btn-info btn-lg btn-block">Date</button>
+	<div id="existing_buttons">
+		<div class="block" id="b1">
+			<button type="button" id="type_btn" class="btn btn-info btn-lg btn-block">Type</button>
+			<button type="button" id="date_btn" class="btn btn-info btn-lg btn-block">Date</button>
+		</div>
+		<div class="block" id="b1">
+			<button type="button" id="rent_btn" class="btn btn-info btn-lg btn-block">Rent</button>
+			<button type="button" id="property_btn" class="btn btn-info btn-lg btn-block">Property</button>
+		</div>
+		<div class="block" id="b1">
+			<button type="button" id="address_btn" class="btn btn-info btn-lg btn-block">Address</button>
+			<button type="button" id="other_btn" class="btn btn-info btn-lg btn-block">Other</button>
+		</div>
+		<div id="data">
+			  <button type="button" class="btn btn-primary" id="save">Expire</button>
+			  <button type="button" class="btn btn-primary" id="ss">Update</button>
+		</div>
 	</div>
-	<div class="block" id="b1">
-		<button type="button" id="rent_btn" class="btn btn-info btn-lg btn-block">Rent</button>
-		<button type="button" id="property_btn" class="btn btn-info btn-lg btn-block">Property</button>
-	</div>
-	<div class="block" id="b1">
-		<button type="button" id="address_btn" class="btn btn-info btn-lg btn-block">Address</button>
-		<button type="button" id="other_btn" class="btn btn-info btn-lg btn-block">Other</button>
-	</div>
-	<div id="data">
-		  <button type="button" class="btn btn-primary" id="save">Expire</button>
-		  <button type="button" class="btn btn-primary" id="ss">Update</button>
+	<div id="existing_list">
+		<div class="panel panel-info" id="panel-rentout">
+		  <!-- Default panel contents -->
+		  <div class="panel-heading">Rent Out Profiles</div>
+		  <!--<div class="panel-body">
+		    <p></p>
+		  </div>-->
+
+		  <!-- List group -->
+		  <ul class="list-group">
+		    <li class="list-group-item"></li>
+		  </ul>
+		</div>
+		<div class="panel panel-info" id="panel-rentin">
+		  <!-- Default panel contents -->
+		  <div class="panel-heading">Rent In Profiles</div>
+		 <!-- <div class="panel-body">
+		    <p></p>
+		  </div>-->
+
+		  <!-- List group -->
+		  <ul class="list-group">
+		    <li class="list-group-item"><a href="/detailedInfo" >Costa Verde Apartments</a></li>
+		  </ul>
+		</div>
 	</div>
 </div>
 	<script src="js/jquery-1.11.0.js"></script>
