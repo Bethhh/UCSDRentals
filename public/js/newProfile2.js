@@ -106,7 +106,7 @@
 
 
    $("#date_btn").click(function(){
-      if(date_flag++)
+      if(date_flag==0)
    	    showDiv("date_div");
       else{
         showNew();
@@ -124,7 +124,7 @@
 
   
    $("#address_btn").click(function(){
-    if(address_flag++)
+    if(address_flag==0)
    	   showDiv("address_div");
     else{
         showNew();
