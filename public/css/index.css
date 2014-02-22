@@ -253,7 +253,7 @@ h3 {
 
 
 /* save and submit? */
-button#save, button#ss {
+button#save, button#ss, button#update, button#expire {
 	width:50%;
 	float:left;
 	font-weight:bold;
@@ -310,4 +310,9 @@ input.menu {
 #contact {
 	float:right;
 
+}
+
+
+#type_div_e, #rent_div_e, #property_div_e, #other_div_e, #date_div_e, #address_div_e{
+	display:none;
 }

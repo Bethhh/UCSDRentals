@@ -35,18 +35,18 @@
 	</ul>
 	<div id="existing_buttons">
 		<div class="block" id="b1">
-			<button type="button" id="type_btn" class="btn btn-info btn-lg btn-block">Type</button>
-			<button type="button" id="date_btn" class="btn btn-info btn-lg btn-block">Date</button>
+			<button type="button" id="type_btn_e" class="btn btn-info btn-lg btn-block exist_btn">Type</button>
+			<button type="button" id="date_btn_e" class="btn btn-info btn-lg btn-block exist_btn">Date</button>
 		</div>
 		<div class="block" id="b1">
-			<button type="button" id="rent_btn" class="btn btn-info btn-lg btn-block">Rent</button>
-			<button type="button" id="property_btn" class="btn btn-info btn-lg btn-block">Property</button>
+			<button type="button" id="rent_btn_e" class="btn btn-info btn-lg btn-block exist_btn">Rent</button>
+			<button type="button" id="property_btn_e" class="btn btn-info btn-lg btn-block exist_btn">Property</button>
 		</div>
 		<div class="block" id="b1">
-			<button type="button" id="address_btn" class="btn btn-info btn-lg btn-block">Address</button>
-			<button type="button" id="other_btn" class="btn btn-info btn-lg btn-block">Other</button>
+			<button type="button" id="address_btn_e" class="btn btn-info btn-lg btn-block exist_btn">Address</button>
+			<button type="button" id="other_btn_e" class="btn btn-info btn-lg btn-block exist_btn">Other</button>
 		</div>
-		<div id="data">
+		<div id="udata">
 			  <button type="button" class="btn btn-primary" id="expire">Expire</button>
 			  <button type="button" class="btn btn-primary" id="update">Update</button>
 		</div>
@@ -77,10 +77,198 @@
 		  </ul>
 		</div>
 	</div>
+	<div id="type_div_e">
+		<form id="type_form_e" role="form" method="get" action="">
+			{{#each Types}}
+		   		<div class="form-group">		
+		   			{{#if radio}}
+		   				<label>{{label}}: </label>
+		   				{{#each options}}
+		   					<input type="radio" name="{{../label}}" value="{{this}}">{{this}}
+		   				{{/each}}
+		   			{{else}}	
+		   				{{#if dropdown}}	
+		   					<label>{{label}}: </label>	
+		   					<select name="{{label}}">		
+		   						{{#each options}}
+									<option value="{{this}}">{{this}}</option>
+								{{/each}}
+							</select>
+						{{else}}
+							<label>{{label}}: </label>	
+		   					{{#each options}}
+		   						<input type="checkbox" name="{{label}}" value="{{this}}">{{this}}<br>
+		   					{{/each}}
+						{{/if}}
+		   			{{/if}}
+		    	</div>
+		    {{/each}}
+	    	<input type="submit" id="type_back_e" value="Back" class="submit_e">
+			<input type="submit" id="type_update_e" value="Update" class="submit_e">
+		</form>
+	</div>
+    <div id="rent_div_e">
+		<form id="rent_form_e" role="form" method="get" action="">
+			{{#each Rent}}
+		   		<div class="form-group">		
+		   			{{#if radio}}
+		   				<label>{{label}}: </label>
+		   				{{#each options}}
+		   					<input type="radio" name="{{label}}" value="{{this}}">{{this}}
+		   				{{/each}}
+		   			{{else}}	
+		   				{{#if dropdown}}	
+		   					<label>{{label}}: </label>	
+		   					<select name="{{label}}">		
+		   						{{#each options}}
+									<option value="{{this}}">{{this}}</option>
+								{{/each}}
+							</select>
+						{{else}}
+							<label>{{label}}: </label>	
+		   					{{#each options}}
+		   						<input type="checkbox" name="{{label}}" value="{{this}}">{{this}}<br>
+		   					{{/each}}
+						{{/if}}
+		   			{{/if}}
+		    	</div>
+		    {{/each}}
+		    <input type="submit" id="rent_back_e" value="Back" class="submit_e">
+			<input type="submit" id="rent_update_e" value="Update" class="submit_e">
+		</form>
+    </div>
+
+    <div id="address_div_e">
+		<form id="address_form" role="form" method="get" action="">
+			{{#each Address}}
+		   		<div class="form-group">		
+		   			{{#if radio}}
+		   				<label>{{label}}: </label>
+		   				{{#each options}}
+		   					<input type="radio" name="{{label}}" value="{{this}}">{{this}}
+		   				{{/each}}
+		   			{{else}}	
+		   				{{#if dropdown}}	
+		   					<label>{{label}}: </label>	
+		   					<select name="{{label}}">		
+		   						{{#each options}}
+									<option value="{{this}}">{{this}}</option>
+								{{/each}}
+							</select>
+						{{else}}
+							<label>{{label}}: </label>	
+		   					{{#each options}}
+		   						<input type="checkbox" name="{{label}}" value="{{this}}">{{this}}<br>
+		   					{{/each}}
+						{{/if}}
+		   			{{/if}}
+		    	</div>
+		    {{/each}}
+		    <input type="submit" id="address_back_e" value="Back" class="submit_e">
+			<input type="submit" id="address_update_e" value="Update" class="submit_e">
+		</form>
+    </div>
+
+    <div id="date_div_e">
+		<form id="date_form_e" role="form" method="get" action="">
+			{{#each Date}}
+		   		<div class="form-group">		
+		   			{{#if radio}}
+		   				<label>{{label}}: </label>
+		   				{{#each options}}
+		   					<input type="radio" name="{{label}}" value="{{this}}">{{this}}
+		   				{{/each}}
+		   			{{else}}	
+		   				{{#if dropdown}}	
+		   					<label>{{label}}: </label>	
+		   					<select name="{{label}}">		
+		   						{{#each options}}
+									<option value="{{this}}">{{this}}</option>
+								{{/each}}
+							</select>
+						{{else}}
+							<label>{{label}}: </label>	
+		   					{{#each options}}
+		   						<input type="checkbox" name="{{label}}" value="{{this}}">{{this}}<br>
+		   					{{/each}}
+						{{/if}}
+		   			{{/if}}
+		    	</div>
+		    {{/each}}
+		    <input type="submit" id="date_back_e" value="Back" class="submit_e">
+			<input type="submit" id="date_update_e" value="Update" class="submit_e">
+		</form>
+    </div>
+
+    <div id="property_div_e">
+		<form id="property_form_e" role="form" method="get" action="">
+			{{#each Property}}
+		   		<div class="form-group">		
+		   			{{#if radio}}
+		   				<label>{{label}}: </label>
+		   				{{#each options}}
+		   					<input type="radio" name="{{label}}" value="{{this}}">{{this}}
+		   				{{/each}}
+		   			{{else}}	
+		   				{{#if dropdown}}	
+		   					<label>{{label}}: </label>	
+		   					<select name="{{label}}">		
+		   						{{#each options}}
+									<option value="{{this}}">{{this}}</option>
+								{{/each}}
+							</select>
+						{{else}}
+							<label>{{label}}: </label>	
+		   					{{#each options}}
+		   						<input type="checkbox" name="{{label}}" value="{{this}}">{{this}}<br>
+		   					{{/each}}
+						{{/if}}
+		   			{{/if}}
+		    	</div>
+		    {{/each}}
+		    <input type="submit" id="property_back_e" value="Back" class="submit_e">
+			<input type="submit" id="property_update_e" value="Update" class="update_e">
+		</form>
+
+    </div>
+
+    <div id="other_div_e">
+		<form id="other_form_e" role="form" method="get" action="">
+			{{#each Other}}
+		   		<div class="form-group">		
+		   			{{#if radio}}
+		   				<label>{{label}}: </label>
+		   				{{#each options}}
+		   					<input type="radio" name="{{label}}" value="{{this}}">{{this}}
+		   				{{/each}}
+		   			{{else}}	
+		   				{{#if dropdown}}	
+		   					<label>{{label}}: </label>	
+		   					<select name="{{label}}">		
+		   						{{#each options}}
+									<option value="{{this}}">{{this}}</option>
+								{{/each}}
+							</select>
+						{{else}}
+							<label>{{label}}: </label>	
+		   					{{#each options}}
+		   						<input type="checkbox" name="{{label}}" value="{{this}}">{{this}}<br>
+		   					{{/each}}
+						{{/if}}
+		   			{{/if}}
+		    	</div>
+			{{/each}}
+	    	<input type="submit" id="other_back_e" value="Back" class="submit_e">
+			<input type="submit" id="other_update_e" value="Update" class="submit_e">
+		</form>
+
+    </div>
 </div>
 	<script src="js/jquery-1.11.0.js"></script>
 	<script src="js/bootstrap.js"></script>
 	<script src="js/ucsdrentals.js"></script>
+	<script src="js/update_form.js"></script>
+	<script src="js/existingProfile.js"></script>
 
 </body>
 </html>
