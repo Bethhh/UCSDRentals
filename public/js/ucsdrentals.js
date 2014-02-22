@@ -65,6 +65,7 @@ function signupValidation(){
 		errors[errors.length] = "Please confirm you input the same password!";
 	}else {
 		window.location = "/menu";
+		//return true;
 	}
 
 	var msg = "";
@@ -154,33 +155,6 @@ function grabTypeForm(){
 	
 }
 
-$("#type_btn").click(function() {
-	//window.location='../types';
-})
-
-$("#property_btn").click(function() {
-	//window.location='../properties';
-})
-
-$("#rent_btn").click(function() {
-	//window.location='../rent';
-})
-
-$("#address_btn").click(function() {
-	//window.location='../address';
-})
-
-$("#date_btn").click(function() {
-	//window.location='../date';
-})
-
-$("#other_btn").click(function() {
-	//window.location='../other';
-})
-
-//$(".submit").click(function(){
-//	window.location="../newProfile";
-//})
 
 
 
@@ -191,7 +165,7 @@ $("#contact").click(function(){
 });
 
 $("#detail_back").click(function(){
-	window_location = '../matches';
+	window.location = '../matches';
 
 
 });
@@ -207,7 +181,8 @@ $(".listItems").click(function(){
 	  d.style.display = 'none';
 });
 
-$("#update").click(function(){
+$("#update").click(function(f){
+	  f.preventDefault();`
       var e = document.getElementById("existing_buttons");
 	  e.style.display = 'none'; 
 	  var e = document.getElementById("existing_list");
