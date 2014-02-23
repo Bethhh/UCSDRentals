@@ -67,7 +67,7 @@ function submit_form_other(e){
 }
 function submit_form_date(e){
   e.preventDefault();
-  $.get("/submit_type/Date", submit_type);
+  $.get("/submit_type/Dates", submit_type);
   $("#date_btn").removeClass("btn-danger");
   $("#date_btn").addClass("btn-success");
 }

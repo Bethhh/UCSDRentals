@@ -112,3 +112,54 @@
     alert("You have to enter all the information to submit!\n Or you can click Save!");
   }
 });*/
+
+$(".listItems").click(function(){
+    var e = document.getElementById("existing_buttons");
+    e.style.display = 'block'; 
+    var d = document.getElementById("existing_list");
+    d.style.display = 'none';
+
+    //fake
+    //should grab what is clicked and search in database
+    $.get("/update_type/display", updateForm);
+});
+
+function updateForm(result){
+  console.log(result);
+  console.log(result["Types"][0].value);
+  console.log(result["Other"][4].value);
+  //var e = document.getElementById("type_form_e").elements["Listing Type"];
+  //for(var i=0; i<e.length;i++){
+   // if(e[i].value == "Single"){
+   //   e[i].checked = true;
+  //  }
+  //}
+  var array = ["Types","Property","Rent","Address","Other","Dates"];
+  var array2 = ["type_form_e","property_form_e","rent_form_e","address_form_e","other_form_e","date_form_e"];
+  //type_form_e
+  for(var i = 0; i < 6; i++){
+    var elem = result[array[i]];
+    var formName = array2[i];
+    for(var j = 0; j < elem.length;j++){
+      fe = document.getElementById(formName).elements[elem[j].label];
+      
+        
+      if(elem[j].type == "radio"){
+        for(var k = 0; k < fe.length; k++){
+          if(fe[k].value == elem[j].value){
+            fe[k].checked = true;
+            break;
+          }
+        }
+      }
+      else if(elem[j].type == "dropdown"){
+        for(var k = 0; k < fe.options.length; k++){
+          if(fe.options[k].value == elem[j].value){
+            fe.options[k].selected = true;
+            break;
+          } 
+        }
+      }
+    }
+  }
+}

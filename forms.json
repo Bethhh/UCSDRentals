@@ -157,7 +157,7 @@
 	"Address":[
 		{
 			"label": "Area",
-			"options":["UTC", "Costa Verde", "La Jolla International Graden", "Norbel Court", "Regentes Court"],
+			"options":["UTC", "Costa Verde", "La Jolla International Graden", "Nobel Court", "Regents Court"],
 			"dropdown": 1,
 			"radio": 0
 		},
@@ -213,7 +213,7 @@
 		}
 	],
 
-	"Date": [
+	"Dates": [
 		{
 			"label": "Length",
 			"options":["Summer","Quarter","Year"],

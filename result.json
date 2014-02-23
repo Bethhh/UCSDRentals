@@ -223,20 +223,20 @@
 		}
 	],
 
-	"Date": [
+	"Dates": [
 		{
 			"label":"Length",
 			"type":"dropdown",
 			"value":"",
 			"selected": 0,
-			"group":"Date"		
+			"group":"Dates"		
 		},
 		{
 			"label":"Lease",
 			"type":"radio",
 			"value":"",
 			"selected": 0,
-			"group":"Date"			
+			"group":"Dates"			
 		}
 	]
 }

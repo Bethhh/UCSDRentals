@@ -67,7 +67,7 @@ function submit_form_other(e){
 }
 function submit_form_date(e){
   e.preventDefault();
-  $.get("/submit_type/Date", submit_type);
+  $.get("/submit_type/Dates", submit_type);
   $("#date_btn").removeClass("btn-danger");
   $("#date_btn").addClass("btn-success");
 }
@@ -147,7 +147,13 @@ function submitDone(result){
   if(result == "unfinished"){
     alert("You have to enter all the information to submit!\n Or you can click Save!");
   }else{
+    //$.get("/submit_type/submit/matches", submitMatches);
     alert("There are Matches!!!");
     window.location="../matches";
   }
+}
+
+function submitMatches(result){
+    alert("There are Matches!!!");
+    window.location="../matches";
 }

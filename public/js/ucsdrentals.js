@@ -174,12 +174,7 @@ $(".m").click(function(){
     window.location = '../matches';
 });
 
-$(".listItems").click(function(){
-	  var e = document.getElementById("existing_buttons");
-	  e.style.display = 'block'; 
-	  var d = document.getElementById("existing_list");
-	  d.style.display = 'none';
-});
+
 
 $("#update").click(function(f){
 	  f.preventDefault();

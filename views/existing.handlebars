@@ -74,6 +74,7 @@
 		  <!-- List group -->
 		  <ul class="list-group">
 		    <li class="list-group-item" ><span class="listItems">Costa Verde Apartments</span><button class="m">Matches</button></li>
+		    <li class="list-group-item" ><span class="listItems">Nobel Court</span><button class="m">Matches</button></li>
 		  </ul>
 		</div>
 	</div>
@@ -97,7 +98,7 @@
 						{{else}}
 							<label>{{label}}: </label>	
 		   					{{#each options}}
-		   						<input type="checkbox" name="{{label}}" value="{{this}}">{{this}}<br>
+		   						<input type="checkbox" name="{{../label}}" value="{{this}}">{{this}}<br>
 		   					{{/each}}
 						{{/if}}
 		   			{{/if}}
@@ -114,7 +115,7 @@
 		   			{{#if radio}}
 		   				<label>{{label}}: </label>
 		   				{{#each options}}
-		   					<input type="radio" name="{{label}}" value="{{this}}">{{this}}
+		   					<input type="radio" name="{{../label}}" value="{{this}}">{{this}}
 		   				{{/each}}
 		   			{{else}}	
 		   				{{#if dropdown}}	
@@ -127,7 +128,7 @@
 						{{else}}
 							<label>{{label}}: </label>	
 		   					{{#each options}}
-		   						<input type="checkbox" name="{{label}}" value="{{this}}">{{this}}<br>
+		   						<input type="checkbox" name="{{../label}}" value="{{this}}">{{this}}<br>
 		   					{{/each}}
 						{{/if}}
 		   			{{/if}}
@@ -139,13 +140,13 @@
     </div>
 
     <div id="address_div_e">
-		<form id="address_form" role="form" method="get" action="">
+		<form id="address_form_e" role="form" method="get" action="">
 			{{#each Address}}
 		   		<div class="form-group">		
 		   			{{#if radio}}
 		   				<label>{{label}}: </label>
 		   				{{#each options}}
-		   					<input type="radio" name="{{label}}" value="{{this}}">{{this}}
+		   					<input type="radio" name="{{../label}}" value="{{this}}">{{this}}
 		   				{{/each}}
 		   			{{else}}	
 		   				{{#if dropdown}}	
@@ -158,7 +159,7 @@
 						{{else}}
 							<label>{{label}}: </label>	
 		   					{{#each options}}
-		   						<input type="checkbox" name="{{label}}" value="{{this}}">{{this}}<br>
+		   						<input type="checkbox" name="{{../label}}" value="{{this}}">{{this}}<br>
 		   					{{/each}}
 						{{/if}}
 		   			{{/if}}
@@ -171,12 +172,12 @@
 
     <div id="date_div_e">
 		<form id="date_form_e" role="form" method="get" action="">
-			{{#each Date}}
+			{{#each Dates}}
 		   		<div class="form-group">		
 		   			{{#if radio}}
 		   				<label>{{label}}: </label>
 		   				{{#each options}}
-		   					<input type="radio" name="{{label}}" value="{{this}}">{{this}}
+		   					<input type="radio" name="{{../label}}" value="{{this}}">{{this}}
 		   				{{/each}}
 		   			{{else}}	
 		   				{{#if dropdown}}	
@@ -189,7 +190,7 @@
 						{{else}}
 							<label>{{label}}: </label>	
 		   					{{#each options}}
-		   						<input type="checkbox" name="{{label}}" value="{{this}}">{{this}}<br>
+		   						<input type="checkbox" name="{{../label}}" value="{{this}}">{{this}}<br>
 		   					{{/each}}
 						{{/if}}
 		   			{{/if}}
@@ -207,7 +208,7 @@
 		   			{{#if radio}}
 		   				<label>{{label}}: </label>
 		   				{{#each options}}
-		   					<input type="radio" name="{{label}}" value="{{this}}">{{this}}
+		   					<input type="radio" name="{{../label}}" value="{{this}}">{{this}}
 		   				{{/each}}
 		   			{{else}}	
 		   				{{#if dropdown}}	
@@ -220,7 +221,7 @@
 						{{else}}
 							<label>{{label}}: </label>	
 		   					{{#each options}}
-		   						<input type="checkbox" name="{{label}}" value="{{this}}">{{this}}<br>
+		   						<input type="checkbox" name="{{../label}}" value="{{this}}">{{this}}<br>
 		   					{{/each}}
 						{{/if}}
 		   			{{/if}}
@@ -239,7 +240,7 @@
 		   			{{#if radio}}
 		   				<label>{{label}}: </label>
 		   				{{#each options}}
-		   					<input type="radio" name="{{label}}" value="{{this}}">{{this}}
+		   					<input type="radio" name="{{../label}}" value="{{this}}">{{this}}
 		   				{{/each}}
 		   			{{else}}	
 		   				{{#if dropdown}}	
@@ -252,7 +253,7 @@
 						{{else}}
 							<label>{{label}}: </label>	
 		   					{{#each options}}
-		   						<input type="checkbox" name="{{label}}" value="{{this}}">{{this}}<br>
+		   						<input type="checkbox" name="{{../label}}" value="{{this}}">{{this}}<br>
 		   					{{/each}}
 						{{/if}}
 		   			{{/if}}

@@ -45,8 +45,6 @@ var profileSchema = new Mongoose.Schema({
 	"Dates":[entrySchema],
 	"DatesDone":Boolean,
 
-	"Dones":[Number],
-	"Done":Number,
 	"User":{type:Schema.ObjectId, ref:'User'}
 });
 

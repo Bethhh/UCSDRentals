@@ -32,7 +32,7 @@ exports.save = function(req, res){
   //var json = req.body;
   console.log(req.body);
 
-	  var form_data = req.body;
+  var form_data = req.body;
   var newEntry = new models.Entry({
       "label":form_data["label"],
       "type": form_data["type"],
@@ -54,7 +54,7 @@ exports.save = function(req, res){
     case "Other":
       profile.Other.push(newEntry);
       break;
-    case "Date":
+    case "Dates":
       profile.Dates.push(newEntry);
       break;
     case "Address":
@@ -82,7 +82,7 @@ exports.done = function(req,res){
     case "Other":
       profile.OtherDone = true;
       break;
-    case "Date":
+    case "Dates":
       profile.DatesDone = true;
       break;
     case "Address":
