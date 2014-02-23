@@ -109,10 +109,15 @@ function submit_type(result){
 
     //type_data = copy_result;
   }
+  console.log("copy");
+  console.log("copy"+copy_result[0].group);
   console.log(copy_result);
   //
  // $.get("/writeTypes", writeTypes);
-  $.post("/submit_type/"+copy_result[0].group+"/save", copy_result, saveTypes);
+  for( var k = 0; k < copy_result.length; k++){
+    $.post("/submit_type/save/"+copy_result[0].group, copy_result[k], saveTypes);
+  }
+  $.get("submit_type/done/" + copy_result[0].group, saveTypes);
 
 }
 
@@ -124,3 +129,25 @@ function saveTypes(result){
 /*function writeTypes(result){
 
 }*/
+
+$("#ss").click(function(){
+  $.get("/submit_type/submit/submit", submitDone);
+  //if(type_flag && rent_flag && other_flag && property_flag && address_flag && date_flag){
+
+    //alert("There are Matches!!!");
+    //window.location="../matches";
+  //}else{
+    //alert("You have to enter all the information to submit!\n Or you can click Save!");
+  //}
+});
+
+function submitDone(result){
+  console.log("log");
+  console.log(result);
+  if(result == "unfinished"){
+    alert("You have to enter all the information to submit!\n Or you can click Save!");
+  }else{
+    alert("There are Matches!!!");
+    window.location="../matches";
+  }
+}
