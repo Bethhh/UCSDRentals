@@ -5,35 +5,32 @@
 		"preferred": "Sky",
 		"email": "1@ucsd.edu",
 		"pwd": "12345678",
-		"major": "CS",
-		"rentout": [],
-		"rentin": [],
-		"age": "100",
+		"major": "Engineering",
+		"age": "21",
 		"phone": "00000000",
-		"photo": ""
+		"photo": "",
+		"Profiles":[]
 	},
 	{
 		"name": "Beth Yue Shi",
 		"preferred": "Beth",
 		"email": "yus017@ucsd.edu",
 		"pwd":"87654321",
-		"major": "CS",
-		"rentout": [],
-		"rentin": [],
-		"age": "100",
+		"major": "Engineering",
+		"age": "21",
 		"phone": "11111111",
-		"photo": ""
+		"photo": "",
+		"Profiles":[]
 	},
 	{
 		"name": "Joy Liao",
 		"preferred": "Joy",
 		"email": "joliao@ucsd.edu",
 		"pwd":"password",
-		"major": "CS",
-		"rentout": [],
-		"rentin": [],
+		"major": "Engineering",
 		"age": "100",
 		"phone": "22222222",
-		"photo": ""
+		"photo": "",
+		"Profiles":[]
 	}
 ]

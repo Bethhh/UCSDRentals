@@ -14,6 +14,7 @@ var index = require('./routes/index');
 var add =  require('./routes/add');
 var menu = require('./routes/menu');
 var about = require('./routes/about');
+var login = require('./routes/login');
 //var newProfile = require('./routes/newProfile');
 var newp = require('./routes/newp');
 var matches = require('./routes/matches');
@@ -60,7 +61,7 @@ if ('development' == app.get('env')) {
 // Add routes here
 app.get('/', index.view);
 app.get('/add', add.addFriend);
-app.get('/menu', menu.view);
+app.get('/menu/:id', menu.view);
 app.get('/about', about.view);
 //app.get('/newProfile', newProfile.view);
 app.get('/newp',newp.view);
@@ -69,6 +70,7 @@ app.get('/existing', existing.view);
 app.get('/detailedInfo', matches.seeDetail);
 app.get('/signup',signup.view);
 
+app.post('/login', login.log_in_check);
 app.get('/user', user.userInfo);
 app.post('/submit_type/save/:name', submit_type.save);
 app.get('/submit_type/done/:name', submit_type.done);

@@ -14,7 +14,8 @@
 <div class="container" >
 	<h1 id="appname">UCSD Rentals</h1>
 	<!-- onsubmit="return validateInfo();" -->
-	<form id="login" role="form" method="get" action="/menu" onsubmit="return validateInfo();">
+	<!--<form id="login" role="form" method="get" action="/menu" onsubmit="return validateInfo();">-->
+	<form id="login" role="form" method="post" action="Javascript:validateUser()">
 	    <div class="form-group">
 	      <label class="email_label" for="email">Your UCSD Email:</label>
 	      <input type="text" class="form-control" id="email" placeholder="Example@ucsd.edu" name="email">

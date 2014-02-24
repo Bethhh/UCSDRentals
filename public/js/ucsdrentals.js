@@ -1,3 +1,23 @@
+function validateUser(){//originally use action="/login" method="post", successfully get the form data and to req.body, but no callback to call alert
+	var email = document.getElementById('email').value;
+	var password = document.getElementById('password').value;
+	var json = { "email":email, "password":password };
+	$.post('/login', json, checkLogIn);
+}
+function checkLogIn(result){
+	var errorMsgs = ["nopwd","invalidemail","noaccount","wrongpwd"];
+	if(result == errorMsgs[0]){
+		alert("Please enter a password!");
+	}else if(result == errorMsgs[1]){
+		alert("Please enter a valid UCSD email address!");
+	}else if(result == errorMsgs[2]){
+		alert("Your account does not exist!\n Please sign up!");
+	}else if(result == errorMsgs[3]){
+		alert("Your password is incorrect!\n Please reenter your password!");
+	}else{
+		window.location='/menu/'+result;
+	}
+}
 
 
 function validateInfo()
@@ -27,27 +47,6 @@ function validateInfo()
  		return false;
  	}
  	
-    //$.get("/user", login);
-
-
-  /*  function login(result){
-   	 alert("haha");
-     return false;
-   }*/
-
-
-   //////////////////////////////check user
-   //$.post("/user", {"email": email.value, "pwd":password.value}, login );
-
-
-
-
-  /*function afterQuery(err, users) {
-    if(err) console.log(err);
-    console.log(users[0]);
-    //res.json(projects[0]);
-    window.location='/menu';
-  }*/
 }
 
 function signupValidation(){
@@ -79,37 +78,7 @@ function signupValidation(){
  		return false;
  	}
 }
-/*
-function login(result){
-	var email = document.getElementById('email');
 
-	var password = document.getElementById('password');
- 		var users  = result;
- 		var errorMsg;
-	 	for(var j = 0; j < users.length; j++){
-	      if(users[j]['email'] == email.value && users[j]['pwd']!=passworifd.value){
-	      	errorMsg = "Your password is wrong!";
-	        return false;
-	      }
-	      else if(users[j]['email'] == email.value && users[j]['pwd']==password.value){
-	      	window.location='/menu';
-	        return true;
-	      }
-	    }
-	    errorMsg = "User does not exist!";
-	    alert(errorMsg);
- 		return false;
-
- 	}
- 	*/
-//action="/menu"onsubmit="return validateInfo();">
-/*
-$("#login_btn").click(function() {
-  if (validateInfo()){
-  	window.location='/menu';
-  }
-});
-*/
 
 $("#signup").click(function() {
   //console.log("should gogogogo");
