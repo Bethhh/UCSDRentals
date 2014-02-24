@@ -61,7 +61,7 @@ if ('development' == app.get('env')) {
 // Add routes here
 app.get('/', index.view);
 app.get('/add', add.addFriend);
-app.get('/menu/:id', menu.view);
+app.get('/menu', menu.view);
 app.get('/about', about.view);
 //app.get('/newProfile', newProfile.view);
 app.get('/newp',newp.view);

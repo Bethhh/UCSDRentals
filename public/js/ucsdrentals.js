@@ -4,6 +4,7 @@ function validateUser(){//originally use action="/login" method="post", successf
 	var json = { "email":email, "password":password };
 	$.post('/login', json, checkLogIn);
 }
+
 function checkLogIn(result){
 	var errorMsgs = ["nopwd","invalidemail","noaccount","wrongpwd"];
 	if(result == errorMsgs[0]){
@@ -15,11 +16,11 @@ function checkLogIn(result){
 	}else if(result == errorMsgs[3]){
 		alert("Your password is incorrect!\n Please reenter your password!");
 	}else{
-		window.location='/menu/'+result;
+		window.location='/menu';///'+result;
 	}
 }
 
-
+/*
 function validateInfo()
 {
  	var email = document.getElementById('email');
@@ -47,7 +48,7 @@ function validateInfo()
  		return false;
  	}
  	
-}
+}*/
 
 function signupValidation(){
 	var email = document.getElementById('emaill');
@@ -64,8 +65,8 @@ function signupValidation(){
 		errors[errors.length] = "Please confirm you input the same password!";
 	}else {
 		window.location = "/menu";
-		//return true;
-	}
+	}		//return true;
+
 
 	var msg = "";
  	if (errors.length > 0){
