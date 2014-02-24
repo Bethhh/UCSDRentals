@@ -7,7 +7,8 @@ profile.RentDone = false;
 profile.PropertyDone = false;
 profile.OtherDone = false;
 profile.AddressDone = false;
-//need to add user and renttype
+//need to add  renttype
+
 
 exports.submitForm = function(req, res) {  
 	// Your code goes here
@@ -27,12 +28,23 @@ exports.submitForm = function(req, res) {
 	//console.log(result);
 	res.json(result[req.params.name]);
 }*/
-
+//function to save each entry of a block
 exports.save = function(req, res){
   //var json = req.body;
   console.log(req.body);
+  console.log("user");
+  //console.log(profile.User.type);
+  //console.log(profile.User['type']);
+  if(profile.User == undefined){
+  	profile.User = req.session._id;
+  	console.log("userId="+profile.User);
+  }
 
   var form_data = req.body;
+  if(form_data["label"]=="Profile Type"){
+  	profile.RentType = form_data["value"];
+  	console.log(profile.RentType);
+  }
   var newEntry = new models.Entry({
       "label":form_data["label"],
       "type": form_data["type"],
@@ -67,6 +79,7 @@ exports.save = function(req, res){
   }
   res.send(200);
 }
+//function to do done (finish one block?)
 exports.done = function(req,res){
   console.log("I am here"+ req.params.name);
   switch(req.params.name){
@@ -95,15 +108,39 @@ exports.done = function(req,res){
   }
   res.send(200);
 }
+
+//function to submit whole form
 exports.submit = function(req,res){
+
 	console.log("insubmit");
+	console.log(req.session._id);
 	if(profile.TypesDone && profile.DatesDone && profile.OtherDone 
 	&& profile.RentDone && profile.PropertyDone && profile.AddressDone){
+		
 		profile.save(afterSaving);
 		function afterSaving(err){
           if(err){console.log(err); res.send(500);}
-          console.log("success");
-          res.send();
+          models.User
+			  .find({"_id": req.session._id})
+	    	  .sort()
+	    	  .exec(saveUserInfo);
+
+	    	function saveUserInfo(err, users){
+	    		if(err) console.log(err);
+	    		
+	    		if(users[0] == undefined){//not found user
+	          		res.send("impossible");//impossible
+	    		}else{
+	    			users[0].Profiles.push(profile._id);
+	    			console.log(users[0].Profiles);
+	            	//res.send();
+	            	console.log("isHERE" + users);
+	            	console.log("success");
+          			console.log(profile);
+          			res.send();
+	    	    }
+	    	}
+
 		}
 	}else{
 		res.send("unfinished");

@@ -1,6 +1,13 @@
 [{
 	"Types": [
 		{
+			"label":"Profile Type",
+			"type":"radio",
+			"value":"Rent Out",
+			"selected":1,
+			"group":"Types"
+		},
+		{
 			"label": "Listing Type",
 			"type":"radio",
 			"value": "Single",
@@ -242,6 +249,13 @@
   },
   {
 	"Types": [
+		{
+			"label":"Profile Type",
+			"type":"radio",
+			"value":"Rent In",
+			"selected":1,
+			"group":"Types"
+		},
 		{
 			"label": "Listing Type",
 			"type":"radio",

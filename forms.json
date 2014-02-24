@@ -1,6 +1,13 @@
 {
 	"Types": [
 		{
+			"label":"Profile Type",
+			"options":["Rent Out","Rent In"],
+			"dropdown": 0,
+			"radio":1,
+			"help":""
+		},
+		{
 			"label": "Listing Type",
 			"options": ["Single", "Shared"],
 			"dropdown":	0,

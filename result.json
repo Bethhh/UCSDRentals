@@ -1,6 +1,13 @@
 {
 	"Types": [
 		{
+			"label":"Profile Type",
+			"type":"radio",
+			"value": "",
+			"selected": 0,
+			"group":"Types"
+		},
+		{
 			"label": "Listing Type",
 			"type":"radio",
 			"value": "",

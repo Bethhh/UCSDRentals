@@ -35,6 +35,9 @@ exports.log_in_check = function(req,res){
             res.send(error);
     	  }else{
     	  	error = users[0]._id;
+    	  	req.session._id = error;
+    	  	console.log("id");
+    	  	console.log(req.session._id);
     	  	res.send(error);
     	  }
     	}
