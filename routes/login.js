@@ -24,7 +24,8 @@ exports.log_in_check = function(req,res){
 
     function checkUser(err, users){
     	if(err) console.log(err);
-    	if(!users){//not found user
+    	console.log("isHERE" + users);
+    	if(users[0] == undefined){//not found user
           error = errorMsgs[2];
           res.send(error);
     	}else{
