@@ -1,3 +1,33 @@
+$(document).ready(function() {
+  initializePage2();
+})
+
+function initializePage2(){
+  $.get('/update_list/Out', afterUpdateOut);
+}
+
+function clickList(id){
+    var e = document.getElementById("existing_buttons");
+    e.style.display = 'block'; 
+    var d = document.getElementById("existing_list");
+    d.style.display = 'none';
+    //console.log(this.innerHTML);
+    //fake
+    //should grab what is clicked and search in database
+
+    $.get("/update_type/display/"+id, updateForm);
+}
+
+function afterUpdateOut(result){
+    var e = document.getElementById("listRentOut");
+    e.innerHTML = "";
+    result= $.parseJSON(result.lists);
+    for(var i= 0; i<result.length; i++){
+      e.innerHTML = e.innerHTML+"<li class='list-group-item' ><button onclick='clickList(\""+result[i]+"\")' class='btn btn-default listItems'>"+
+                    result[i]+"</button><button class='m'>Matches</button></li>";
+    }
+}
+
 
    $(".exist_btn").click(hideEx);
   
@@ -113,16 +143,18 @@
   }
 });*/
 
-$(".listItems").click(function(){
+/*$(".listItems").click(function(){
     var e = document.getElementById("existing_buttons");
     e.style.display = 'block'; 
     var d = document.getElementById("existing_list");
     d.style.display = 'none';
-
+    console.log(this.innerHTML);
     //fake
     //should grab what is clicked and search in database
-    $.get("/update_type/display", updateForm);
-});
+
+    $.get("/update_type/display", updateForm);*/
+
+
 
 function updateForm(result){
   console.log(result);

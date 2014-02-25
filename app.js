@@ -22,6 +22,7 @@ var existing = require('./routes/existing');
 var signup = require('./routes/signup');
 var submit_type = require('./routes/submit_type');
 var update_type = require('./routes/update_type');
+var update_list = require('./routes/update_list');
 var user = require('./routes/user');
 // Example route
 // var user = require('./routes/user');
@@ -77,7 +78,9 @@ app.get('/submit_type/done/:name', submit_type.done);
 app.get('/submit_type/:name', submit_type.submitForm);
 app.get('/submit_type/submit/submit', submit_type.submit);
 
-app.get('/update_type/display', update_type.displayProfile);
+app.get('/update_type/display/:id', update_type.displayProfile);
+app.get('/update_list/Out', update_list.updateOut);
+app.get('/update_list/In',update_list.updateIn);
 // Example route
 // app.get('/users', user.list);
 

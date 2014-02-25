@@ -7,7 +7,7 @@ profile.RentDone = false;
 profile.PropertyDone = false;
 profile.OtherDone = false;
 profile.AddressDone = false;
-//need to add  renttype
+
 
 
 exports.submitForm = function(req, res) {  
@@ -119,9 +119,9 @@ exports.submit = function(req,res){
 		
 		profile.save(afterSaving);
 		function afterSaving(err){
-          if(err){console.log(err); res.send(500);}
-          models.User
-			  .find({"_id": req.session._id})
+        if(err){console.log(err); res.send(500);}
+        models.User
+			    .find({"_id": req.session._id})
 	    	  .sort()
 	    	  .exec(saveUserInfo);
 
@@ -131,14 +131,27 @@ exports.submit = function(req,res){
 	    		if(users[0] == undefined){//not found user
 	          		res.send("impossible");//impossible
 	    		}else{
+            console.log("isHERE" + users);
+            console.log(profile._id);
 	    			users[0].Profiles.push(profile._id);
+            users[0].save();
 	    			console.log(users[0].Profiles);
 	            	//res.send();
-	            	console.log("isHERE" + users);
-	            	console.log("success");
-          			console.log(profile);
-          			res.send();
-	    	    }
+	            	
+          	console.log("success");
+      			console.log(profile._id);
+            console.log("isHERE" + users);
+
+            profile = new models.Profile();
+
+            profile.TypesDone = false;
+            profile.DatesDone = false;
+            profile.RentDone = false;
+            profile.PropertyDone = false;
+            profile.OtherDone = false;
+            profile.AddressDone = false;
+      			res.send();
+	    	  }
 	    	}
 
 		}
