@@ -79,8 +79,7 @@ app.get('/submit_type/:name', submit_type.submitForm);
 app.get('/submit_type/submit/submit', submit_type.submit);
 
 app.get('/update_type/display/:id', update_type.displayProfile);
-app.get('/update_list/Out', update_list.updateOut);
-app.get('/update_list/In',update_list.updateIn);
+app.get('/update_list/:type', update_list.update);
 // Example route
 // app.get('/users', user.list);
 

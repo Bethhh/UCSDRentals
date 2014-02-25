@@ -3,7 +3,8 @@ $(document).ready(function() {
 })
 
 function initializePage2(){
-  $.get('/update_list/Out', afterUpdateOut);
+  $.get('/update_list/RentOut', afterUpdateOut);
+  $.get('/update_list/RentIn', afterUpdateIn);
 }
 
 function clickList(id){
@@ -22,9 +23,27 @@ function afterUpdateOut(result){
     var e = document.getElementById("listRentOut");
     e.innerHTML = "";
     result= $.parseJSON(result.lists);
-    for(var i= 0; i<result.length; i++){
-      e.innerHTML = e.innerHTML+"<li class='list-group-item' ><button onclick='clickList(\""+result[i]+"\")' class='btn btn-default listItems'>"+
-                    result[i]+"</button><button class='m'>Matches</button></li>";
+    if(result != ""){
+      for(var i= 0; i<result.length; i++){
+        e.innerHTML = e.innerHTML+"<li class='list-group-item' ><button onclick='clickList(\""+result[i]+"\")' class='btn btn-default listItems'>"+
+                      result[i]+"</button><button class='m'>Matches</button></li>";
+      }
+    }else{
+        e.innerHTML = e.innerHTML+"<li class='list-group-item' ><span class='btn btn-default listItems'>No profiles in this category.</button></li>";
+    }
+}
+
+function afterUpdateIn(result){
+    var e = document.getElementById("listRentIn");
+    e.innerHTML = "";
+    result= $.parseJSON(result.lists);
+    if(result != ""){
+      for(var i= 0; i<result.length; i++){
+        e.innerHTML = e.innerHTML+"<li class='list-group-item' ><button onclick='clickList(\""+result[i]+"\")' class='btn btn-default listItems'>"+
+                      result[i]+"</button><button class='m'>Matches</button></li>";
+      }
+    }else{
+        e.innerHTML = e.innerHTML+"<li class='list-group-item' ><span class='btn btn-default listItems'>No profiles in this category.</button></li>";
     }
 }
 
