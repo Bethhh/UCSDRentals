@@ -18,6 +18,8 @@ var login = require('./routes/login');
 //var newProfile = require('./routes/newProfile');
 var newp = require('./routes/newp');
 var matches = require('./routes/matches');
+var detailedInfo1 = require('./routes/detailedInfo1');
+var detailedInfo2 = require('./routes/detailedInfo2');
 var existing = require('./routes/existing');
 var signup = require('./routes/signup');
 var submit_type = require('./routes/submit_type');
@@ -68,7 +70,8 @@ app.get('/about', about.view);
 app.get('/newp',newp.view);
 app.get('/matches', matches.view);
 app.get('/existing', existing.view);
-app.get('/detailedInfo', matches.seeDetail);
+app.get('/detailedInfo1', matches.seeDetail1);
+app.get('/detailedInfo2', matches.seeDetail2);
 app.get('/signup',signup.view);
 
 app.post('/login', login.log_in_check);

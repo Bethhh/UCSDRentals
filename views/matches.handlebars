@@ -48,25 +48,30 @@
 	});
 	ucsd.setMap(map);
 
-	//{{#each matches}}
+	var myMarkers = new Array();
+	var i = 0;
+	{{#each matches}}
 		var match = new google.maps.LatLng({{lat}},{{lon}});
-		var marker = new google.maps.Marker({
+		myMarkers[i] = new google.maps.Marker({
 			position:match,
 		//icon: '/icons/house.png'
 		});
-		marker.setMap(map);
+		myMarkers[i].setMap(map);
 		var msg = "{{name}}";
 		var infowindow = new google.maps.InfoWindow({
 			content:"{{name}}"
 			//icon: '/icons/house.png'
 		});
 
-		google.maps.event.addListener(marker,'click',function(){
-			infowindow.open(map,marker);
-			window.location = "../detailedInfo";
+		google.maps.event.addListener(myMarkers[i],'click',function(){
+			infowindow.open(map,myMarkers[i]);
+			window.location = "/detailedInfo1";
 		})
-		//console.log("haha");
-	//{{/each}}
+
+
+		i++;
+		console.log(i+"id is "+{{id}});
+	{{/each}}
 
 	}
 
