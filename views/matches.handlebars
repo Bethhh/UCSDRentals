@@ -49,28 +49,40 @@
 	ucsd.setMap(map);
 
 	var myMarkers = new Array();
+	var msg = new Array();
 	var i = 0;
 	{{#each matches}}
 		var match = new google.maps.LatLng({{lat}},{{lon}});
 		myMarkers[i] = new google.maps.Marker({
 			position:match,
+			title:"{{name}}"
 		//icon: '/icons/house.png'
 		});
 		myMarkers[i].setMap(map);
-		var msg = "{{name}}";
-		var infowindow = new google.maps.InfoWindow({
-			content:"{{name}}"
-			//icon: '/icons/house.png'
-		});
-
+			msg[i] = '<div id="content">'+
+	      '<div id="siteNotice">'+
+	      '</div>'+
+	      '<h1 id="firstHeading" class="firstHeading">{{name}}</h1>'+
+	      '<div id="bodyContent">'+
+	      '<p>Attribution: {{name}}, <a url="/detailedInfo{{id}}"></a> '+
+	      '(last visited June 22, 2009).</p>'+
+	      '</div>'+
+	      '</div>';
+		
+		
 		google.maps.event.addListener(myMarkers[i],'click',function(){
-			infowindow.open(map,myMarkers[i]);
-			window.location = "/detailedInfo1";
+			
+			var infow = new google.maps.InfoWindow({
+			content:msg[i]
+			//icon: '/icons/house.png'
+			});
+			infow.open(map,myMarkers[i]);
+			//window.location = "/detailedInfo{{id}}";
 		})
 
 
 		i++;
-		console.log(i+"id is "+{{id}});
+		console.log(i+"id is "+{{id}} + "name is {{name}}");
 	{{/each}}
 
 	}

@@ -19,6 +19,13 @@ function clickList(id){
     $.get("/update_type/display/"+id, updateForm);
 }
 
+function clickMatch(id){
+  $.get("/matches/getMatches/"+id, afterMatch);
+}
+function afterMatch(result){
+  
+}
+
 function afterUpdateOut(result){
     var e = document.getElementById("listRentOut");
     e.innerHTML = "";
@@ -26,7 +33,7 @@ function afterUpdateOut(result){
     if(result != ""){
       for(var i= 0; i<result.length; i++){
         e.innerHTML = e.innerHTML+"<li class='list-group-item' ><button onclick='clickList(\""+result[i]+"\")' class='btn btn-default listItems'>"+
-                      result[i]+"</button><button class='m'>Matches</button></li>";
+                      result[i]+"</button><button class='m' onclick='clickMatch(\""+result[i]+"\")'>Matches</button></li>";
       }
     }else{
         e.innerHTML = e.innerHTML+"<li class='list-group-item' ><span class='btn btn-default listItems'>No profiles in this category.</button></li>";
@@ -40,7 +47,7 @@ function afterUpdateIn(result){
     if(result != ""){
       for(var i= 0; i<result.length; i++){
         e.innerHTML = e.innerHTML+"<li class='list-group-item' ><button onclick='clickList(\""+result[i]+"\")' class='btn btn-default listItems'>"+
-                      result[i]+"</button><button class='m'>Matches</button></li>";
+                      result[i]+"</button><button class='m' onclick='clickMatch(\""+result[i]+"\")'>Matches</button></li>";
       }
     }else{
         e.innerHTML = e.innerHTML+"<li class='list-group-item' ><span class='btn btn-default listItems'>No profiles in this category.</button></li>";

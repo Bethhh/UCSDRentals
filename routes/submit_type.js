@@ -117,7 +117,7 @@ exports.submit = function(req,res){
 	if(profile.TypesDone && profile.DatesDone && profile.OtherDone 
 	&& profile.RentDone && profile.PropertyDone && profile.AddressDone){
 		
-		profile.save(afterSaving);
+		profile.save(afterSaving);//find match before or after
 		function afterSaving(err){
         if(err){console.log(err); res.send(500);}
         models.User

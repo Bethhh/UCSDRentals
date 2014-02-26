@@ -83,6 +83,7 @@ app.get('/submit_type/submit/submit', submit_type.submit);
 
 app.get('/update_type/display/:id', update_type.displayProfile);
 app.get('/update_list/:type', update_list.update);
+app.get('/matches/getMatches/:id', matches.getMatches);
 // Example route
 // app.get('/users', user.list);
 
