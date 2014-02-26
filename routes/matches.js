@@ -1,3 +1,5 @@
+var models = require('../models');
+
 exports.view = function(req, res){
 	res.render('matches',{
 		'matches':[
@@ -13,11 +15,36 @@ exports.view = function(req, res){
 			}	*/	
 		]
 	});
-};
+}
 
 exports.seeDetail = function(req,res){
 	var data = {"img1":"http://www.gardencommunitiesca.com/Apartment-Rentals/CA/San-Diego/Costa-Verde-Village/Home/CostaVerdeVillage-7.aspx?width=400",
 	            "img2":"http://www.gardencommunitiesca.com/Apartment-Rentals/CA/San-Diego/Costa-Verde-Village/Home/CostaVerdeVillage-8.aspx?width=400",
 	            "img3":"http://www.gardencommunitiesca.com/Apartment-Rentals/CA/San-Diego/Costa-Verde-Village/Home/CostaVerdeVillage-2.aspx?width=400"};
     res.render('detailedInfo', data);
-};
+}
+
+exports.getMatches = function(req, res){
+  var profileID = req.params.id;
+  models.Profile
+  	.find({"_id":profileID})
+  	.exec(afterFind);
+
+  	function afterFind(err, profiles){
+  		if(err){console.log(err);res.send(500);}
+  		if(profiles == undefined || profiles[0] == undefined){
+  			res.send("Impossible! The profile should exist!");
+  		}
+  		if(profiles[0].Matches.length==0){
+  			//call Match function to refind
+  			//if still no match
+            res.send("noMatch");
+  		}else{
+  			var json = "";
+  			for(var i = 0; i< profiles[0].Matches.length; i++){
+                  //build json file and send it to map
+                  //display matches
+  			}
+  		}
+  	}
+}
