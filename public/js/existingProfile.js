@@ -20,7 +20,8 @@ function clickList(id){
 }
 
 function clickMatch(id){
-  $.get("/matches/getMatches/"+id, afterMatch);
+  //$.get("/matches/getMatches/"+id, afterMatch);
+  window.location ="../matches";
 }
 function afterMatch(result){
   
