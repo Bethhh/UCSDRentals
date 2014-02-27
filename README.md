@@ -1,4 +1,4 @@
-lab7
+UCSDRentals
 ====
 
-Lab 7: Databases
+Web app used for UCSD students to easily find housing.
