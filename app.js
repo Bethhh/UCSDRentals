@@ -18,8 +18,11 @@ var login = require('./routes/login');
 //var newProfile = require('./routes/newProfile');
 var newp = require('./routes/newp');
 var matches = require('./routes/matches');
+var detailedInfo1 = require('./routes/detailedInfo1');
+var detailedInfo2 = require('./routes/detailedInfo2');
 var existing = require('./routes/existing');
 var signup = require('./routes/signup');
+var setting = require('./routes/setting');
 var submit_type = require('./routes/submit_type');
 var update_type = require('./routes/update_type');
 var update_list = require('./routes/update_list');
@@ -66,10 +69,13 @@ app.get('/menu', menu.view);
 app.get('/about', about.view);
 //app.get('/newProfile', newProfile.view);
 app.get('/newp',newp.view);
+app.get('/setting',setting.view);
 app.get('/matches', matches.view);
 app.get('/existing', existing.view);
-app.get('/detailedInfo', matches.seeDetail);
+app.get('/detailedInfo1', matches.seeDetail1);
+app.get('/detailedInfo2', matches.seeDetail2);
 app.get('/signup',signup.view);
+app.post('/login/signup', login.sign_up_check);
 
 app.post('/login', login.log_in_check);
 app.get('/user', user.userInfo);
@@ -80,6 +86,7 @@ app.get('/submit_type/submit/submit', submit_type.submit);
 
 app.get('/update_type/display/:id', update_type.displayProfile);
 app.get('/update_list/:type', update_list.update);
+app.get('/matches/getMatches/:id', matches.getMatches);
 // Example route
 // app.get('/users', user.list);
 

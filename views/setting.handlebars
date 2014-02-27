@@ -1,0 +1,35 @@
+<html>
+<head>
+	<title>UCSDRentals</title>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+
+	<link href="/css/bootstrap.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="/css/bootswatch.min.css">
+	<link href="/css/index.css" rel="stylesheet">
+
+</head>
+
+<body id="home_bg">
+<div class="container" >
+	<h1 id="sign_up_title">Setting</h1>
+
+	<div id="setting">
+		<form id="setting_form" role="form" method="get" action="">
+			{{#each User}}
+		   		<div class="form-group">			   			
+		   			<label>{{label}}: </label>
+		   			<input type="text" name="{{label_id}}" value=""></br>
+		   		</div>
+		    {{/each}}
+	    	<input type="submit" id="setting_save" value="Save" class="submit_s">
+		</form>
+	</div>
+</div>
+	<script src="js/jquery-1.11.0.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/ucsdrentals.js"></script>
+
+
+</body>
+</html>

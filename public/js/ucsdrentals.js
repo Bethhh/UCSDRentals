@@ -51,33 +51,28 @@ function validateInfo()
 }*/
 
 function signupValidation(){
-	var email = document.getElementById('emaill');
-	var p1 = document.getElementById('password1');
-	var p2 = document.getElementById('password2');
-	var filter = /^([a-zA-Z0-9_\.\-])+\@ucsd.edu+$/;
-	var errors = [];
+	console.log("in checking sign up");
+	var email = document.getElementById('emaill').value;
+	var password1 = document.getElementById('password1').value;
+	var password2 = document.getElementById('password2').value;
+	var json = { "email":email, "password1":password1, "password2":password2 };
+	$.post('/login/signup', json, checkSignUp);
+}
 
-	if (!filter.test(emaill.value)){
-		errors[errors.length] = "You must enter a valid UCSD email address!";
-	}else if ((p1.value+p2.value)==""){
-		errors[errors.length] = "Please input your password!";
-	}else if (p1.value != p2.value){
-		errors[errors.length] = "Please confirm you input the same password!";
-	}else {
-		window.location = "/menu";
-	}		//return true;
-
-
-	var msg = "";
- 	if (errors.length > 0){
- 		//var msg = "Please Enter Valid Data...\n";
-		for (var i = 0; i<errors.length; i++){
-			var numError = i+1;
-			msg += "\n" + errors[i];
-		}
- 		alert(msg);
- 		return false;
- 	}
+function checkSignUp(result){
+    var errorMsgs = ["nopwd","invalidemail","accountexist","wrongpwd"];
+    if(result == errorMsgs[0]){
+		alert("Please enter your password!");
+	}else if(result == errorMsgs[1]){
+		alert("Please enter a valid UCSD email address!");
+	}else if(result == errorMsgs[2]){
+		alert("This account already exist!\n Please log in!");
+	}else if(result == errorMsgs[3]){
+		alert("Your passwords don't match!\n Please reenter your password!");
+	}else{
+		window.location='/setting';
+	}
+	
 }
 
 
@@ -87,11 +82,12 @@ $("#signup").click(function() {
   
 });
 
-$("#signup_btn").click(function() {
+/*$("#signup_btn").click(function() {
   //console.log("should gogogogo");
-  window.location='/signup';
+  //window.location='/signup';
+  signupValidation();
   
-});
+});*/
 
 
 

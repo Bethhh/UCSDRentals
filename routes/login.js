@@ -41,6 +41,45 @@ exports.log_in_check = function(req,res){
     	  	res.send(error);
     	  }
     	}
-	}
+	  }
   }	
+}
+
+exports.sign_up_check = function(req,res){
+  console.log("insignup");
+  console.log(req.body);
+
+  var email = req.body.email;
+  var filter = /^([a-zA-Z0-9_\.\-])+\@ucsd.edu+$/;
+  var password1 = req.body.password1;
+  var password2 = req.body.password2;
+  var errorMsgs = ["nopwd","invalidemail","accountexist","wrongpwd"];
+  var error = "";
+
+  if (!filter.test(email)){
+        error = errorMsgs[1];
+        res.send(error);
+  }else if (password1 == '' | password2 == ''){
+        error = errorMsgs[0];
+        res.send(error);
+  }else if(password1 != password2){
+        error = errorMsgs[3];
+        res.send(error);  
+  }else{
+  models.User
+      .find({"email": email})
+      .sort()
+      .exec(checkUser);
+
+    function checkUser(err, users){
+      if(err) console.log(err);
+
+      if(users[0] == undefined){//not found user
+          res.send("pass");
+      }else{
+        error = errorMsgs[2];
+        res.send(error);
+      }
+    } 
+  }
 }

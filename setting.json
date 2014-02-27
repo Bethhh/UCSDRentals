@@ -1,0 +1,44 @@
+{
+	"User":[
+		{
+			"label": "Full Name",
+			"label_id":"name",
+			"value": ""
+		},
+		{
+			"label": "Preferred Name",
+			"label_id":"preferred",
+		    "value":""
+		},
+		{
+			"label":"UCSD Email",
+			"label_id":"email",
+			"value": ""
+		},
+		{
+			"label":"Password",
+			"label_id": "pwd",
+			"value":""
+		},
+		{
+			"label":"Major",
+			"label_id":	"major",
+			"value": ""
+		},
+		{
+			"label":"Age",
+			"label_id":"age",
+			"value": ""
+		},
+		{
+			"label":"Phone Number",
+			"label_id":"phone",
+			"value":""
+		},
+		{
+			"label":"Profile Picture",
+			"label_id":"photo",
+			"value":""
+		}
+	]
+}

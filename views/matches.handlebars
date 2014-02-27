@@ -9,6 +9,19 @@
 	<link href="/css/bootswatch.min.css" rel="stylesheet">
 	<link href="/css/index.css" rel="stylesheet">
 
+	<style>
+      #map_canvas {
+      	position:absolute;
+      	top: 150px;
+        width: 100%;
+        height: 100%;
+        background-color: #CCC;
+        padding: 10px 20px;
+        bottom: 0;
+        box-sizing: border-box;
+      }
+    </style>
+
 	<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false">
 	</script>
 
@@ -17,12 +30,13 @@
 
 	function initialize()
 	{
+	var mapCanvas = document.getElementById('map_canvas');
 	var mapProp = {
 	  center:center_UCSD,
 	  zoom:13,
 	  mapTypeId:google.maps.MapTypeId.ROADMAP
-	  };
-	var map=new google.maps.Map(document.getElementById("googleMap")
+	  }
+	var map=new google.maps.Map(document.getElementById("map_canvas")
 	  ,mapProp);
 	
 	var ucsd = new google.maps.Marker({
@@ -34,25 +48,42 @@
 	});
 	ucsd.setMap(map);
 
-	//{{#each matches}}
+	var myMarkers = new Array();
+	var msg = new Array();
+	var i = 0;
+	{{#each matches}}
 		var match = new google.maps.LatLng({{lat}},{{lon}});
-		var marker = new google.maps.Marker({
+		myMarkers[i] = new google.maps.Marker({
 			position:match,
+			title:"{{name}}"
 		//icon: '/icons/house.png'
 		});
-		marker.setMap(map);
-		var msg = "{{name}}";
-		var infowindow = new google.maps.InfoWindow({
-			content:"{{name}}"
+		myMarkers[i].setMap(map);
+			msg[i] = '<div id="content">'+
+	      '<div id="siteNotice">'+
+	      '</div>'+
+	      '<h1 id="firstHeading" class="firstHeading">{{name}}</h1>'+
+	      '<div id="bodyContent">'+
+	      '<p>Attribution: {{name}}, <a url="/detailedInfo{{id}}"></a> '+
+	      '(last visited June 22, 2009).</p>'+
+	      '</div>'+
+	      '</div>';
+		
+		
+		google.maps.event.addListener(myMarkers[i],'click',function(){
+			
+			var infow = new google.maps.InfoWindow({
+			content:msg[i]
 			//icon: '/icons/house.png'
-		});
-
-		google.maps.event.addListener(marker,'click',function(){
-			infowindow.open(map,marker);
-			window.location = "../detailedInfo";
+			});
+			infow.open(map,myMarkers[i]);
+			//window.location = "/detailedInfo{{id}}";
 		})
-		//console.log("haha");
-	//{{/each}}
+
+
+		i++;
+		console.log(i+"id is "+{{id}} + "name is {{name}}");
+	{{/each}}
 
 	}
 
@@ -83,8 +114,7 @@
 	</ul>
 </div>
 <div><a href="detailedInfo">Test</a></div>
-<div id="googleMap" style="width:640px;height:1136px;"></div>
-<div id="googleMap" style="width:640px;height:1136px;"></div>
+<div id="map_canvas" align="center"></div>
 
 	<script src="js/jquery-1.11.0.js"></script>
 	<script src="js/bootstrap.js"></script>

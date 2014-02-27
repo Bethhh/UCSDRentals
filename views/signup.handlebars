@@ -15,7 +15,8 @@
 <body id="home_bg">
 <div class="container" >
 	<h2 id="sign">Sign up with your UCSD account</h2>
-	<form id="login" role="form" method="get" action = "/menu" onsubmit="return signupValidation();" >
+	<!--<form id="login" role="form" method="get" action = "/menu" onsubmit="return signupValidation();" >-->
+	<form id="sign_up" role="form" method="post" action="Javascript:signupValidation()">
 	    <div class="form-group">
 	      <label class="email_label" for="email">Your UCSD Email:</label>
 	      <input type="text" class="form-control" id="emaill" placeholder="Example@ucsd.edu" name="email">
