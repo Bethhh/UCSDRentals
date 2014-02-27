@@ -141,7 +141,7 @@ button#settings, button#about {
 
 
 /***** CREATE HOUSING PROFILE PAGE *****/
-h4 {
+h1, h4 {
 	color:white;
 	display: block;
 	/*background-position: center top;
@@ -194,11 +194,21 @@ h4 {
 	margin-bottom: 20px;
 }
 /***********************************/
-.top_bar, #menu_title {
+.top_bar, #menu_title, #sign_up_title {
 	background-position: center top;
 	background-image:url("/icons/photo.jpg");
 	background-repeat: no-repeat;
 	background-size: 100%;
+}
+#sign_up_title {
+	font-size: 16pt;
+	padding-right: 170px;
+	text-align: right;
+}
+#setting_form {
+	margin-top: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 
 /******* EXISTING PROFILES PAGE ********/

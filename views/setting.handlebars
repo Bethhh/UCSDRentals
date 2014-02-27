@@ -10,9 +10,25 @@
 
 </head>
 
-<body id="home_bg">
+<body>
+		<div class="top_bar">
+		<div class="menu_bar">
+			<div class="btn-group">
+		  		<button type="button" id="home_dropdown" class="btn btn-default btn-lg" data-toggle="dropdown">
+  				<span class="glyphicon glyphicon-home"></span>
+				</button>
+		  		<ul class="dropdown-menu" role="menu">
+		    		<li><a href="/menu">Home Menu</a></li>
+		    		<li><a href="/about">About</a></li>
+		  		</ul>
+			</div>
+		</div>
+		<h1 id="sign_up_title">Setting</h1>
+		
+
+	</div>
+
 <div class="container" >
-	<h1 id="sign_up_title">Setting</h1>
 
 	<div id="setting">
 		<form id="setting_form" role="form" method="get" action="">
@@ -22,7 +38,7 @@
 		   			<input type="text" name="{{label_id}}" value=""></br>
 		   		</div>
 		    {{/each}}
-	    	<input type="submit" id="setting_save" value="Save" class="submit_s">
+	    	<button type="button" class="btn btn-primary" id="setting_save" >Save</button>
 		</form>
 	</div>
 </div>
