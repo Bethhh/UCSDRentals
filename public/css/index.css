@@ -264,6 +264,18 @@ h6 {
 	padding-bottom:30px;
 	padding-right: 50px; 
 }
+
+h7 {
+	font-size: 16pt;
+	color:white;
+	background-color: #1F5080;
+	margin-top:0px;
+	margin-left:0px;
+	margin-right:0px;
+	margin-bottom:0px;
+	padding-top:20px;
+	padding-bottom:10px;
+}
 #abouttitle {
 	font-size: 16pt;
 	padding-right: 178px;
