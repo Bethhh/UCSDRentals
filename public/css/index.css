@@ -196,7 +196,7 @@ h1, h4 {
 /***********************************/
 .top_bar, #menu_title, #sign_up_title {
 	background-position: center top;
-	background-image:url("/icons/photo.jpg");
+	background-image:url("/icons/Photo.jpg");
 	background-repeat: no-repeat;
 	background-size: 100%;
 }
