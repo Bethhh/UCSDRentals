@@ -79,6 +79,7 @@ app.post('/login/signup', login.sign_up_check);
 
 app.post('/login', login.log_in_check);
 app.get('/user', user.userInfo);
+app.post('/user/save', user.save);
 app.post('/submit_type/save/:name', submit_type.save);
 app.get('/submit_type/done/:name', submit_type.done);
 app.get('/submit_type/:name', submit_type.submitForm);
