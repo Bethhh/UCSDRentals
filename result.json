@@ -102,7 +102,7 @@
 			"group":"Property"		
 		},
 		{
-			"label":"AC",
+			"label":"Air Conditioning",
 			"type":"radio",
 			"value":"",
 			"selected": 0,

@@ -103,11 +103,11 @@
 			"help": "Do you want a place with balcony?"
 		},
 		{
-			"label": "AC",
+			"label": "Air Conditioning",
 			"options": ["Yes","No"],
 			"dropdown": 0,
 			"radio": 1,
-			"help": "Do you want a place with air conditioner?"
+			"help": "Do you want a place with air conditioning?"
 		},
 		{
 			"label": "Cable",
