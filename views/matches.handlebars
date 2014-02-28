@@ -18,7 +18,18 @@
         background-color: #CCC;
         padding: 10px 20px;
         bottom: 0;
-        box-sizing: border-box;
+        box-sizing: border-box;}
+
+       .style1 {
+       	color:black;
+       	font-weight:bold;
+      	}
+
+      	#firstHeading{
+      		color:black;
+      		background-color: white;
+      		font-size: 16px;
+      	}
       }
     </style>
 
@@ -27,70 +38,7 @@
 
 	<script>
 	var center_UCSD = new google.maps.LatLng(32.877491,-117.235276);
-/*
-	function initialize()
-	{
-	var mapCanvas = document.getElementById('map_canvas');
-	var mapProp = {
-	  center:center_UCSD,
-	  zoom:13,
-	  mapTypeId:google.maps.MapTypeId.ROADMAP
-	  }
-	var map=new google.maps.Map(document.getElementById("map_canvas")
-	  ,mapProp);
-	
-	var ucsd = new google.maps.Marker({
-		position:center_UCSD,
-		icon: {
-	      path: google.maps.SymbolPath.CIRCLE,
-	      scale: 10
-	    }
-	});
-	ucsd.setMap(map);
 
-	match1 = new google.maps.LatLng(32.867779,-117.218110);
-	infoWindow1 = new google.map.InfoWindow({
-		content:'testing'
-	});
-	marker1 = new google.maps.Marker({
-		position:match1,
-		map:map,
-		title:'Costa Verde'
-	});
-
-	google.maps.event.addListener(marker1,'click',infoWindow1.open(map,marker1));
-	/*
-	var myMarkers = new Array();
-	var myInfoWins = new Array();
-	var msg = new Array();
-	var match = new Array();
-	var name = new Array();
-	var i = 0;
-	{{#each matches}}
-		match[i] = new google.maps.LatLng({{lat}},{{lon}});
-		name[i] = "{{name}}";
-		msg[i] = '<div>'+
-	      '<h1>name[i]</h1>'+
-	      '<a url="/detailedInfo{{id}}"></a>'+
-	      '</div>';
-
-	    myInfoWins[i] = new google.map.InfoWindow({
-      		content: msg[i]
-  		});
-
-		myMarkers[i] = new google.maps.Marker({
-			position:match[i],
-			map:map,
-			title:name[i]
-		});
-		//myMarkers[i].setMap(map);
-
-		google.maps.event.addListener(myMarkers[i],'click',myInfoWins[i].open(map,myMarkers[i]));
-
-		i++;
-		console.log(i+"id is "+{{id}} + "name is {{name}}");
-	{{/each}}
-	*/
 	function initialize() {
   		var latlng1 = new google.maps.LatLng(32.867779,-117.218110);
   		var latlng2 = new google.maps.LatLng(32.855234,-117.217615);
@@ -100,23 +48,25 @@
 	  };
 
   		var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+  		google.maps.event.addListener(map,'projection_changed', function () {
+		    var proj = map.getProjection();
+		    ltBound = proj.fromPointToLatLng(new google.maps.Point(0,100))
+		    rbBound = proj.fromPointToLatLng(new google.maps.Point(100,200))
+		    console.log(ltBound,rbBound)
+		});
 
   		var contentString1 = '<div id="bodyContent">'+
-  	  '<h7 id="firstHeading" class="firstHeading">Costa Verde</h7>'+
-  	  '<p></p>'+
-      '<p>Rent:$760</p>'+
-      '<p>One Bedroom</p>'+
+  	  '<h7 id="firstHeading" class="firstHeading">Rent:$760</h7>'+
+      '<p>Costa Verde:One Bedroom</p>'+
       '<a href="/detailedInfo1">'+
-      'View Details</a> '+
+      'Click Here to View Details</a> '+
       '</div>';
 
 	      var contentString2 = '<div id="bodyContent">'+
-	  	  '<h7 id="firstHeading" class="firstHeading">Regents Court</h7>'+
-	  	  '<p></p>'+
-	      '<p>Rent:$860</p>'+
-	      '<p>One Bedroom</p>'+
+	  	  '<h7 id="firstHeading" class="firstHeading">Rent:$860</h7>'+
+	      '<div><p>Regents Court:One Bedroom</p>'+
 	      '<a href="/detailedInfo2">'+
-	      'View Details</a> '+
+	      'Click Here to View Details</a></div> '+
 	      '</div>';
 
 	  var infowindow1 = new google.maps.InfoWindow({
@@ -125,26 +75,26 @@
 	var infowindow2 = new google.maps.InfoWindow({
 	      content: contentString2
 	  });
-	var infowindow3 = new google.maps.InfoWindow({
-	      content: "UCSD"
-	  });
 
   	var marker1 = new google.maps.Marker({
       position: latlng1,
       map: map,
       title: 'Costa Verde'
   	});
+  	//map, point, html, classname, pixelOffset, percentOpacity, overlap
+ 	var label1 = new ELabel(map, latlng1, '<p>Costa Verde<\/p>',"style1",new google.maps.Size(-20,20));
+ 	//= new ELabel(,'Costa Verde',"style1");
+ 	label1.setMap(map);
+
   	var marker2 = new google.maps.Marker({
       position: latlng2,
       map: map,
       title: 'Regents Court'
   	});
-  	var marker3 = new google.maps.Marker({
-      position: center_UCSD,
-      map: map,
-      animation: google.maps.Animation.BOUNCE,
-      title: 'UCSD'
-  	});
+
+  	var label2 = new ELabel(map, latlng2, '<p>Regents Court<\/p>',"style1",new google.maps.Size(-20,20));
+ 	//= new ELabel(,'Costa Verde',"style1");
+ 	label2.setMap(map);
   google.maps.event.addListener(marker1, 'click', function() {
     infowindow1.open(map,marker1);
   });
@@ -170,6 +120,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 		    		<li><a href="/menu">Home Menu</a></li>
 		    		<li><a href="/about">About</a></li>
 		    		<li><a class="logoutgroup" href="/">Logout</a></li>
+
 		  		</ul>
 			</div>
 		</div>
@@ -188,5 +139,6 @@ google.maps.event.addDomListener(window, 'load', initialize);
 	<script src="js/jquery-1.11.0.js"></script>
 	<script src="js/bootstrap.js"></script>
 	<script src="js/ucsdrentals.js"></script>
+	<script src="js/elabel.js" type="text/javascript"></script>
 </body>
 </html>
