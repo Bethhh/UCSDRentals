@@ -315,7 +315,19 @@ h5 {
 	padding-right: 80px;
 	text-align: right;
 }
-/***************************/
+/*********** DETAILED INFO ****************/
+#detailinfo {
+	font-size: 16pt;
+	padding-right: 40px;
+	text-align: right;
+}
+#detailtitle {
+	text-align: center;
+}
+#maincontainer {
+	display: block;
+	text-align: center;
+}
 
 h3 {
 	color:white;
