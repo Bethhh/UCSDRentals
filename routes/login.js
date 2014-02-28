@@ -36,6 +36,7 @@ exports.log_in_check = function(req,res){
     	  }else{
     	  	error = users[0]._id;
     	  	req.session._id = error;
+          req.session.preferred = users[0].preferred;
     	  	console.log("id");
     	  	console.log(req.session._id);
     	  	res.send(error);
@@ -75,6 +76,8 @@ exports.sign_up_check = function(req,res){
       if(err) console.log(err);
 
       if(users[0] == undefined){//not found user
+          req.session.email = email;
+          req.session.pwd = password1;
           res.send("pass");
       }else{
         error = errorMsgs[2];
@@ -82,4 +85,12 @@ exports.sign_up_check = function(req,res){
       }
     } 
   }
+}
+
+exports.logout = function(req, res){
+  req.session.email = "";
+  req.session.pwd = "";
+  req.session.preferred = "";
+  req.session._id = "";
+  res.send("successfully log out");
 }

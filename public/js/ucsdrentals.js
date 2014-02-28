@@ -1,3 +1,15 @@
+$(document).ready(function() {
+	$.get("/user/get_name", update_name);
+})
+function update_name(result){
+	if(result != ""){
+	  if($(".user_name")[0] != undefined){
+	  	$(".user_name")[0].innerHTML = "Hello, "+result;
+	  }
+	  console.log("here");
+	}
+}
+
 function validateUser(){//originally use action="/login" method="post", successfully get the form data and to req.body, but no callback to call alert
 	var email = document.getElementById('email').value;
 	var password = document.getElementById('password').value;
@@ -71,9 +83,24 @@ function checkSignUp(result){
 		alert("Your passwords don't match!\n Please reenter your password!");
 	}else{
 		window.location='/setting';
+		//$.get('/setting', putEPBack);
 	}
 	
 }
+
+/*function putEPBack(){
+	$.get('/setting/set', setting_done);
+}
+function setting_done(result){
+  window.location="/setting";
+  console.log("the cookie");
+  console.log(result[0]);
+  var e = document.getElementsByName("email");
+  e.value = result[0];
+  var p = document.getElementsByName("pwd");
+  p.value = result[1];
+
+}*/
 
 
 $("#signup").click(function() {
@@ -149,3 +176,10 @@ $("#update").click(function(f){
 	  var e = document.getElementById("existing_list");
 	  e.style.display = 'block';
 });
+
+$("#logout").click(function(){
+	$.get('/login/logout', afterOut);
+});
+function afterOut(result){
+  console.log(result);
+}

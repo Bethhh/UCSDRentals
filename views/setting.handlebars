@@ -28,23 +28,25 @@
 
 	</div>
 
-<div class="container" >
+<div class="containersetting" >
 
 	<div id="setting">
 		<form id="setting_form" role="form" method="get" action="">
 			{{#each User}}
 		   		<div class="form-group">			   			
-		   			<label>{{label}}: </label>
-		   			<input type="text" name="{{label_id}}" value=""></br>
+		   			<label id="settinglabel">{{label}}: </label>
+		   			<input type="text" name="{{label_id}}" value="{{value}}"></br>
+
 		   		</div>
 		    {{/each}}
-	    	<button type="button" class="btn btn-primary" id="setting_save" >Save</button>
+	    	<button type="button" id="setting_save" class="btn btn-primary">Save</button>
 		</form>
 	</div>
 </div>
 	<script src="js/jquery-1.11.0.js"></script>
 	<script src="js/bootstrap.js"></script>
 	<script src="js/ucsdrentals.js"></script>
+	<script src="js/setting.js"></script>
 
 
 </body>

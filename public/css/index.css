@@ -7,7 +7,7 @@ body {
 	background-image:url("/icons/house.jpg");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	background-size: 380px;
+	background-size: cover;
 }
 #appname{
 	text-align: center;
@@ -35,7 +35,7 @@ h1 {
 	width:100%;
 	font-size:16pt;
 	font-weight: normal;
-	margin-top: 170px; 
+	margin-top: 150px; 
 }
 
 .password_label {
@@ -53,7 +53,7 @@ button#login_btn {
 	font-weight:bold;
 	height:25pt;
 	margin-top:5px;
-	margin-bottom:30px;
+	margin-bottom:0px;
 }
 #signup{
 	text-align: center;
@@ -62,10 +62,10 @@ button#login_btn {
 	font-weight:bold;
 	height:25pt;
 	margin-top:5px;
-	margin-bottom:30px;
+	margin-bottom:0px;
 }
 
-#signup_btn{
+button#signup_btn{
 	text-align: center;
 	width:100%;
 	font-weight:bold;
@@ -129,7 +129,7 @@ h2 {
 	display: block;
 	font-weight: normal;
 	margin-top: 0px;
-	margin-bottom: 28px;
+	margin-bottom: 23px;
 }
 button#settings, button#about {
 	margin-bottom:0px;
@@ -168,38 +168,93 @@ h1, h4 {
 	display: block;
 	margin-top: 10px;
 	margin-left: 0px;
-}
+} 
 #type_btn {
 	display: block;
 	margin-top: 20px;
+}
+#type_form {
+	margin-top:20px;
+}
+#type_form label {
+	width:50%;
+}
+.type_buttons {
+	text-align: center;
 }
 #rent_btn {
 	display: block;
 	margin-top: 20px;
 }
+#rent_form {
+	margin-top:20px;
+}
+#rent_form label {
+	width:50%;
+}
+.rent_buttons {
+	text-align: center;
+}
 #address_btn {
 	display: block;
 	margin-top: 20px;
 }
+#address_form {
+	margin-top:20px;
+}
+#address_form label {
+	width:30%;
+}
+.address_buttons {
+	text-align: center;
+}
 #date_btn {
 	display: block;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
+}
+#date_form {
+	margin-top:20px;
+}
+#date_form label {
+	width:50%;
+}
+.date_buttons {
+	text-align: center;
 }
 #property_btn {
 	display: block;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
+}
+#property_form {
+	margin-top:20px;
+}
+#property_form label {
+	width:50%;
+}
+.property_buttons {
+	text-align: center;
 }
 #other_btn {
 	display: block;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
+}
+#other_form {
+	margin-top:20px;
+}
+#other_form label {
+	width:50%;
+}
+.other_buttons {
+	text-align: center;
 }
 /***********************************/
 .top_bar, #menu_title, #sign_up_title {
 	background-position: center top;
 	background-image:url("/icons/Photo.jpg");
 	background-repeat: no-repeat;
-	background-size: 100%;
+	background-size: cover;
 }
+/***** SETTINGS PAGE ******/
 #sign_up_title {
 	font-size: 16pt;
 	padding-right: 170px;
@@ -209,6 +264,29 @@ h1, h4 {
 	margin-top: 10px;
 	padding-top: 5px;
 	padding-bottom: 5px;
+	margin-left: 0px;
+}
+.containersetting label{
+	width:30%; 
+}
+#settinglabel {
+	margin-left:25px;
+}
+#setting_save {
+	margin-left:25px;
+}
+
+/*********** SIGN UP PAGE **********/
+#sign {
+	margin-bottom:0px;
+}
+.signup_email {
+	text-align:center;
+	color:white;
+	width:100%;
+	font-size:16pt;
+	font-weight: normal;
+	margin-top: 85px; 	
 }
 
 /******* EXISTING PROFILES PAGE ********/
@@ -264,18 +342,6 @@ h6 {
 	padding-bottom:30px;
 	padding-right: 50px; 
 }
-
-h7 {
-	font-size: 16pt;
-	color:white;
-	background-color: #1F5080;
-	margin-top:0px;
-	margin-left:0px;
-	margin-right:0px;
-	margin-bottom:0px;
-	padding-top:20px;
-	padding-bottom:10px;
-}
 #abouttitle {
 	font-size: 16pt;
 	padding-right: 178px;
@@ -297,17 +363,15 @@ h7 {
 }
 
 
-/* save and submit? */
+/******* SAVE, SUBMIT, UPDATE, EXPIRE BUTTONS *******/
 button#save, button#ss, button#update, button#expire {
 	width:50%;
 	float:left;
 	font-weight:bold;
 	height:30pt;
-	margin-top:30px;
+	margin-top:25px;
 	margin-bottom:0px;
 }
-
-
 
 input.menu {
 	margin-bottom:30px;
