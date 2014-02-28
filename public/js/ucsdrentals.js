@@ -141,9 +141,9 @@ $("#about").click(function() {
 
 
 
-$("#logout").click(function()  {
-	window.location='/';
-});
+//$("#logout").click(function()  {
+//	window.location='/';
+//});
 
 
 function grabTypeForm(){
@@ -179,14 +179,17 @@ $("#update").click(function(f){
 	  e.style.display = 'block';
 });
 
-$("#logout").click(function(){
+$("#logout").click(function(f){
+	f.preventDefault();
 	$.get('/login/logout', afterOut);
 });
 
-$(".logoutgroup").click(function(){
-	$.get('/login/logout', afterOut);
+$(".logoutgroup").click(function(f){
+	f.preventDefault();
+	$.get('../login/logout', afterOut);
 });
 
 function afterOut(result){
   console.log(result);
+  window.location="/";
 }
