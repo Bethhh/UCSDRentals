@@ -139,6 +139,8 @@ $("#about").click(function() {
 });
 
 
+
+
 $("#logout").click(function()  {
 	window.location='/';
 });
@@ -180,6 +182,11 @@ $("#update").click(function(f){
 $("#logout").click(function(){
 	$.get('/login/logout', afterOut);
 });
+
+$(".logoutgroup").click(function(){
+	$.get('/login/logout', afterOut);
+});
+
 function afterOut(result){
   console.log(result);
 }

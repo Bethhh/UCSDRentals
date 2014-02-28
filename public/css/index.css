@@ -66,7 +66,7 @@ button#login_btn {
 }
 
 button#signup_btn{
-	text-align: center;
+	text-align:center;
 	width:100%;
 	font-weight:bold;
 	height:25pt;
@@ -171,7 +171,7 @@ h1, h4 {
 } 
 #type_btn {
 	display: block;
-	margin-top: 20px;
+	margin-top: 0px;
 }
 #type_form {
 	margin-top:20px;
@@ -184,7 +184,7 @@ h1, h4 {
 }
 #rent_btn {
 	display: block;
-	margin-top: 20px;
+	margin-top: 0px;
 }
 #rent_form {
 	margin-top:20px;
@@ -197,7 +197,7 @@ h1, h4 {
 }
 #address_btn {
 	display: block;
-	margin-top: 20px;
+	margin-top: 0px;
 }
 #address_form {
 	margin-top:20px;
@@ -210,7 +210,7 @@ h1, h4 {
 }
 #date_btn {
 	display: block;
-	margin-bottom: 10px;
+	margin-bottom: 0px;
 }
 #date_form {
 	margin-top:20px;
@@ -223,7 +223,7 @@ h1, h4 {
 }
 #property_btn {
 	display: block;
-	margin-bottom: 10px;
+	margin-bottom: 0px;
 }
 #property_form {
 	margin-top:20px;
@@ -236,7 +236,7 @@ h1, h4 {
 }
 #other_btn {
 	display: block;
-	margin-bottom: 10px;
+	margin-bottom: 0px;
 }
 #other_form {
 	margin-top:20px;
@@ -266,14 +266,17 @@ h1, h4 {
 	padding-bottom: 5px;
 	margin-left: 0px;
 }
-.containersetting label{
+#setting_form label{
 	width:30%; 
 }
 #settinglabel {
 	margin-left:25px;
 }
-#setting_save {
-	margin-left:25px;
+button#setting_save {
+	text-align: center;
+	width:100%;
+	font-weight:bold;
+	height:25pt;
 }
 
 /*********** SIGN UP PAGE **********/
@@ -369,7 +372,7 @@ button#save, button#ss, button#update, button#expire {
 	float:left;
 	font-weight:bold;
 	height:30pt;
-	margin-top:25px;
+	margin-top:0px;
 	margin-bottom:0px;
 }
 
