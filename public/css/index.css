@@ -178,7 +178,9 @@ h1, h4 {
 }
 #type_form label {
 	width:50%;
-	text-align: right;
+}
+.type_buttons {
+	text-align: center;
 }
 #rent_btn {
 	display: block;
@@ -189,7 +191,9 @@ h1, h4 {
 }
 #rent_form label {
 	width:50%;
-	text-align: right;
+}
+.rent_buttons {
+	text-align: center;
 }
 #address_btn {
 	display: block;
@@ -199,8 +203,10 @@ h1, h4 {
 	margin-top:20px;
 }
 #address_form label {
-	width:50%;
-	text-align: right;
+	width:30%;
+}
+.address_buttons {
+	text-align: center;
 }
 #date_btn {
 	display: block;
@@ -211,7 +217,9 @@ h1, h4 {
 }
 #date_form label {
 	width:50%;
-	text-align: right;
+}
+.date_buttons {
+	text-align: center;
 }
 #property_btn {
 	display: block;
@@ -222,7 +230,9 @@ h1, h4 {
 }
 #property_form label {
 	width:50%;
-	text-align: right;
+}
+.property_buttons {
+	text-align: center;
 }
 #other_btn {
 	display: block;
@@ -233,7 +243,9 @@ h1, h4 {
 }
 #other_form label {
 	width:50%;
-	text-align: right;
+}
+.other_buttons {
+	text-align: center;
 }
 /***********************************/
 .top_bar, #menu_title, #sign_up_title {
@@ -255,13 +267,13 @@ h1, h4 {
 	margin-left: 0px;
 }
 .containersetting label{
-	width:50%; 
+	width:30%; 
 }
 #settinglabel {
-	text-align: right;
+	margin-left:25px;
 }
 #setting_save {
-	margin-left:40px;
+	margin-left:25px;
 }
 
 /*********** SIGN UP PAGE **********/
@@ -329,18 +341,6 @@ h6 {
 	padding-left: 0px;
 	padding-bottom:30px;
 	padding-right: 50px; 
-}
-
-h7 {
-	font-size: 16pt;
-	color:white;
-	background-color: #1F5080;
-	margin-top:0px;
-	margin-left:0px;
-	margin-right:0px;
-	margin-bottom:0px;
-	padding-top:20px;
-	padding-bottom:10px;
 }
 #abouttitle {
 	font-size: 16pt;
