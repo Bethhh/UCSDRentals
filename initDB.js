@@ -109,10 +109,10 @@ function onceClear2(err) {
         // connection to the database is closed
         
 
-        mongoose.connection.close();
+        //mongoose.connection.close();
       }
     });
   }
 }
-//mongoose.connection.close();
+mongoose.connection.close();
 
