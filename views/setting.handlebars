@@ -35,7 +35,8 @@
 			{{#each User}}
 		   		<div class="form-group">			   			
 		   			<label id="settinglabel">{{label}}: </label>
-		   			<input type="text" name="{{label_id}}" value=""></br>
+		   			<input type="text" name="{{label_id}}" value="{{value}}"></br>
+
 		   		</div>
 		    {{/each}}
 	    	<button type="button" id="setting_save" class="btn btn-primary">Save</button>
@@ -45,6 +46,7 @@
 	<script src="js/jquery-1.11.0.js"></script>
 	<script src="js/bootstrap.js"></script>
 	<script src="js/ucsdrentals.js"></script>
+	<script src="js/setting.js"></script>
 
 
 </body>
