@@ -435,7 +435,17 @@ input.menu {
 	float:right;
 
 }
+.user_name{
+	font-weight:bold;
+}
 
+.user_table{
+	width:100%;
+}
+
+.logout_sp{
+	float:right;
+}
 
 #type_div_e, #rent_div_e, #property_div_e, #other_div_e, #date_div_e, #address_div_e{
 	display:none;
