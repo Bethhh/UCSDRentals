@@ -53,3 +53,7 @@ exports.save = function(req, res){
 exports.displayUser = function(req, res){
   res.send(req.session.preferred);
 };
+
+exports.displayProf = function(req, res){
+  res.send(req.session.pname);
+};

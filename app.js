@@ -83,10 +83,12 @@ app.post('/login', login.log_in_check);
 app.get('/user', user.userInfo);
 app.post('/user/save', user.save);
 app.get('/user/get_name', user.displayUser);
+app.get('/user/get_prof', user.displayProf);
 app.post('/submit_type/save/:name', submit_type.save);
 app.get('/submit_type/done/:name', submit_type.done);
 app.get('/submit_type/:name', submit_type.submitForm);
 app.get('/submit_type/submit/submit', submit_type.submit);
+app.get('/submit_type/init/:name', submit_type.init);
 
 app.get('/update_type/display/:id', update_type.displayProfile);
 app.get('/update_list/:type', update_list.update);

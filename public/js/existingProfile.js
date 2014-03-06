@@ -29,12 +29,21 @@ function afterMatch(result){
 
 function afterUpdateOut(result){
     var e = document.getElementById("listRentOut");
+    console.log("updateout");
     e.innerHTML = "";
     result= $.parseJSON(result.lists);
     if(result != ""){
       for(var i= 0; i<result.length; i++){
-        e.innerHTML = e.innerHTML+"<li class='list-group-item' ><button onclick='clickList(\""+result[i]+"\")' class='btn btn-default listItems'>"+
-                      result[i]+"</button><button class='m' onclick='clickMatch(\""+result[i]+"\")'>Matches</button></li>";
+        var str = result[i];
+        console.log(str);
+        var index = str.indexOf("id=");
+        var pname = str.substr(0,index);
+        console.log(pname);
+        index = index+3;
+        var idstr = str.substr(index);
+        
+        e.innerHTML = e.innerHTML+"<li class='list-group-item' ><button onclick='clickList(\""+idstr+"\")' class='btn btn-default listItems'>"+
+                      pname+"</button><button class='m' onclick='clickMatch(\""+idstr+"\")'>Matches</button></li>";
       }
     }else{
         e.innerHTML = e.innerHTML+"<li class='list-group-item' ><span class='btn btn-default listItems'>No profiles in this category.</button></li>";
@@ -43,12 +52,20 @@ function afterUpdateOut(result){
 
 function afterUpdateIn(result){
     var e = document.getElementById("listRentIn");
+    console.log("updatein");
     e.innerHTML = "";
     result= $.parseJSON(result.lists);
     if(result != ""){
       for(var i= 0; i<result.length; i++){
-        e.innerHTML = e.innerHTML+"<li class='list-group-item' ><button onclick='clickList(\""+result[i]+"\")' class='btn btn-default listItems'>"+
-                      result[i]+"</button><button class='m' onclick='clickMatch(\""+result[i]+"\")'>Matches</button></li>";
+        var str = result[i];
+        console.log(str);
+        var index = str.indexOf("id=");
+        var pname = str.substr(0,index);
+        console.log(pname);
+        index = index+3;
+        var idstr = str.substr(index);
+        e.innerHTML = e.innerHTML+"<li class='list-group-item' ><button onclick='clickList(\""+idstr+"\")' class='btn btn-default listItems'>"+
+                      pname+"</button><button class='m' onclick='clickMatch(\""+idstr+"\")'>Matches</button></li>";
       }
     }else{
         e.innerHTML = e.innerHTML+"<li class='list-group-item' ><span class='btn btn-default listItems'>No profiles in this category.</button></li>";

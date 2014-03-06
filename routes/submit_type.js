@@ -28,6 +28,32 @@ exports.submitForm = function(req, res) {
 	//console.log(result);
 	res.json(result[req.params.name]);
 }*/
+exports.init = function(req, res){
+  console.log("in init");
+  if(profile.User == undefined){
+    profile.User = req.session._id;
+    console.log("userId="+profile.User);
+  }
+  //var form_data = req.body;
+  console.log(req.params.name);
+  var str = req.params.name;
+  var i = str.lastIndexOf("Rent");
+  var pname = str.substr(0,i);
+  pname.trim();
+  var type = str.substr(i);
+
+  /*if(form_data["label"]=="Profile Type"){
+    profile.RentType = form_data["value"];
+    console.log(profile.RentType);
+  }*/
+  profile.RentType = type;
+  profile.ProfileName = pname;
+  console.log(type);
+  console.log(pname);
+  req.session.pname = pname;
+  res.send(200);
+}
+
 //function to save each entry of a block
 exports.save = function(req, res){
   //var json = req.body;
@@ -35,16 +61,16 @@ exports.save = function(req, res){
   console.log("user");
   //console.log(profile.User.type);
   //console.log(profile.User['type']);
-  if(profile.User == undefined){
+  /*if(profile.User == undefined){
   	profile.User = req.session._id;
   	console.log("userId="+profile.User);
-  }
+  }*/
 
   var form_data = req.body;
-  if(form_data["label"]=="Profile Type"){
+  /*if(form_data["label"]=="Profile Type"){
   	profile.RentType = form_data["value"];
   	console.log(profile.RentType);
-  }
+  }*/
   var newEntry = new models.Entry({
       "label":form_data["label"],
       "type": form_data["type"],
@@ -116,7 +142,8 @@ exports.submit = function(req,res){
 	console.log(req.session._id);
 	if(profile.TypesDone && profile.DatesDone && profile.OtherDone 
 	&& profile.RentDone && profile.PropertyDone && profile.AddressDone){
-		
+		profile.ProfileNameLong = profile.ProfileName + "id=" + profile._id;
+    console.log(profile.ProfileNameLong);
 		profile.save(afterSaving);//find match before or after
 		function afterSaving(err){
         if(err){console.log(err); res.send(500);}

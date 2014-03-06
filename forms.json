@@ -9,14 +9,14 @@
 		},
 		{
 			"label": "Listing Type",
-			"options": ["Single", "Shared"],
+			"options": ["Single", "Shared", "NP"],
 			"dropdown":	0,
 			"radio":1,
 			"help": "Do you want a place of full vacancy or you can share with others?"
 		},
 		{
 			"label": "Housing Type",			
-			"options": ["Apts", "Rooms","Sublets", "Studios", "Condos"],
+			"options": ["Apts", "Rooms","Sublets", "Studios", "Condos", "NP"],
 			"dropdown":	1,
 			"radio":0,
 			"help": "Choose the type of the place you want :)"
@@ -26,28 +26,28 @@
 	"Property": [
 		{
 			"label": "Parking",
-			"options": ["Lot","Garage","None"],
+			"options": ["Lot","Garage","None", "NP"],
 			"dropdown": 1,
 			"radio": 0,
 			"help": "Choose the type of parking space for your car"
 		},
 		{
 			"label": "Storage",
-			"options": ["Yes","No"],
+			"options": ["Yes","No", "NP"],
 			"dropdown": 0,
 			"radio": 1,
 			"help": "Do you want an extra storage room?"
 		},
 		{
 			"label": "Kitchen",
-			"options": ["Yes","No"],
+			"options": ["Yes","No", "NP"],
 			"dropdown": 0,
 			"radio": 1,
 			"help": "Do you need a kitchen?"
 		},
 		{
 			"label": "Bathroom",
-			"options": ["Private","Shared"],
+			"options": ["Private","Shared", "NP"],
 			"dropdown": 0,
 			"radio": 1,
 			"help": "Do you want a private bathroom or you do not mind sharing?"
@@ -55,63 +55,63 @@
 	
 		{
 			"label": "Bedroom",
-			"options": ["Private","Shared"],
+			"options": ["Private","Shared", "NP"],
 			"dropdown": 0,
 			"radio": 1,
 			"help": "Do you want your own bedroom or you can share?"
 		},
 		{
 			"label": "Laundry Facility",
-			"options": ["In House","Near","None"],
+			"options": ["In House","Near","None", "NP"],
 			"dropdown": 1,
 			"radio": 0,
 			"help": "Do you want your laundry facility in your place or somewhere outside and near? Or you do not need laundry facility?"
 		},
 		{
 			"label": "Furnished",
-			"options": ["Yes","No"],
+			"options": ["Yes","No", "NP"],
 			"dropdown": 0,
 			"radio": 1,
 			"help": "Do you want your place furnished?"
 		},
 		{
 			"label": "Pool",
-			"options": ["Yes","No"],
+			"options": ["Yes","No", "NP"],
 			"dropdown": 0,
 			"radio": 1,
 			"help": "Do you want a place in a complex with a pool?"
 		},
 		{
 			"label": "Sports Facility",
-			"options": ["Yes","No"],
+			"options": ["Yes","No", "NP"],
 			"dropdown": 0,
 			"radio": 1,
 			"help": "Do you want a place in a complex with sports facility?"
 		},
 		{
 			"label": "Internet",
-			"options": ["Yes","No"],
+			"options": ["Yes","No", "NP"],
 			"dropdown": 0,
 			"radio": 1,
 			"help": "Do you want a place with Internet access?"
 		},
 		{
 			"label": "Balcony",
-			"options": ["Yes","No"],
+			"options": ["Yes","No", "NP"],
 			"dropdown": 0,
 			"radio": 1,
 			"help": "Do you want a place with balcony?"
 		},
 		{
 			"label": "Air Conditioning",
-			"options": ["Yes","No"],
+			"options": ["Yes","No", "NP"],
 			"dropdown": 0,
 			"radio": 1,
 			"help": "Do you want a place with air conditioning?"
 		},
 		{
 			"label": "Cable",
-			"options": ["Yes","No"],
+			"options": ["Yes","No", "NP"],
 			"dropdown": 0,
 			"radio": 1,
 			"help": "Do you want a place with cable?"
@@ -120,118 +120,129 @@
 	"Rent": [
 		{
 			"label": "Rent Range",
-			"options": ["$0~$500", "$500~$1000", "$1000~$1500", "$1500~$2000"],
+			"options": ["$0~$500", "$500~$1000", "$1000~$1500", "$1500~$2000", "NP"],
 			"dropdown": 1,
 			"radio": 0,
 			"help": "Choose the range of rent that you can accept :)"
 		},
 		{
 			"label": "Water",
-			"options": ["Include","Not"],
+			"options": ["Include","Not", "NP"],
 			"dropdown": 0,
 			"radio": 1,
 			"help": "Is this rent for a place with water supply preinstalled?"
 		},
 		{
 			"label": "Electricity",
-			"options": ["Include","Not"],
+			"options": ["Include","Not", "NP"],
 			"dropdown": 0,
 			"radio": 1,
 			"help": "Is this rent for a place with electricity supply preinstalled?"
 		},
 		{
 			"label": "Internet/Wifi",
-			"options": ["Include","Not"],
+			"options": ["Include","Not", "NP"],
 			"dropdown": 0,
 			"radio": 1,
 			"help": "Is this rent for a place with Internet/wifi supply preinstalled?"
 		},
 		{
 			"label": "Pay Method",
-			"options": ["Credit/Debit","Cash","Check"],
+			"options": ["Credit/Debit","Cash","Check", "NP"],
 			"dropdown": 1,
 			"radio": 0,
 			"help": "How do you want to pay the rent?"
 		},
 		{
 			"label": "Deposit",
-			"options":["Under: $500", "Under: $1000", "Under: $2000"],
+			"options":["Under: $500", "Under: $1000", "Under: $2000", "NP"],
 			"dropdown": 1,
 			"radio": 0,
-			"help": "How much deposit can you accept to pay"
+			"help": "How much deposit can you accept to pay?"
 		}
 	],
 	"Address":[
 		{
 			"label": "Area",
-			"options":["UTC", "Costa Verde", "La Jolla International Graden", "Nobel Court", "Regents Court"],
+			"options":["UTC", "Costa Verde", "La Jolla International Graden", "Nobel Court", "Regents Court", "NP"],
 			"dropdown": 1,
-			"radio": 0
+			"radio": 0,
+			"help": "Where do you prefer to live?"
 		},
 		{
 			"label": "Transportation",
-			"options":["Close","Far"],
+			"options":["Close","Far","NP"],
 			"dropdown": 0,
-			"radio": 1
+			"radio": 1,
+			"help": "Close to transportation?"
 		},
 		{
 			"label": "Market/Mall",
-			"options":["Close","Far"],
+			"options":["Close","Far", "NP"],
 			"dropdown": 0,
-			"radio": 1
+			"radio": 1,
+			"help": "Close to market?"
 		}
 	],
 	"Other": [
 		{
 			"label": "Pets",
-			"options":["Allowed","Not"],
+			"options":["Allowed","Not","NP"],
 			"dropdown": 0,
-			"radio": 1
+			"radio": 1,
+			"help": "Pets are allowed?"
 		},
 		{
 			"label": "Major",
-			"options":["Engineering", "Science", "Literature", "Medical"],
+			"options":["Engineering", "Science", "Literature", "Medical", "Other"],
 			"dropdown": 1,
-			"radio": 0
+			"radio": 0,
+			"help": "What's your major?"
 		},
 		{
 			"label": "Age range",
-			"options":["15~17","18~20","21~23","24~26"],
+			"options":["15~17","18~20","21~23","24~26", "Secret"],
 			"dropdown": 1,
-			"radio": 0
+			"radio": 0,
+			"help":"How old are you?"
 		},
 		{
 			"label": "Sex",
-			"options":["Male","Female"],
+			"options":["Male","Female","Other"],
 			"dropdown": 0,
-			"radio": 1
+			"radio": 1,
+			"help":"You know what it means..."
 		},
 		{
 			"label": "Smoking",
-			"options":["Yes","No"],
+			"options":["Yes","No", "NP"],
 			"dropdown": 0,
-			"radio": 1
+			"radio": 1,
+			"help":"Do you smoke?"
 		},
 		{
 			"label": "Contact",
-			"options":["Email","Text","Call"],
+			"options":["Email","Text","Call", "NP"],
 			"dropdown": 1,
-			"radio": 0
+			"radio": 0,
+			"help": "Which way do you prefer?"
 		}
 	],
 
 	"Dates": [
 		{
 			"label": "Length",
-			"options":["Summer","Quarter","Year"],
+			"options":["Summer","Quarter","Year", "NP"],
 			"dropdown": 1,
-			"radio": 0
+			"radio": 0,
+			"help": "How long?"
 		},
 		{
 			"label": "Lease",
-			"options":["Monthly","Yearly"],
+			"options":["Monthly","Yearly", "NP"],
 			"dropdown": 0,
-			"radio": 1
+			"radio": 1,
+			"help":"Lease length?"
 		}
 
 	]

@@ -5,6 +5,7 @@ exports.log_in_check = function(req,res){
   console.log(req.body);
 
   var email = req.body.email;
+  email.toLowerCase();
   var filter = /^([a-zA-Z0-9_\.\-])+\@ucsd.edu+$/;
   var password = req.body.password;
   var errorMsgs = ["nopwd","invalidemail","noaccount","wrongpwd"];
@@ -51,6 +52,7 @@ exports.sign_up_check = function(req,res){
   console.log(req.body);
 
   var email = req.body.email;
+  email.toLowerCase();
   var filter = /^([a-zA-Z0-9_\.\-])+\@ucsd.edu+$/;
   var password1 = req.body.password1;
   var password2 = req.body.password2;

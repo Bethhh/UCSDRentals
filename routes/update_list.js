@@ -19,7 +19,7 @@ exports.update = function(req,res){
 		var json= '["';
 
 		for(var i =0; i<lists.length; i++){
-			json = json+lists[i]._id;
+			json = json+lists[i].ProfileNameLong;
 			if(i!=lists.length-1){
 				json = json + '", "';
 			}

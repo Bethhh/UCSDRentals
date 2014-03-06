@@ -27,6 +27,8 @@ var entrySchema = new Mongoose.Schema({
 var profileSchema = new Mongoose.Schema({
 	"date": { type: Date, default: Date.now },
 	"RentType":String,
+	"ProfileName":String,
+	"ProfileNameLong":String,
 
 	"Types":[entrySchema],
 	"TypesDone":Boolean,

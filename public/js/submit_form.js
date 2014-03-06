@@ -15,6 +15,7 @@ function initializePage() {
   $('#other_submit').click(submit_form_other);
   $('#property_submit').click(submit_form_property);
   $('#address_submit').click(submit_form_address);
+  $('#first_submit').click(submit_form_name);
 
   //$('#ss').click(submit_form);
 
@@ -76,6 +77,22 @@ function submit_form_address(e){
   $.get("/submit_type/Address", submit_type);
   $("#address_btn").removeClass("btn-danger");
   $("#address_btn").addClass("btn-success");
+}
+function submit_form_name(e){
+  e.preventDefault();
+  var name = document.getElementById("pname").value;
+  var radio = document.getElementsByName("Profile Type");
+  var type;
+  if(radio[0].checked){
+    type = radio[0].value;
+  }else{
+    type = radio[1].value;
+  }
+  console.log(name+" type="+type);
+  $.get("/submit_type/init/"+name+" " +type, submit_name);
+}
+function submit_name(result){
+
 }
 
 function submit_type(result){

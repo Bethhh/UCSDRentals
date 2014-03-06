@@ -1,5 +1,6 @@
 $(document).ready(function() {
 	$.get("/user/get_name", update_name);
+	
 })
 function update_name(result){
 	if(result != ""){

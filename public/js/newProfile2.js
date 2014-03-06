@@ -5,17 +5,33 @@
    var date_flag=0;
    var address_flag=0;
 
+$(document).ready(function() {
+  $.get("/user/get_prof", update_pname);
+  
+})
+function update_pname(result){
+  if(result != ""){
+    if($("#prof_label") != undefined){
+      $("#prof_label").innerHTML = result;
+    }
+    console.log("there");
+  }
+}
+
+
    $(".main_btn").click(hideNew);
   
 
 
 
    function hideNew() {
+       //f.preventDefault();
        var e = document.getElementById("main_buttons");
        e.style.display = 'none';
    }
 
    function showNew() {
+       //f.preventDefault();
        var e = document.getElementById("main_buttons");
        e.style.display = 'block';
    }
@@ -30,7 +46,22 @@
    	  var e = document.getElementById(d);
    	  e.style.display = 'none';   	  
    }
-
+   $("#first_submit").click(function(f){
+      f.preventDefault();
+      var e = document.getElementById("pname");
+      if(e.value == ""){
+        alert("Please insert a profile name!");
+        //hideNew();
+        $("#pname-group").addClass("error");
+      }else{
+        hideDiv("first_div");
+        showNew();
+        $("#pname-group").removeClass("error");
+      }
+    });
+   $("#first_back").click(function(){
+      window.location="/menu";
+   });
 
    $("#type_btn").click(function(){
       if(type_flag == 0)
