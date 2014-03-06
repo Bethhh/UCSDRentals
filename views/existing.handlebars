@@ -32,11 +32,16 @@
 	<ul class="nav nav-tabs ">
   		<li ><a href="/newp">New</a></li>
   		<li class="active"><a href="/existing">Existing</a></li>
-  		<li><a href="/matches">Matches</a></li>
+  		<li><a href="#" class="logoutgroup name_sp">Log Out</a></li>
 	</ul>
-	<p class="user_name">Hello, User</p>
-	<p>Click the list items to see the existing profiles!</p>
-	<p>Click Match buttons to see matches of that profile!</p>
+	<table class="user_table">
+		<tr>
+		  <td class="user_name">Hello, User</td>
+		  <td id="prof_label" class="name_sp">Existing Profile</td>
+		</tr>
+	</table>
+	<p class="ex_help_txt help-block">Click the list items to see the existing profiles!</br>
+	Click Match buttons to see matches of that profile!</p>
 	<div id="existing_buttons">
 		<div class="block" id="b1">
 			<button type="button" id="type_btn_e" class="btn btn-info btn-lg btn-block exist_btn">Type</button>
@@ -127,7 +132,7 @@
 		    {{/each}}
 		    <div class="type_buttons">
 	    		<input class="btn btn-primary sub-form submit_e" type="submit" id="type_back_e" value="Back">
-				<input class="btn btn-primary sub-form submit_e" type="submit" id="type_update_e" value="Update">
+				<input class="btn btn-primary sub-form submit_e disabled" type="submit" id="type_update_e" value="Update">
 			</div>
 		</fieldset>
 		</form>
@@ -177,7 +182,7 @@
 		    {{/each}}
 		    <div class="rent_buttons">
 	    		<input class="btn btn-primary sub-form submit_e" type="submit" id="rent_back_e" value="Back">
-				<input class="btn btn-primary sub-form submit_e" type="submit" id="rent_update_e" value="Update">
+				<input class="btn btn-primary sub-form submit_e disabled" type="submit" id="rent_update_e" value="Update">
 			</div>
 		</fieldset>
 		</form>
@@ -228,7 +233,7 @@
 		    {{/each}}
 		    <div class="address_buttons">
     			<input class="btn btn-primary sub-form submit_e" type="submit" id="address_back_e" value="Back">
-				<input class="btn btn-primary sub-form submit_e" type="submit" id="address_update_e" value="Update">
+				<input class="btn btn-primary sub-form submit_e disabled" type="submit" id="address_update_e" value="Update">
 			</div>
 		</fieldset>
 		</form>
@@ -279,7 +284,7 @@
 		    {{/each}}
 		    <div class="date_buttons">
 	    		<input class="btn btn-primary sub-form submit_e" type="submit" id="date_back_e" value="Back">
-				<input class="btn btn-primary sub-form submit_e" type="submit" id="date_update_e" value="Update">
+				<input class="btn btn-primary sub-form submit_e disabled" type="submit" id="date_update_e" value="Update">
 			</div>
 		</fieldset>
 		</form>
@@ -330,7 +335,7 @@
 		    {{/each}}
 		    <div class="property_buttons">
 	    		<input class="btn btn-primary sub-form submit_e" type="submit" id="property_back_e" value="Back">
-				<input class="btn btn-primary sub-form submit_e" type="submit" id="property_update_e" value="Update">
+				<input class="btn btn-primary sub-form submit_e disabled" type="submit" id="property_update_e" value="Update">
 			</div>
 		</fieldset>
 		</form>
@@ -382,7 +387,7 @@
 		    {{/each}}
 		    <div class="other_buttons">
 	    		<input class="btn btn-primary sub-form submit_e" type="submit" id="other_back_e" value="Back">
-				<input class="btn btn-primary sub-form submit_e" type="submit" id="other_update_e" value="Update">
+				<input class="btn btn-primary sub-form submit_e disabled" type="submit" id="other_update_e" value="Update">
 			</div>
 		</fieldset>
 		</form>
