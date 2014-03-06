@@ -83,188 +83,308 @@
 		</div>
 	</div>
 	<div id="type_div_e">
-		<form id="type_form_e" role="form" method="get" action="">
+		<form class="well" id="type_form_e" role="form" method="get" action="">
+			<fieldset>
+			<legend class="legends">Type</legend>
 			{{#each Types}}
-		   		<div class="form-group">		
+		   		<div class="form-group control-group">	
+		   		<table class="form-table"><tr><td class="cell label-cell">	
 		   			{{#if radio}}
-		   				<label>{{label}}: </label>
-		   				{{#each options}}
-		   					<input type="radio" name="{{../label}}" value="{{this}}">{{this}}
-		   				{{/each}}
+		   				<label class="form-label">{{label}}: </label>
+		   				</td><td class="cell elem-cell">
+		   				<div class="controls">
+		   					{{#each options}}
+		   						<input type="radio" name="{{../label}}" value="{{this}}">{{this}}
+		   					{{/each}}
+		   					<p class="help-block">{{help}}</p>
+		   					<div class="clear"></div>
+		   				</div>
 		   			{{else}}	
 		   				{{#if dropdown}}	
-		   					<label>{{label}}: </label>	
-		   					<select name="{{label}}">		
-		   						{{#each options}}
-									<option value="{{this}}">{{this}}</option>
-								{{/each}}
-							</select>
+		   					<label class="form-label">{{label}}: </label>
+		   					</td><td class="cell">
+		   					<div class="controls">	
+		   						<select name="{{label}}">		
+		   							{{#each options}}
+										<option value="{{this}}">{{this}}</option>
+									{{/each}}
+								</select>
+								<p class="help-block">{{help}}</p>
+							</div>
 						{{else}}
-							<label>{{label}}: </label>	
-		   					{{#each options}}
-		   						<input type="checkbox" name="{{../label}}" value="{{this}}">{{this}}<br>
-		   					{{/each}}
+							<label class="form-label">{{label}}: </label>
+		   					</td><td class="cell">
+		   					<div class="controls">	
+		   						{{#each options}}
+		   							<input type="checkbox" name="{{../label}}" value="{{this}}">{{this}}<br>
+		   						{{/each}}
+		   						<p class="help-block">{{help}}</p>
+		   					</div>
 						{{/if}}
 		   			{{/if}}
+		   			</td></tr></table>
 		    	</div>
 		    {{/each}}
-	    	<input type="submit" id="type_back_e" value="Back" class="submit_e">
-			<input type="submit" id="type_update_e" value="Update" class="submit_e">
+		    <div class="type_buttons">
+	    		<input class="btn btn-primary sub-form submit_e" type="submit" id="type_back_e" value="Back">
+				<input class="btn btn-primary sub-form submit_e" type="submit" id="type_update_e" value="Update">
+			</div>
+		</fieldset>
 		</form>
 	</div>
     <div id="rent_div_e">
-		<form id="rent_form_e" role="form" method="get" action="">
+		<form class="well" id="rent_form_e" role="form" method="get" action="">
+			<fieldset>
+			<legend class="legends">Rent</legend>
 			{{#each Rent}}
-		   		<div class="form-group">		
+		   		<div class="form-group control-group">	
+		   		<table class="form-table"><tr><td class="cell label-cell">	
 		   			{{#if radio}}
-		   				<label>{{label}}: </label>
-		   				{{#each options}}
-		   					<input type="radio" name="{{../label}}" value="{{this}}">{{this}}
-		   				{{/each}}
+		   				<label class="form-label">{{label}}: </label>
+		   				</td><td class="cell elem-cell">
+		   				<div class="controls">
+		   					{{#each options}}
+		   						<input type="radio" name="{{../label}}" value="{{this}}">{{this}}
+		   					{{/each}}
+		   					<p class="help-block">{{help}}</p>
+		   					<div class="clear"></div>
+		   				</div>
 		   			{{else}}	
 		   				{{#if dropdown}}	
-		   					<label>{{label}}: </label>	
-		   					<select name="{{label}}">		
-		   						{{#each options}}
-									<option value="{{this}}">{{this}}</option>
-								{{/each}}
-							</select>
+		   					<label class="form-label">{{label}}: </label>
+		   					</td><td class="cell">
+		   					<div class="controls">	
+		   						<select name="{{label}}">		
+		   							{{#each options}}
+										<option value="{{this}}">{{this}}</option>
+									{{/each}}
+								</select>
+								<p class="help-block">{{help}}</p>
+							</div>
 						{{else}}
-							<label>{{label}}: </label>	
-		   					{{#each options}}
-		   						<input type="checkbox" name="{{../label}}" value="{{this}}">{{this}}<br>
-		   					{{/each}}
+							<label class="form-label">{{label}}: </label>
+		   					</td><td class="cell">
+		   					<div class="controls">	
+		   						{{#each options}}
+		   							<input type="checkbox" name="{{../label}}" value="{{this}}">{{this}}<br>
+		   						{{/each}}
+		   						<p class="help-block">{{help}}</p>
+		   					</div>
 						{{/if}}
 		   			{{/if}}
+		   			</td></tr></table>
 		    	</div>
 		    {{/each}}
-		    <input type="submit" id="rent_back_e" value="Back" class="submit_e">
-			<input type="submit" id="rent_update_e" value="Update" class="submit_e">
+		    <div class="rent_buttons">
+	    		<input class="btn btn-primary sub-form submit_e" type="submit" id="rent_back_e" value="Back">
+				<input class="btn btn-primary sub-form submit_e" type="submit" id="rent_update_e" value="Update">
+			</div>
+		</fieldset>
 		</form>
     </div>
 
     <div id="address_div_e">
-		<form id="address_form_e" role="form" method="get" action="">
+		<form class="well" id="address_form_e" role="form" method="get" action="">
+			<fieldset>
+			<legend class="legends">Address</legend>
 			{{#each Address}}
-		   		<div class="form-group">		
+		   		<div class="form-group control-group">	
+		   		<table class="form-table"><tr><td class="cell label-cell">	
 		   			{{#if radio}}
-		   				<label>{{label}}: </label>
-		   				{{#each options}}
-		   					<input type="radio" name="{{../label}}" value="{{this}}">{{this}}
-		   				{{/each}}
+		   				<label class="form-label">{{label}}: </label>
+		   				</td><td class="cell elem-cell">
+		   				<div class="controls">
+		   					{{#each options}}
+		   						<input type="radio" name="{{../label}}" value="{{this}}">{{this}}
+		   					{{/each}}
+		   					<p class="help-block">{{help}}</p>
+		   					<div class="clear"></div>
+		   				</div>
 		   			{{else}}	
 		   				{{#if dropdown}}	
-		   					<label>{{label}}: </label>	
-		   					<select name="{{label}}">		
-		   						{{#each options}}
-									<option value="{{this}}">{{this}}</option>
-								{{/each}}
-							</select>
+		   					<label class="form-label">{{label}}: </label>
+		   					</td><td class="cell">
+		   					<div class="controls">	
+		   						<select name="{{label}}">		
+		   							{{#each options}}
+										<option value="{{this}}">{{this}}</option>
+									{{/each}}
+								</select>
+								<p class="help-block">{{help}}</p>
+							</div>
 						{{else}}
-							<label>{{label}}: </label>	
-		   					{{#each options}}
-		   						<input type="checkbox" name="{{../label}}" value="{{this}}">{{this}}<br>
-		   					{{/each}}
+							<label class="form-label">{{label}}: </label>
+		   					</td><td class="cell">
+		   					<div class="controls">	
+		   						{{#each options}}
+		   							<input type="checkbox" name="{{../label}}" value="{{this}}">{{this}}<br>
+		   						{{/each}}
+		   						<p class="help-block">{{help}}</p>
+		   					</div>
 						{{/if}}
 		   			{{/if}}
+		   			</td></tr></table>
 		    	</div>
 		    {{/each}}
-		    <input type="submit" id="address_back_e" value="Back" class="submit_e">
-			<input type="submit" id="address_update_e" value="Update" class="submit_e">
+		    <div class="address_buttons">
+    			<input class="btn btn-primary sub-form submit_e" type="submit" id="address_back_e" value="Back">
+				<input class="btn btn-primary sub-form submit_e" type="submit" id="address_update_e" value="Update">
+			</div>
+		</fieldset>
 		</form>
     </div>
 
     <div id="date_div_e">
-		<form id="date_form_e" role="form" method="get" action="">
+		<form class="well" id="date_form_e" role="form" method="get" action="">
+			<fieldset>
+			<legend class="legends">Date</legend>
 			{{#each Dates}}
-		   		<div class="form-group">		
+		   		<div class="form-group control-group">	
+		   		<table class="form-table"><tr><td class="cell label-cell">	
 		   			{{#if radio}}
-		   				<label>{{label}}: </label>
-		   				{{#each options}}
-		   					<input type="radio" name="{{../label}}" value="{{this}}">{{this}}
-		   				{{/each}}
+		   				<label class="form-label">{{label}}: </label>
+		   				</td><td class="cell elem-cell">
+		   				<div class="controls">
+		   					{{#each options}}
+		   						<input type="radio" name="{{../label}}" value="{{this}}">{{this}}
+		   					{{/each}}
+		   					<p class="help-block">{{help}}</p>
+		   					<div class="clear"></div>
+		   				</div>
 		   			{{else}}	
 		   				{{#if dropdown}}	
-		   					<label>{{label}}: </label>	
-		   					<select name="{{label}}">		
-		   						{{#each options}}
-									<option value="{{this}}">{{this}}</option>
-								{{/each}}
-							</select>
+		   					<label class="form-label">{{label}}: </label>
+		   					</td><td class="cell">
+		   					<div class="controls">	
+		   						<select name="{{label}}">		
+		   							{{#each options}}
+										<option value="{{this}}">{{this}}</option>
+									{{/each}}
+								</select>
+								<p class="help-block">{{help}}</p>
+							</div>
 						{{else}}
-							<label>{{label}}: </label>	
-		   					{{#each options}}
-		   						<input type="checkbox" name="{{../label}}" value="{{this}}">{{this}}<br>
-		   					{{/each}}
+							<label class="form-label">{{label}}: </label>
+		   					</td><td class="cell">
+		   					<div class="controls">	
+		   						{{#each options}}
+		   							<input type="checkbox" name="{{../label}}" value="{{this}}">{{this}}<br>
+		   						{{/each}}
+		   						<p class="help-block">{{help}}</p>
+		   					</div>
 						{{/if}}
 		   			{{/if}}
+		   			</td></tr></table>
 		    	</div>
 		    {{/each}}
-		    <input type="submit" id="date_back_e" value="Back" class="submit_e">
-			<input type="submit" id="date_update_e" value="Update" class="submit_e">
+		    <div class="date_buttons">
+	    		<input class="btn btn-primary sub-form submit_e" type="submit" id="date_back_e" value="Back">
+				<input class="btn btn-primary sub-form submit_e" type="submit" id="date_update_e" value="Update">
+			</div>
+		</fieldset>
 		</form>
     </div>
 
     <div id="property_div_e">
-		<form id="property_form_e" role="form" method="get" action="">
+		<form class="well" id="property_form_e" role="form" method="get" action="">
+			<fieldset>
+			<legend class="legends">Property</legend>
 			{{#each Property}}
-		   		<div class="form-group">		
+		   		<div class="form-group control-group">	
+		   		<table class="form-table"><tr><td class="cell label-cell">	
 		   			{{#if radio}}
-		   				<label>{{label}}: </label>
-		   				{{#each options}}
-		   					<input type="radio" name="{{../label}}" value="{{this}}">{{this}}
-		   				{{/each}}
+		   				<label class="form-label">{{label}}: </label>
+		   				</td><td class="cell elem-cell">
+		   				<div class="controls">
+		   					{{#each options}}
+		   						<input type="radio" name="{{../label}}" value="{{this}}">{{this}}
+		   					{{/each}}
+		   					<p class="help-block">{{help}}</p>
+		   					<div class="clear"></div>
+		   				</div>
 		   			{{else}}	
 		   				{{#if dropdown}}	
-		   					<label>{{label}}: </label>	
-		   					<select name="{{label}}">		
-		   						{{#each options}}
-									<option value="{{this}}">{{this}}</option>
-								{{/each}}
-							</select>
+		   					<label class="form-label">{{label}}: </label>
+		   					</td><td class="cell">
+		   					<div class="controls">	
+		   						<select name="{{label}}">		
+		   							{{#each options}}
+										<option value="{{this}}">{{this}}</option>
+									{{/each}}
+								</select>
+								<p class="help-block">{{help}}</p>
+							</div>
 						{{else}}
-							<label>{{label}}: </label>	
-		   					{{#each options}}
-		   						<input type="checkbox" name="{{../label}}" value="{{this}}">{{this}}<br>
-		   					{{/each}}
+							<label class="form-label">{{label}}: </label>
+		   					</td><td class="cell">
+		   					<div class="controls">	
+		   						{{#each options}}
+		   							<input type="checkbox" name="{{../label}}" value="{{this}}">{{this}}<br>
+		   						{{/each}}
+		   						<p class="help-block">{{help}}</p>
+		   					</div>
 						{{/if}}
 		   			{{/if}}
+		   			</td></tr></table>
 		    	</div>
 		    {{/each}}
-		    <input type="submit" id="property_back_e" value="Back" class="submit_e">
-			<input type="submit" id="property_update_e" value="Update" class="update_e">
+		    <div class="property_buttons">
+	    		<input class="btn btn-primary sub-form submit_e" type="submit" id="property_back_e" value="Back">
+				<input class="btn btn-primary sub-form submit_e" type="submit" id="property_update_e" value="Update">
+			</div>
+		</fieldset>
 		</form>
 
     </div>
 
     <div id="other_div_e">
-		<form id="other_form_e" role="form" method="get" action="">
+		<form class="well" id="other_form_e" role="form" method="get" action="">
+			<fieldset>
+			<legend class="legends">Other</legend>
 			{{#each Other}}
-		   		<div class="form-group">		
+		   		<div class="form-group control-group">	
+		   		<table class="form-table"><tr><td class="cell label-cell">	
 		   			{{#if radio}}
-		   				<label>{{label}}: </label>
-		   				{{#each options}}
-		   					<input type="radio" name="{{../label}}" value="{{this}}">{{this}}
-		   				{{/each}}
+		   				<label class="form-label">{{label}}: </label>
+		   				</td><td class="cell elem-cell">
+		   				<div class="controls">
+		   					{{#each options}}
+		   						<input type="radio" name="{{../label}}" value="{{this}}">{{this}}
+		   					{{/each}}
+		   					<p class="help-block">{{help}}</p>
+		   					<div class="clear"></div>
+		   				</div>
 		   			{{else}}	
 		   				{{#if dropdown}}	
-		   					<label>{{label}}: </label>	
-		   					<select name="{{label}}">		
-		   						{{#each options}}
-									<option value="{{this}}">{{this}}</option>
-								{{/each}}
-							</select>
+		   					<label class="form-label">{{label}}: </label>
+		   					</td><td class="cell">
+		   					<div class="controls">	
+		   						<select name="{{label}}">		
+		   							{{#each options}}
+										<option value="{{this}}">{{this}}</option>
+									{{/each}}
+								</select>
+								<p class="help-block">{{help}}</p>
+							</div>
 						{{else}}
-							<label>{{label}}: </label>	
-		   					{{#each options}}
-		   						<input type="checkbox" name="{{../label}}" value="{{this}}">{{this}}<br>
-		   					{{/each}}
+							<label class="form-label">{{label}}: </label>
+		   					</td><td class="cell">
+		   					<div class="controls">	
+		   						{{#each options}}
+		   							<input type="checkbox" name="{{../label}}" value="{{this}}">{{this}}<br>
+		   						{{/each}}
+		   						<p class="help-block">{{help}}</p>
+		   					</div>
 						{{/if}}
 		   			{{/if}}
+		   			</td></tr></table>
 		    	</div>
-			{{/each}}
-	    	<input type="submit" id="other_back_e" value="Back" class="submit_e">
-			<input type="submit" id="other_update_e" value="Update" class="submit_e">
+		    {{/each}}
+		    <div class="other_buttons">
+	    		<input class="btn btn-primary sub-form submit_e" type="submit" id="other_back_e" value="Back">
+				<input class="btn btn-primary sub-form submit_e" type="submit" id="other_update_e" value="Update">
+			</div>
+		</fieldset>
 		</form>
 
     </div>

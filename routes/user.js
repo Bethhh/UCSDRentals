@@ -55,5 +55,6 @@ exports.displayUser = function(req, res){
 };
 
 exports.displayProf = function(req, res){
+  console.log(req.session.pname);
   res.send(req.session.pname);
 };

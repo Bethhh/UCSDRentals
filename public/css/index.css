@@ -169,84 +169,24 @@ h1, h4 {
 	margin-top: 10px;
 	margin-left: 0px;
 } 
-#type_btn {
+#type_btn, #rent_btn, #address_btn, #date_btn, #property_btn, #other_btn {
 	display: block;
 	margin-top: 0px;
 }
-#type_form {
+#type_form, #rent_form, #address_form, #date_form, #property_form, #other_form {
 	margin-top:20px;
 }
-#type_form label {
+#type_form label, #rent_form label, #address_form label, #date_form label, #property_form label {
 	width:50%;
 }
-.type_buttons {
+.type_buttons, .rent_buttons, .address_buttons, .date_buttons, .property_buttons, .other_buttons, .first_buttons {
 	text-align: center;
 }
-#rent_btn {
-	display: block;
-	margin-top: 0px;
-}
-#rent_form {
-	margin-top:20px;
-}
-#rent_form label {
-	width:50%;
-}
-.rent_buttons {
-	text-align: center;
-}
-#address_btn {
-	display: block;
-	margin-top: 0px;
-}
-#address_form {
-	margin-top:20px;
-}
-#address_form label {
-	width:30%;
-}
-.address_buttons {
-	text-align: center;
-}
-#date_btn {
-	display: block;
-	margin-bottom: 0px;
-}
-#date_form {
-	margin-top:20px;
-}
-#date_form label {
-	width:50%;
-}
-.date_buttons {
-	text-align: center;
-}
-#property_btn {
-	display: block;
-	margin-bottom: 0px;
-}
-#property_form {
-	margin-top:20px;
-}
-#property_form label {
-	width:50%;
-}
-.property_buttons {
-	text-align: center;
-}
-#other_btn {
-	display: block;
-	margin-bottom: 0px;
-}
-#other_form {
-	margin-top:20px;
-}
+
 /*#other_form label {
 	width:50%;
 }*/
-.other_buttons {
-	text-align: center;
-}
+
 /***********************************/
 .top_bar, #menu_title, #sign_up_title {
 	background-position: center top;
@@ -379,12 +319,20 @@ h6 {
 
 
 /******* SAVE, SUBMIT, UPDATE, EXPIRE BUTTONS *******/
-button#save, button#ss, button#update, button#expire {
+button#save, button#ss {
 	width:50%;
 	float:left;
 	font-weight:bold;
 	height:30pt;
 	margin-top:0px;
+	margin-bottom:0px;
+}
+button#update, button#expire {
+	width:50%;
+	float:left;
+	font-weight:bold;
+	height:30pt;
+	margin-top:20px;
 	margin-bottom:0px;
 }
 
@@ -441,10 +389,12 @@ input.menu {
 
 .user_table{
 	width:100%;
+	/*margin_bottom:15px;*/
 }
 
-.logout_sp{
+.name_sp{
 	float:right;
+	font-weight: bold;
 }
 
 #type_div_e, #rent_div_e, #property_div_e, #other_div_e, #date_div_e, #address_div_e{
@@ -483,3 +433,18 @@ input.menu {
 	text-align: center;
 }
 
+.nav-tabs a{
+	font-weight: bold;
+}
+
+.red {
+	color:red;
+}
+.green {
+	color:green;
+}
+
+#hello_sp{
+	text-align: center;
+	font-size:15pt;
+}
