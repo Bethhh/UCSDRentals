@@ -92,9 +92,17 @@ function submit_form_name(e){
   $.get("/submit_type/init/"+name+" " +type, submit_name);
 }
 function submit_name(result){
-
+  $.get("/user/get_prof", update_pname);
 }
-
+function update_pname(result){
+  console.log(result);
+  if(result != ""){
+    if($("#prof_label") != undefined){
+      $("#prof_label")[0].innerHTML = result;
+    }
+    console.log("there");
+  }
+}
 function submit_type(result){
   var copy_result = result;
   var order = 0;

@@ -26,14 +26,14 @@ mongoose.connect(database_uri);
 // Step 1: load the JSON data
 
 // Step 2: Remove all existing documents
-var example = require('./example.json');
+//var example = require('./example.json');
 var users = require('./user.json');
 
 // Step 2: Remove all existing documents
-models.Profile
+/*models.Profile
   .find()
   .remove()
-  .exec(onceClear); // callback to continue at
+  .exec(onceClear); // callback to continue at*/
 
 models.User
   .find()
@@ -109,10 +109,10 @@ function onceClear2(err) {
         // connection to the database is closed
         
 
-        //mongoose.connection.close();
+        mongoose.connection.close();
       }
     });
   }
 }
-mongoose.connection.close();
+//mongoose.connection.close();
 
