@@ -46,7 +46,7 @@ function afterUpdateOut(result){
                       pname+"</button><button class='m' onclick='clickMatch(\""+idstr+"\")'>Matches</button></li>";
       }
     }else{
-        e.innerHTML = e.innerHTML+"<li class='list-group-item' ><span class='btn btn-default listItems'>No profiles in this category.</button></li>";
+        e.innerHTML = e.innerHTML+"<li class='list-group-item' ><span class='btn btn-default listItems disabled'>No profiles in this category.</button></li>";
     }
 }
 
@@ -68,7 +68,7 @@ function afterUpdateIn(result){
                       pname+"</button><button class='m' onclick='clickMatch(\""+idstr+"\")'>Matches</button></li>";
       }
     }else{
-        e.innerHTML = e.innerHTML+"<li class='list-group-item' ><span class='btn btn-default listItems'>No profiles in this category.</button></li>";
+        e.innerHTML = e.innerHTML+"<li class='list-group-item' ><span class='btn btn-default listItems disabled'>No profiles in this category.</button></li>";
     }
 }
 

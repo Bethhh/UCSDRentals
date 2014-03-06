@@ -35,7 +35,7 @@
 	<ul class="nav nav-tabs ">
   		<li class="active"><a href="/newp">New</a></li>
   		<li><a href="/existing">Existing</a></li>
-  		<li><a href="/matches">Matches</a></li>
+  		<li><a href="#" class="logoutgroup logout_sp">Log Out</a></li>
 	</ul>
 	<table class="user_table">
 		<tr>
@@ -44,9 +44,10 @@
 		  <td class="logoutgroup logout_sp"><button class="btn btn-default">Log Out</button></td>
 		</tr>
 	</table>
-	<p id="prof-label"><p>
-	<p class="main_help_txt">Click on a red block and fill out the form to turn the block green!</p>
+	<p id="prof_label"><p>
+
 	<div id="main_buttons">
+		<p class="main_help_txt">Click on a red block and fill out the form to turn the block green!</p>
 		<div class="block" id="b1">
 			<button id="type_btn" type="button" class="btn btn-danger btn-lg btn-block main_btn">Type</button>
 			<button id="date_btn" type="button" class="btn btn-danger btn-lg btn-block main_btn">Date</button>
@@ -59,8 +60,9 @@
 			<button id="address_btn" type="button" class="btn btn-danger btn-lg btn-block main_btn">Address</button>
 			<button id="other_btn" type="button" class="btn btn-danger btn-lg btn-block main_btn">Other</button>
 		</div>
-		<p class="main_help_txt">Submit only after all blocks are green!</p>
+
 		<div id="data">
+			<p class="main_help_txt">Submit only after all blocks are green!</p>
 			  <button type="button" class="btn btn-primary disabled" id="save" >Save</button>
 			  <button type="button" class="btn btn-primary" id="ss" >Submit</button>
 		</div>
