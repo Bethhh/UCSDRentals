@@ -381,10 +381,12 @@ input.menu {
 
 .user_table{
 	width:100%;
+	/*margin_bottom:15px;*/
 }
 
-.logout_sp{
+.name_sp{
 	float:right;
+	font-weight: bold;
 }
 
 #type_div_e, #rent_div_e, #property_div_e, #other_div_e, #date_div_e, #address_div_e{
@@ -423,3 +425,18 @@ input.menu {
 	text-align: center;
 }
 
+.nav-tabs a{
+	font-weight: bold;
+}
+
+.red {
+	color:red;
+}
+.green {
+	color:green;
+}
+
+#hello_sp{
+	text-align: center;
+	font-size:15pt;
+}
