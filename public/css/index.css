@@ -319,12 +319,20 @@ h6 {
 
 
 /******* SAVE, SUBMIT, UPDATE, EXPIRE BUTTONS *******/
-button#save, button#ss, button#update, button#expire {
+button#save, button#ss {
 	width:50%;
 	float:left;
 	font-weight:bold;
 	height:30pt;
 	margin-top:0px;
+	margin-bottom:0px;
+}
+button#update, button#expire {
+	width:50%;
+	float:left;
+	font-weight:bold;
+	height:30pt;
+	margin-top:20px;
 	margin-bottom:0px;
 }
 
