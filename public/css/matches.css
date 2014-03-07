@@ -1,12 +1,16 @@
 #map_canvas {
-  position:absolute;
-  top: 140px;
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
   background-color: #CCC;
-  padding: 10px 20px;
-  bottom: 0;
+  padding: 50% 10%;
+  margin-top:0;
+  margin-bottom:5%;
+  margin-right:5%;
+  margin-left:5%;
   box-sizing: border-box;
+  border-style:solid;
+  border-width:5%;
+  border-color:#256FE8;
 }
 
 .style1 {
@@ -26,7 +30,7 @@
 }
 
 #matchNum{
-  background-color: #CCC;
+  background-color: white;
   color: black;
   font-size: 20px;
   width:100%;
