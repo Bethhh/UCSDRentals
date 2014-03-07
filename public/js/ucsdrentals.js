@@ -3,7 +3,7 @@ $(document).ready(function() {
 	
 })
 
-$(document).ready(function()
+/*$(document).ready(function()
   {
   //$("button").click(function(){
    // $("#p1").css("color","red")
@@ -19,14 +19,14 @@ $(document).ready(function()
      min_move_x: 20,
      min_move_y: 20,
      preventDefaultEvents: true
-	});*/
+	});
 	$('#mainImage').cycle({ 
 	    fx:      'scrollRight', 
 	    next:   '#thumbnails', 
 	    timeout:  0, 
 	    easing:  'easeInOutBack' 
 	});
-});
+});*/
 function update_name(result){
 	if(result != ""){
 	  if($(".user_name")[0] != undefined){
