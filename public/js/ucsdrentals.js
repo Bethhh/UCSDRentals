@@ -3,31 +3,6 @@ $(document).ready(function() {
 	
 });
 
-/*$(document).ready(function()
-  {
-  //$("button").click(function(){
-   // $("#p1").css("color","red")
-    //  .slideUp(2000)
-     // .slideDown(2000);
-  //});
-
-  /*$("#mainImage").touchwipe({
-     wipeLeft: function() { alert("left"); },
-     wipeRight: function() { alert("right"); },
-     wipeUp: function() { alert("up"); },
-     wipeDown: function() { alert("down"); },
-     min_move_x: 20,
-     min_move_y: 20,
-     preventDefaultEvents: true
-	});
-	$('#mainImage').cycle({ 
-	    fx:      'scrollRight', 
-	    next:   '#thumbnails', 
-	    timeout:  0, 
-	    easing:  'easeInOutBack' 
-
-	});
-});*/
 
 function update_name(result){
 	if(result != ""){
@@ -111,11 +86,6 @@ function checkSignUp(result){
 	}else if(result == errorMsgs[3]){
 		alert("Your passwords don't match!\n Please reenter your password!");
 	}else{
-
-		//ga("send","event","login","click");
-
-		//ga("send","event","login","click","signup");
-
 		window.location='/setting';
 		//$.get('/setting', putEPBack);
 	}
@@ -216,19 +186,12 @@ $("#update").click(function(f){
 $("#logout").click(function(f){
 	f.preventDefault();
 
-	//ga("send","event","logout","click");
-
-	//ga("send","event","logout","click","menu");
 
 	$.get('/login/logout', afterOut);
 });
 
 $(".logoutgroup").click(function(f){
 	f.preventDefault();
-
-	//ga("send","event","logout","click");
-
-	//ga("send","event","logout","click","other");
 
 	$.get('../login/logout', afterOut);
 });

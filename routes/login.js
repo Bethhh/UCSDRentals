@@ -6,7 +6,7 @@ exports.log_in_check = function(req,res){
 
   var email = req.body.email;
   email = email.toLowerCase();
-  document.getElementById("email").innerHTML=email;
+  //document.getElementById("email").innerHTML=email;
   
   var filter = /^([a-z0-9_\.\-])+\@ucsd.edu+$/;
   /*var _A = /^([A])+$/;
