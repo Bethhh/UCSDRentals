@@ -5,8 +5,36 @@ exports.log_in_check = function(req,res){
   console.log(req.body);
 
   var email = req.body.email;
-  email.toLowerCase();
-  var filter = /^([a-zA-Z0-9_\.\-])+\@ucsd.edu+$/;
+  email = email.toLowerCase();
+  document.getElementById("email").innerHTML=email;
+  
+  var filter = /^([a-z0-9_\.\-])+\@ucsd.edu+$/;
+  /*var _A = /^([A])+$/;
+  var _B = /^([B])+$/;
+  var _C = /^([C])+$/;
+  var _D = /^([D])+$/;
+  var _E = /^([E])+$/;
+  var _F = /^([F])+$/;
+  var _G = /^([G])+$/;
+  var _H = /^([H])+$/;
+  var _I = /^([I])+$/;
+  var _J = /^([J])+$/;
+  var _K = /^([K])+$/;
+  var _L = /^([L])+$/;
+  var _M = /^([M])+$/;
+  var _N = /^([N])+$/;
+  var _O = /^([O])+$/;
+  var _P = /^([P])+$/;
+  var _Q = /^([Q])+$/;
+  var _R = /^([R])+$/;
+  var _S = /^([S])+$/;
+  var _T = /^([T])+$/;
+  var _U = /^([U])+$/;
+  var _V = /^([V])+$/;
+  var _W = /^([W])+$/;
+  var _X = /^([X])+$/;
+  var _Y = /^([Y])+$/;
+  var _Z = /^([Z])+$/;*/
   var password = req.body.password;
   var errorMsgs = ["nopwd","invalidemail","noaccount","wrongpwd"];
   var error = "";
