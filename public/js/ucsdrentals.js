@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	$.get("/user/get_name", update_name);
 	
-})
+});
 
 /*$(document).ready(function()
   {
@@ -56,11 +56,7 @@ function checkLogIn(result){
 	}else if(result == errorMsgs[3]){
 		alert("Your password is incorrect!\n Please reenter your password!");
 	}else{
-<<<<<<< HEAD
-		//ga("send","event","login","click");
-=======
-		//ga("send","event","login","click", "login");
->>>>>>> 66a45e6488d7547c043c8bf6b51fa14bba9a6300
+
 		window.location='/menu';///'+result;
 	}
 }
