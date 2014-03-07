@@ -157,7 +157,7 @@
 	"Address":[
 		{
 			"label": "Area",
-			"options":["UTC", "Costa Verde", "La Jolla International Graden", "Nobel Court", "Regents Court", "NP"],
+			"options":["UTC", "Costa Verde", "La Jolla International Garden", "Nobel Court", "Regents Court", "NP"],
 			"dropdown": 1,
 			"radio": 0,
 			"help": "Where do you prefer to live?"

@@ -25,8 +25,10 @@ $(document).ready(function() {
 	    next:   '#thumbnails', 
 	    timeout:  0, 
 	    easing:  'easeInOutBack' 
+
 	});
 });*/
+
 function update_name(result){
 	if(result != ""){
 	  if($(".user_name")[0] != undefined){
@@ -54,7 +56,11 @@ function checkLogIn(result){
 	}else if(result == errorMsgs[3]){
 		alert("Your password is incorrect!\n Please reenter your password!");
 	}else{
+<<<<<<< HEAD
+		//ga("send","event","login","click");
+=======
 		//ga("send","event","login","click", "login");
+>>>>>>> 66a45e6488d7547c043c8bf6b51fa14bba9a6300
 		window.location='/menu';///'+result;
 	}
 }
@@ -109,7 +115,11 @@ function checkSignUp(result){
 	}else if(result == errorMsgs[3]){
 		alert("Your passwords don't match!\n Please reenter your password!");
 	}else{
+
+		//ga("send","event","login","click");
+
 		//ga("send","event","login","click","signup");
+
 		window.location='/setting';
 		//$.get('/setting', putEPBack);
 	}
@@ -209,13 +219,21 @@ $("#update").click(function(f){
 
 $("#logout").click(function(f){
 	f.preventDefault();
+
+	//ga("send","event","logout","click");
+
 	//ga("send","event","logout","click","menu");
+
 	$.get('/login/logout', afterOut);
 });
 
 $(".logoutgroup").click(function(f){
 	f.preventDefault();
+
+	//ga("send","event","logout","click");
+
 	//ga("send","event","logout","click","other");
+
 	$.get('../login/logout', afterOut);
 });
 
