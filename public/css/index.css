@@ -9,10 +9,63 @@ body {
 	background-attachment: fixed;
 	background-size: cover;
 }
-#appname{
-	text-align: center;
-	font-size: 35pt;
-	font-weight: bold;
+#h1container{
+	background-color: #1F5080;
+	opacity: 0.5;
+	position: absolute;
+	top:3%;
+	left:5%;
+	right:5%;
+	height: 10%;
+	width: 90%;
+	z-index:-1;
+}
+
+#h2container{
+	background-color: #1F5080;
+	opacity: 0.5;
+	position: absolute;
+	top:3.5%;
+	left:5%;
+	right:5%;
+	height: 10%;
+	width: 90%;
+	z-index:-1;
+}
+
+#emailcontainer{
+	background-color: #1F5080;
+	opacity: 0.5;
+	position: absolute;
+	margin-top:100px;
+	left:15%;
+	right:15%;
+	height: 5%;
+	width: 70%;
+	z-index:-1;
+}
+
+#pwcontainer{
+	background-color: #1F5080;
+	opacity: 0.5;
+	position: absolute;
+	margin-top: 0px;
+	left:15%;
+	right:15%;
+	height: 5%;
+	width: 70%;
+	z-index:-1;
+}
+#emaillcontainer{
+	background-color: #1F5080;
+	opacity: 0.5;
+	position: absolute;
+	margin-top:85px;
+	left:15%;
+	right:15%;
+	height: 5%;
+	width: 70%;
+	z-index:-1;
 }
 #sign{
 	text-align: center;
@@ -21,6 +74,7 @@ body {
 }
 h1 {
 	color: white;
+	text-align: center;
 	background-opacity: 0;
 	margin-top:0px;
 	margin-left:0px;
@@ -28,6 +82,14 @@ h1 {
 	margin-bottom:0px;
 	padding-top:20px;
 	padding-bottom:10px;
+}
+#appname{
+	margin-left: 5%;
+	margin-right: 5%;
+	width: 90%;
+	font-size: 35pt;
+	font-weight: bold;
+	z-index:1;
 }
 .email_label {
 	text-align:center;

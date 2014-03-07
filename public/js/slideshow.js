@@ -8,7 +8,7 @@ window.onload = function(){
                 j = (j < 3) ? ++j : 0 ;
                 mainImage.src = thumbnailImages[j].src;
 
-            }, 10000);
+            }, 2000);
     }   
 
     startTimer();
