@@ -37,7 +37,7 @@ function update_name(result){
 }
 
 function validateUser(){//originally use action="/login" method="post", successfully get the form data and to req.body, but no callback to call alert
-	var email = document.getElementById('email').value;
+	var email = document.getElementById('email').value.toLowerCase();
 	var password = document.getElementById('password').value;
 	var json = { "email":email, "password":password };
 	$.post('/login', json, checkLogIn);
@@ -54,11 +54,9 @@ function checkLogIn(result){
 	}else if(result == errorMsgs[3]){
 		alert("Your password is incorrect!\n Please reenter your password!");
 	}else{
-<<<<<<< HEAD
+
 		//ga("send","event","login","click");
-=======
-		//ga("send","event","login","click", "login");
->>>>>>> 66a45e6488d7547c043c8bf6b51fa14bba9a6300
+
 		window.location='/menu';///'+result;
 	}
 }
@@ -95,7 +93,7 @@ function validateInfo()
 
 function signupValidation(){
 	console.log("in checking sign up");
-	var email = document.getElementById('emaill').value;
+	var email = document.getElementById('emaill').value.toLowerCase;
 	var password1 = document.getElementById('password1').value;
 	var password2 = document.getElementById('password2').value;
 	var json = { "email":email, "password1":password1, "password2":password2 };
