@@ -32,6 +32,11 @@ function checkLogIn(result){
 		alert("Your password is incorrect!\n Please reenter your password!");
 	}else{
 
+<<<<<<< HEAD
+=======
+		//ga("send","event","login","click");
+
+>>>>>>> d08586e3e47153cac1896bd9f5d337734b9b6500
 		window.location='/menu';///'+result;
 	}
 }
@@ -68,7 +73,11 @@ function validateInfo()
 
 function signupValidation(){
 	console.log("in checking sign up");
+<<<<<<< HEAD
 	var email = document.getElementById('emaill').value.toLowerCase();
+=======
+	var email = document.getElementById('emaill').value.toLowerCase;
+>>>>>>> d08586e3e47153cac1896bd9f5d337734b9b6500
 	var password1 = document.getElementById('password1').value;
 	var password2 = document.getElementById('password2').value;
 	var json = { "email":email, "password1":password1, "password2":password2 };

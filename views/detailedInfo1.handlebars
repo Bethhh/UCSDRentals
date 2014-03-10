@@ -24,6 +24,57 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 	<link href="/css/index.css" rel="stylesheet">
 	<link href="/css/slideshow.css" rel="stylesheet">
 
+	<style>
+    /* Prevent the slideshow from flashing on load */
+    #slides {
+      display: none
+    }
+
+    /* Center the slideshow */
+    .container {
+      margin: 0 auto
+    }
+
+    /* Show active item in the pagination */
+    .slidesjs-pagination .active {
+      color:red;
+    }
+
+    /* Media quires for a responsive layout */
+
+    /* For tablets & smart phones */
+    @media (max-width: 767px) {
+      body {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      .container {
+        width: auto
+      }
+    }
+
+    /* For smartphones */
+    @media (max-width: 480px) {
+      .container {
+        width: auto
+      }
+    }
+
+    /* For smaller displays like laptops */
+    @media (min-width: 768px) and (max-width: 979px) {
+      .container {
+        width: 724px
+      }
+    }
+
+    /* For larger displays 
+    @media (min-width: 1200px) {
+      .container {
+        width: 1170px
+      }
+    }*/
+  </style>
+
 </head>
 
 <body>
@@ -46,7 +97,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 
 	</div>
 
-	
+	<!--
 <div class="container" id="newprof_bg">
 	<ul class="nav nav-tabs ">
   		<li><a href="/newp">New</a></li>
@@ -73,6 +124,19 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
     </div>
     <div id="imgCaption">
     </div>
+-->
+    <!-- SlidesJS Required: Start Slides -->
+  <!-- The container is used to define the width of the slideshow -->
+  <div class="container">
+    <div id="slides">
+      <img src="http://www.gardencommunitiesca.com/Apartment-Rentals/CA/San-Diego/Costa-Verde-Village/Home/CostaVerdeVillage-7.aspx?width=400" alt="Photo by: Missy S Link: http://www.flickr.com/photos/listenmissy/5087404401/">
+      <img src="http://www.gardencommunitiesca.com/Apartment-Rentals/CA/San-Diego/Costa-Verde-Village/Home/CostaVerdeVillage-8.aspx?width=400" alt="Photo by: Daniel Parks Link: http://www.flickr.com/photos/parksdh/5227623068/">
+      <img src="img/example-slide-3.jpg" alt="Photo by: Mike Ranweiler Link: http://www.flickr.com/photos/27874907@N04/4833059991/">
+      <img src="http://www.gardencommunitiesca.com/Apartment-Rentals/CA/San-Diego/Costa-Verde-Village/Home/CostaVerdeVillage-2.aspx?width=400" alt="Photo by: Stuart SeegerLink: http://www.flickr.com/photos/stuseeger/97577796/">
+    </div>
+  </div>
+  <!-- End SlidesJS Required: Start Slides -->
+
     <ul>
     	<li>Rent:$760</li>
     	<li>Utility:$50/month</li>
@@ -89,10 +153,26 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 	<script src="js/bootstrap.js"></script>
 	<script src="js/handlebars.js"></script>
 	<script src="js/ucsdrentals.js"></script>
-	<script src="js/slideshow.js"></script>
 	<script src="js/bootbox.js"></script>
-	<script src="jquery.touchwipe.1.1.1.js"></script>
-	<script src="jquery.touchwipe.min.js"></script>
+
+	<!-- SlidesJS Required: Link to jQuery -->
+	  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	  <!-- End SlidesJS Required -->
+
+	  <!-- SlidesJS Required: Link to jquery.slides.js -->
+	  <script src="js/jquery.slides.min.js"></script>
+	  <!-- End SlidesJS Required -->
+
+	  <!-- SlidesJS Required: Initialize SlidesJS with a jQuery doc ready -->
+	  <script>
+	    $(function() {
+	      $('#slides').slidesjs({
+	        width: 940,
+	        height: 528
+	      });
+	    });
+	  </script>
+  <!-- End SlidesJS Required -->
 <!--	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
