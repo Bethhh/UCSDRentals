@@ -3,41 +3,49 @@
 		{
 			"label": "Full Name",
 			"label_id":"name",
+			"ispwd":0,
 			"value": ""
 		},
 		{
 			"label": "Preferred Name",
 			"label_id":"preferred",
+			"ispwd":0,
 		    "value":""
 		},
 		{
 			"label":"UCSD Email",
 			"label_id":"email",
+			"ispwd":0,
 			"value": ""
 		},
 		{
 			"label":"Password",
 			"label_id": "pwd",
+			"ispwd":1,
 			"value":""
 		},
 		{
 			"label":"Major",
 			"label_id":	"major",
+			"ispwd":0,
 			"value": ""
 		},
 		{
 			"label":"Age",
 			"label_id":"age",
+			"ispwd":0,
 			"value": ""
 		},
 		{
 			"label":"Phone Number",
 			"label_id":"phone",
+			"ispwd":0,
 			"value":""
 		},
 		{
 			"label":"Profile Picture",
 			"label_id":"photo",
+			"ispwd":0,
 			"value":""
 		}
 	]
