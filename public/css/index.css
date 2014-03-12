@@ -264,15 +264,19 @@ h1, h4 {
 }
 #setting_form {
 	margin-top: 10px;
-	padding-top: 5px;
+padding-top: 5px;
 	padding-bottom: 5px;
 	margin-left: 0px;
 }
-#setting_form label{
-	width:30%; 
-}
+
 #settinglabel {
-	margin-left:25px;
+	margin-left:10px;
+	width:40%;
+}
+.textbox {
+	margin-right:10px;
+	width:40%;
+	float:right;
 }
 button#setting_save {
 	text-align: center;
@@ -492,7 +496,7 @@ input.menu {
 	padding:10px;
 }
 #setting_form{
-	padding:2px;
+	/*padding:2px;*/
 }
 .legends{
 	text-align: center;
