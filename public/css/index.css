@@ -491,6 +491,9 @@ input.menu {
 	/*background-color: #D9EDF7;*/
 	padding:10px;
 }
+#setting_form{
+	padding:2px;
+}
 .legends{
 	text-align: center;
 }
