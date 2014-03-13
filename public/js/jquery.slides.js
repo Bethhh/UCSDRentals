@@ -165,12 +165,12 @@
         }
       }
       if (this.options.pagination.active) {
-        pagination = $("<ul>", {
+        pagination = $("<div>", {
           "class": "slidesjs-pagination"
         }).appendTo($element);
         $.each(new Array(this.data.total), function(i) {
           var paginationItem, paginationLink;
-          paginationItem = $("<li>", {
+          paginationItem = $("<button id="b123">", {
             "class": "slidesjs-pagination-item"
           }).appendTo(pagination);
           paginationLink = $("<a>", {

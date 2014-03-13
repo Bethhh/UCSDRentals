@@ -439,10 +439,12 @@ input.menu {
 }
 #detailtitle {
 	color:black;
-	margin:10px;
-	padding:0px;
+	margin:3%;
+	margin-right: 10%;
+	margin-left: 10%;
+	padding:0%;
 	text-align:center;
-	width:250px;
+	width:80%%;
 	font-weight:bold;
 }
 #contact {
@@ -516,4 +518,41 @@ input.menu {
 #hello_sp{
 	text-align: center;
 	font-size:15pt;
+}
+
+
+#slidepic{
+	margin-right: auto;
+	margin-left: auto;
+	padding: 5% 5% 5% 5%;
+	width: 10%;
+	height: 100%;
+}
+
+.slidesjs-previous{
+	padding: 5% 5% 5% 5%;
+}
+
+.slidesjs-next{
+	padding: 5% 5% 5% 5%;
+}
+
+#infolist{
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid #1F5080;
+	text-align: center;
+}
+
+.slidesjs-pagination{
+	color: #1F5080;
+	font-size: 14px;
+}
+
+#story{
+	margin-top: 5%;
+	margin-right: 5%;
+	margin-left: 5%;
+	font-size: 16px;
+	background-color: #CCC;
 }

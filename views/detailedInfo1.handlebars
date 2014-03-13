@@ -97,6 +97,13 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 
 	</div>
 
+  <table class="user_table">
+    <tr>
+      <td class="user_name">Hello, User</td>
+    </tr>
+  </table>
+
+  <h3 id="detailtitle">Regents Court #220</h3>
 	<!--
 <div class="container" id="newprof_bg">
 	<ul class="nav nav-tabs ">
@@ -129,23 +136,36 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
   <!-- The container is used to define the width of the slideshow -->
   <div class="container">
     <div id="slides">
-      <img src="http://www.gardencommunitiesca.com/Apartment-Rentals/CA/San-Diego/Costa-Verde-Village/Home/CostaVerdeVillage-7.aspx?width=400" alt="Photo by: Missy S Link: http://www.flickr.com/photos/listenmissy/5087404401/">
-      <img src="http://www.gardencommunitiesca.com/Apartment-Rentals/CA/San-Diego/Costa-Verde-Village/Home/CostaVerdeVillage-8.aspx?width=400" alt="Photo by: Daniel Parks Link: http://www.flickr.com/photos/parksdh/5227623068/">
-      <img src="img/example-slide-3.jpg" alt="Photo by: Mike Ranweiler Link: http://www.flickr.com/photos/27874907@N04/4833059991/">
-      <img src="http://www.gardencommunitiesca.com/Apartment-Rentals/CA/San-Diego/Costa-Verde-Village/Home/CostaVerdeVillage-2.aspx?width=400" alt="Photo by: Stuart SeegerLink: http://www.flickr.com/photos/stuseeger/97577796/">
+      <img id="slidepic" src="http://www.gardencommunitiesca.com/Apartment-Rentals/CA/San-Diego/Costa-Verde-Village/Home/CostaVerdeVillage-7.aspx?width=400" alt="Photo by: Missy S Link: http://www.flickr.com/photos/listenmissy/5087404401/">
+      <img id="slidepic" src="http://www.gardencommunitiesca.com/Apartment-Rentals/CA/San-Diego/Costa-Verde-Village/Home/CostaVerdeVillage-8.aspx?width=400" alt="Photo by: Daniel Parks Link: http://www.flickr.com/photos/parksdh/5227623068/">
+      <img id="slidepic" src="http://www.gardencommunitiesca.com/Apartment-Rentals/CA/San-Diego/Costa-Verde-Village/Home/CostaVerdeVillage-2.aspx?width=400" alt="Photo by: Stuart SeegerLink: http://www.flickr.com/photos/stuseeger/97577796/">
     </div>
   </div>
   <!-- End SlidesJS Required: Start Slides -->
 
-    <ul>
-    	<li>Rent:$760</li>
-    	<li>Utility:$50/month</li>
-    	<li>Address:Regents Court #220</li>
-    	<li>One Bedroom</li>
-    	<li>Private Bathroom</li>
-    	<li>No Pet</li>
-    </ul>
-    <p>We have 4 students living in this house.　We are all biology major. One of us considered to move out due to graduation. We are willing to find a new friendly roommate. She has to be female and quiet. We prefer sleep early at night. </p>
+    <table id="infolist" border="1">
+      <tr>
+        <td>Rent:</td>
+        <td>$760</td>   
+      </tr>
+      <tr>
+        <td>Utility:</td>
+        <td>$50/month</td>
+      </tr>
+      <tr>
+        <td>Address:</td>
+        <td>Regents Court #220</td>
+      </tr>
+      <tr>
+        <td>Room Type:</td>
+        <td>One Bedroom</td>
+      </tr>
+      <tr>
+        <td>Other:</td>
+        <td>Private Bathroom, no pet</td>
+      </tr>
+    </table>
+    <p id="story">We have 4 students living in this house.　We are all biology major. One of us considered to move out due to graduation. We are willing to find a new friendly roommate. She has to be female and quiet. We prefer sleep early at night. </p>
     <button id="detail_back" class="btn btn-primary detailed">Back</button>
     <button id="contact" class="btn btn-primary detailed">Contact</button>
 </div>
