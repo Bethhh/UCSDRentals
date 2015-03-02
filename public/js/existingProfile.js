@@ -43,7 +43,7 @@ function afterUpdateOut(result){
         var idstr = str.substr(index);
         
         e.innerHTML = e.innerHTML+"<li class='list-group-item' ><button onclick='clickList(\""+idstr+"\")' class='btn btn-default listItems'>"+
-                      pname+"</button><button class='m' onclick='clickMatch(\""+idstr+"\")'>Matches</button></li>";
+                      pname+"</button><button class='btn match_btn btn-info' onclick='clickMatch(\""+idstr+"\")'>Matches</button></li>";
       }
     }else{
         e.innerHTML = e.innerHTML+"<li class='list-group-item' ><span class='btn btn-default listItems disabled'>No profiles in this category.</button></li>";
@@ -65,7 +65,7 @@ function afterUpdateIn(result){
         index = index+3;
         var idstr = str.substr(index);
         e.innerHTML = e.innerHTML+"<li class='list-group-item' ><button onclick='clickList(\""+idstr+"\")' class='btn btn-default listItems'>"+
-                      pname+"</button><button class='m' onclick='clickMatch(\""+idstr+"\")'>Matches</button></li>";
+                      pname+"</button><button class='match_btn btn-info btn' onclick='clickMatch(\""+idstr+"\")'>Matches</button></li>";
       }
     }else{
         e.innerHTML = e.innerHTML+"<li class='list-group-item' ><span class='btn btn-default listItems disabled'>No profiles in this category.</button></li>";

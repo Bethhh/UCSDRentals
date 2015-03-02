@@ -556,3 +556,8 @@ input.menu {
 	font-size: 16px;
 	background-color: #CCC;
 }
+
+.match_btn {
+
+	float:right;
+}
