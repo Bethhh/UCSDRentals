@@ -49,8 +49,8 @@ then
   then
 
     echo "Adding automatic mongo start"	
-    echo -e ". ~/lab7/run_mongo.sh" >> ~/.bash_profile
-    . ~/lab7/run_mongo.sh
+    echo -e ". ~/UCSDRentals/run_mongo.sh" >> ~/.bash_profile
+    . ~/UCSDRentals/run_mongo.sh
 	
   fi
 	
@@ -141,15 +141,15 @@ then
   fi
 
   # current lab hardcoded
-  node_status=$(cd lab7;npm ls 2>&1)
+  node_status=$(cd UCSDRentals;npm ls 2>&1)
 
   if [[ $node_status == *"UNMET DEPENDENCY"* ]]
   then
     echo "FAIL: Node is missing packages"
     echo "Attempting to repair."
-    install_status=$(cd lab4; npm -y install --no-bin-links)
+    install_status=$(cd UCSDRentals; npm -y install --no-bin-links)
 
-    node_status=$(cd lab7;npm ls 2>&1)
+    node_status=$(cd UCSDRentals;npm ls 2>&1)
   
     if [[ $node_status != *"UNMET DEPENDENCY"* ]]
     then
@@ -185,7 +185,7 @@ else
     dirloc="$(pwd)"
 
     IFS=/ read -a dirarr <<< "$dirloc"
-    if [ "${dirarr[4]}" != "introHCI" ]
+    if [ "${dirarr[4]}" != "Rentals" ]
     then
       echo "FAIL: Either you are not running this script in the introHCI directory or your directory is named incorrectly."
     else
@@ -197,7 +197,7 @@ else
     dirloc="$(pwd)"
 
     IFS=/ read -a dirarr <<< "$dirloc"
-    if [ "${dirarr[5]}" != "introHCI" ]
+    if [ "${dirarr[5]}" != "Rentals" ]
     then
       echo "FAIL: Either you are not running this script in the introHCI directory or your directory is named incorrectly."
     else
