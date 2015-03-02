@@ -28,25 +28,25 @@ var center_UCSD = new google.maps.LatLng(32.877491,-117.235276);
       latlngbounds.extend(latlng7);
       latlngbounds.extend(latlng6);
       map.fitBounds(latlngbounds);
-  		var contentString1 = '<div id="bodyContent">'+
-  	  '<h7 id="firstHeading" class="firstHeading">Rent:$760</h7>'+
-      '<p id="desMatch">One Bedroom </p> <p id="descMatch">Private Bathroom</p>'+
-      '<button id="matchbutton"><a href="/detailedInfo1" id="descMatch">'+
-      'View Details</a></button> '+
+      var contentString1 = '<div id="bodyContent">'+
+      '<h7 id="firstHeading" class="firstHeading">Rent:$760-$790</h7>'+
+      '<p id="desc">Costa Verde:3 matches</p>'+
+      '<a href="/detailedInfo1" id="desc">'+
+      'Click Here to View Details</a> '+
       '</div>';
 
-	    var contentString2 = '<div id="bodyContent">'+
-      '<h7 id="firstHeading" class="firstHeading">Rent:$860</h7>'+
-      '<p id="desMatch">One Bedroom </p> <p id="descMatch">Private Bathroom</p>'+
-      '<button id="matchbutton"><a href="/detailedInfo2" id="descMatch">'+
-      'View Details</a></button>'+
+      var contentString2 = '<div id="bodyContent">'+
+      '<h7 id="firstHeading" class="firstHeading">Rent:$800-$860</h7>'+
+      '<p id="desc">Regents Court:3 mathces</p>'+
+      '<a href="/detailedInfo2" id="desc">'+
+      'Click Here to View Details</a>'+
       '</div>';
 
       var contentString3 = '<div id="bodyContent">'+
-      '<h7 id="firstHeading" class="firstHeading">Rent:$1328</h7>'+
-      '<p id="desMatch">One Bedroom </p> <p id="descMatch">Private Bathroom</p>'+
-      '<button id="matchbutton"><a href="/detailedInfo3" id="descMatch">'+
-      'View Details</a></button>'+
+      '<h7 id="firstHeading" class="firstHeading">Rent:$1200-$1328</h7>'+
+      '<p id="desc">Nobel Court:3 matches</p>'+
+      '<a href="/detailedInfo3" id="desc">'+
+      'Click Here to View Details</a>'+
       '</div>';  
 
   	  var infowindow1 = new google.maps.InfoWindow({

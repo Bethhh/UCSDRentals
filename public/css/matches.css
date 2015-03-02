@@ -18,29 +18,15 @@
  	font-weight:bold;
 }
 
-#bodycontent{
-  align-content:center;
-  align-self:center;
-}
-
 #firstHeading{
-  color:#256FE8;
+  color:black;
   font-weight: bold;
+  background-color: #CCC;
   font-size: 20px;
-  border-bottom: solid;
 }
 
-#desMatch{
+#desc{
   font-size: 16px;
-  padding:10% 0% 0% 0%;
-}
-#descMatch{
-  font-size: 16px;
-  padding:0% 0% 0% 0%;
-}
-
-#matchbutton{
-  color:#CCC;
 }
 
 #matchNum{
