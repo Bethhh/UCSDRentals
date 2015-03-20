@@ -1,4 +1,4 @@
-
+/*
 
 #mainContainer {    
     width: 250px;
@@ -16,21 +16,41 @@
     height: 180px; 
 }
 
-#thumbnails {
-    padding-top: 10px;
-    height: 80px;
-}
 
-.imgThumbnails {
-    margin-left: 6px;
-    height: 70px;
-    width: 70px;
-    display: inline;
-    hover: 
-}
 
 .imgThumbnails:hover {
     cursor: pointer;
+    }*/
+
+#details {
+    position: relative;
+    max-width: 600px;
+    margin: 3rem auto 0;
 }
 
+.imgThumbnails {
+    margin: 0 auto;
+    height: 70px;
+    width: 70px;
+    display: inline;
+}
 
+#slides-wrap {
+    position: relative;
+    max-width: 600px;
+    margin: 3rem auto 0;
+}
+
+#slidepic {
+    padding: 0;
+}
+
+.slidesjs-pagination {
+    margin: 0 auto;
+    padding: 0;
+}
+
+.slidesjs-pagination li {
+    display: inline-block;
+    margin: .5em .5em 0 0;
+}

@@ -135,37 +135,26 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
     <!-- SlidesJS Required: Start Slides -->
   <!-- The container is used to define the width of the slideshow -->
   <div class="container">
-    <div id="slides">
-      <img id="slidepic" src="http://www.gardencommunitiesca.com/Apartment-Rentals/CA/San-Diego/Costa-Verde-Village/Home/CostaVerdeVillage-7.aspx?width=400" alt="Photo by: Missy S Link: http://www.flickr.com/photos/listenmissy/5087404401/">
-      <img id="slidepic" src="http://www.gardencommunitiesca.com/Apartment-Rentals/CA/San-Diego/Costa-Verde-Village/Home/CostaVerdeVillage-8.aspx?width=400" alt="Photo by: Daniel Parks Link: http://www.flickr.com/photos/parksdh/5227623068/">
-      <img id="slidepic" src="http://www.gardencommunitiesca.com/Apartment-Rentals/CA/San-Diego/Costa-Verde-Village/Home/CostaVerdeVillage-2.aspx?width=400" alt="Photo by: Stuart SeegerLink: http://www.flickr.com/photos/stuseeger/97577796/">
+    <div id="slides-wrap">
+      <div id="slides">
+        <img id="slidepic" src="http://www.gardencommunitiesca.com/Apartment-Rentals/CA/San-Diego/Costa-Verde-Village/Home/CostaVerdeVillage-7.aspx?width=400" alt="Photo by: Missy S Link: http://www.flickr.com/photos/listenmissy/5087404401/" data-image-index="0" data-image-thumb="http://www.gardencommunitiesca.com/Apartment-Rentals/CA/San-Diego/Costa-Verde-Village/Home/CostaVerdeVillage-7.aspx?width=80">
+        <img id="slidepic" src="http://www.gardencommunitiesca.com/Apartment-Rentals/CA/San-Diego/Costa-Verde-Village/Home/CostaVerdeVillage-8.aspx?width=400" alt="Photo by: Daniel Parks Link: http://www.flickr.com/photos/parksdh/5227623068/" data-image-index="1" data-image-thumb="http://www.gardencommunitiesca.com/Apartment-Rentals/CA/San-Diego/Costa-Verde-Village/Home/CostaVerdeVillage-8.aspx?width=80">
+        <img id="slidepic" src="http://www.gardencommunitiesca.com/Apartment-Rentals/CA/San-Diego/Costa-Verde-Village/Home/CostaVerdeVillage-2.aspx?width=400" alt="Photo by: Stuart SeegerLink: http://www.flickr.com/photos/stuseeger/97577796/" data-image-index="2" data-image-thumb="http://www.gardencommunitiesca.com/Apartment-Rentals/CA/San-Diego/Costa-Verde-Village/Home/CostaVerdeVillage-2.aspx?width=80">
+      </div>
     </div>
   </div>
   <!-- End SlidesJS Required: Start Slides -->
-
-    <table id="infolist" border="1">
-      <tr>
-        <td>Rent:</td>
-        <td>$1328</td>   
-      </tr>
-      <tr>
-        <td>Utility:</td>
-        <td>$80/month</td>
-      </tr>
-      <tr>
-        <td>Address:</td>
-        <td>Regents Court #330</td>
-      </tr>
-      <tr>
-        <td>Room Type:</td>
-        <td>One Bedroom</td>
-      </tr>
-      <tr>
-        <td>Other:</td>
-        <td>Private Bathroom, no pet</td>
-      </tr>
-    </table>
+  <div id="details">
+    <ul>
+      <li>Rent:$760</li>
+      <li>Utility:$50/month</li>
+      <li>Address:Costa Verde</li>
+      <li>One Bedroom</li>
+      <li>Private Bathroom</li>
+      <li>No Pet</li>
+    </ul>
     <p id="story">I am the only girl living in this house.　I am Finance Major. I have been living here for 6 months and everything is in good condition. I hope to find a quiet girl roommate. </p>
+  </div>
     <button id="detail_back" class="btn btn-primary detailed">Back</button>
     <button id="contact" class="btn btn-primary detailed">Contact</button>
 </div>
@@ -185,12 +174,25 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 
     <!-- SlidesJS Required: Initialize SlidesJS with a jQuery doc ready -->
     <script>
-      $(function() {
-        $('#slides').slidesjs({
-          width: 940,
-          height: 528
-        });
-      });
+      (function( $ ) {
+          $( "#slides" ).slidesjs({
+              width: 940,
+              height: 528,
+              navigation: {
+                  active: false,
+              },
+              callback: {
+                  loaded: function(number) {
+                      $( '.slidesjs-pagination-item' ).each( function( index, element ) {
+                          var target = $( element ).find( 'a' ),
+                              src    = $( '#slides [data-image-index=' + index + ']' ).data( 'image-thumb' );
+       
+                          $( target ).html( '<img src="' + src + '" alt="" class="imgThumbnails"/>' );
+                      });
+                  },
+              },
+          });
+      })( jQuery );    
     </script>
   <!-- End SlidesJS Required -->
 <script>
